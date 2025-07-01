@@ -1,0 +1,25 @@
+// JavaScript의 Array.concat 함수를 타입 시스템에서 구현하세요.
+// 타입은 두 인수를 받고, 인수를 왼쪽부터 concat한 새로운 배열을 반환해야 합니다.
+export {};
+type Result = Concat<[1], [2]>; // expected to be [1, 2
+
+// type Concat<A extends any[], B extends any[]> = [...A, ...B];
+
+type Tuple = readonly unknown[];
+
+type Concat<T extends Tuple, U extends Tuple> = [...T, ...U];
+
+/*
+| 구분          | `any[]` 버전    | `readonly unknown[]` 버전 |
+| ----------- | ------------- | ----------------------- |
+| 읽기 전용 튜플 허용 | ❌ 안 됨         | ✅ 가능                    |
+| 일반 배열 허용    | ✅ 가능          | ✅ 가능                    |
+| 타입 안정성      | 낮음 (`any` 사용) | 높음 (`unknown` 사용)       |
+| 재사용성        | 제한적           | 범용적                     |
+
+
+any버전을 사용하면
+type A = Concat<[1], [2]>           // OK
+type B = Concat<readonly [1], [2]>  // ❌ Error (readonly 안됨)
+
+*/
