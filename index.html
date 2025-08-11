@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS Challenge 복습 노트</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 2rem;
+        background: #f9f9f9;
+      }
+      h1 {
+        color: #2d3a4b;
+      }
+      .section {
+        margin-bottom: 2rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 0.5rem 0;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      pre {
+        background: #f6f6f6;
+        color: #222;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 1rem;
+        line-height: 1.6;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      }
+      #viewer {
+        margin-top: 2rem;
+        display: none;
+      }
+      .tabs {
+        display: flex;
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 2rem;
+      }
+      .tab {
+        padding: 0.7rem 2rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 1.1rem;
+        color: #888;
+        outline: none;
+        transition: color 0.2s, border-bottom 0.2s;
+        border-bottom: 2px solid transparent;
+      }
+      .tab.active {
+        color: #2d3a4b;
+        border-bottom: 2px solid #007acc;
+        font-weight: bold;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <h1>개발 공부 노트</h1>
+    <div class="tabs">
+      <button class="tab active" id="tab-ts">TS Challenge</button>
+      <button class="tab" id="tab-algo">알고리즘</button>
+    </div>
+    <div class="tab-content active" id="content-ts">
+      <div class="section">
+        <h2>Easy</h2>
+        <ul id="easy-list"></ul>
+      </div>
+      <div class="section">
+        <h2>Medium</h2>
+        <ul id="medium-list"></ul>
+      </div>
+    </div>
+    <div class="tab-content" id="content-algo">
+      <div class="section">
+        <h2>알고리즘</h2>
+        <ul id="algorithm-list"></ul>
+      </div>
+    </div>
+    <div id="viewer">
+      <h2 id="file-title"></h2>
+      <pre
+        style="display: none"
+      ><code id="file-content" class="language-typescript"></code></pre>
+      <div id="md-content" style="display: none"></div>
+    </div>
+    <script>
+      // 문제 파일 목록 (자동화하려면 빌드시 스크립트로 생성 추천)
+      const easyFiles = [
+        "11.Tuple_to_Object.ts",
+        "14.First_of_Array.ts",
+        "18.Length_of_Tuple.ts",
+        "189.Awaited.ts",
+        "268.If.ts",
+        "3057.Push.ts",
+        "3060.Unshift.ts",
+        "3312.Parameters.ts",
+        "4.Pick.ts",
+        "43.Exclude.ts",
+        "533.Concat.ts",
+        "7.Readonly.ts",
+        "898.Includes.ts",
+      ];
+      const mediumFiles = [
+        "10.Tuple_to_Union'.ts",
+        "2.Get_Return_Type.ts",
+        "3.Omit.ts",
+        "8.Readonly.ts",
+        "9.Deep_Readonly.ts",
+      ];
+      const algorithmFiles = [
+        { name: "1주차: 배열/문자열", file: "1week-array-string.md" },
+        { name: "2주차: 해시맵", file: "2week-hashmap.md" },
+        { name: "3주차: 많이 쓰이는 테크닉", file: "3week-patterns.md" },
+        {
+          name: "4주차: 실전 패턴 확장 & 탐색 테크닉",
+          file: "4week-patterns.md",
+        },
+        {
+          name: "5주차: 패턴 조합 & 실전 심화 문제",
+          file: "5week-patterns.md",
+        },
+        {
+          name: "6주차: 그리디, 힙, DP 기초 & 1D 최적화",
+          file: "6week-patterns.md",
+        },
+        {
+          name: "7주차: 고급 자료구조 & 그래프 알고리즘",
+          file: "7week-patterns.md",
+        },
+      ];
+      function renderList(listId, files, folder, isMarkdown = false) {
+        const ul = document.getElementById(listId);
+        files.forEach((fileObj) => {
+          let file, displayName;
+          if (typeof fileObj === "string") {
+            file = fileObj;
+            displayName = fileObj;
+          } else {
+            file = fileObj.file;
+            displayName = fileObj.name;
+          }
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.textContent = displayName;
+          if (isMarkdown) {
+            a.onclick = () => loadMarkdown(folder + "/" + file, displayName);
+          } else {
+            a.onclick = () => loadFile(folder + "/" + file, displayName);
+          }
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      }
+      function showViewer(show, isMarkdown = false) {
+        document.getElementById("viewer").style.display = show
+          ? "block"
+          : "none";
+        document.getElementById("file-content").parentElement.style.display =
+          !isMarkdown && show ? "block" : "none";
+        document.getElementById("md-content").style.display =
+          isMarkdown && show ? "block" : "none";
+      }
+      async function loadFile(path, title) {
+        document.getElementById("file-title").textContent = title;
+        document.getElementById("file-content").textContent = "로딩 중...";
+        showViewer(true);
+        try {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error("파일을 불러올 수 없습니다.");
+          const text = await res.text();
+          document.getElementById("file-content").innerHTML = Prism.highlight(
+            text,
+            Prism.languages.typescript,
+            "typescript"
+          );
+        } catch (e) {
+          document.getElementById("file-content").textContent = e.message;
+        }
+      }
+      async function loadMarkdown(path, title) {
+        document.getElementById("file-title").textContent = title;
+        document.getElementById("md-content").textContent = "로딩 중...";
+        showViewer(true, true);
+        try {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error("파일을 불러올 수 없습니다.");
+          const text = await res.text();
+          document.getElementById("md-content").innerHTML = marked.parse(text);
+          Prism.highlightAll();
+        } catch (e) {
+          document.getElementById("md-content").textContent = e.message;
+        }
+      }
+      // 페이지 로드시 viewer 숨김
+      showViewer(false);
+      renderList("easy-list", easyFiles, "ts-challenge/easy");
+      renderList("medium-list", mediumFiles, "ts-challenge/medium");
+      renderList("algorithm-list", algorithmFiles, "algorithm", true);
+
+      // 탭 전환 로직
+      const tabTS = document.getElementById("tab-ts");
+      const tabAlgo = document.getElementById("tab-algo");
+      const contentTS = document.getElementById("content-ts");
+      const contentAlgo = document.getElementById("content-algo");
+      function activateTab(tab) {
+        if (tab === "ts") {
+          tabTS.classList.add("active");
+          tabAlgo.classList.remove("active");
+          contentTS.classList.add("active");
+          contentAlgo.classList.remove("active");
+        } else {
+          tabTS.classList.remove("active");
+          tabAlgo.classList.add("active");
+          contentTS.classList.remove("active");
+          contentAlgo.classList.add("active");
+        }
+        // 탭 전환 시 viewer도 숨김
+        showViewer(false);
+      }
+      tabTS.onclick = () => activateTab("ts");
+      tabAlgo.onclick = () => activateTab("algo");
+    </script>
+  </body>
+</html>
