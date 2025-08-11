@@ -76,11 +76,9 @@ type IsEqual<T, U> = (<G>() => G extends T ? 1 : 2) extends <G>() => G extends U
 - IsEqual로 비교
 - 같으면 true, 아니면 나머지 요소로 재귀
 */
-type Includes<T extends readonly unknown[], U> = T extends [infer F, ...infer R] //F: 1, R: 2,3,4,5
-  ? IsEqual<F, U> extends true //1이랑 3을 비교
-    ? true //1과 3이 같으면 true
-    : Includes<R, U> //Includes<[2,3,4,5], 3> 재귀
-  : false;
+
+// 📌 
+type Includes<> = 
 
 /* 테스트 */
 type HasThree = Includes<[1, 2, 3, 4, 5], 3>; // true

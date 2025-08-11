@@ -1,0 +1,20 @@
+//배열(튜플)을 받아 길이를 반환하는 제네릭 Length<T>를 구현하세요.
+
+type tesla = ["tesla", "model 3", "model X", "model Y"];
+type spaceX = [
+  "FALCON 9",
+  "FALCON HEAVY",
+  "DRAGON",
+  "STARSHIP",
+  "HUMAN SPACEFLIGHT",
+];
+
+type teslaLength = Length<tesla>; // expected 4
+type spaceXLength = Length<spaceX>; // expected 5
+
+//type Length<T extends readonly any[]> = number;
+//항상 number라는 일반 타입이 된다.
+
+//📌
+type Length<> = 
+//이건 T가 고정된 튜플일 경우, 정확한 숫자 리터럴 타입을 추론할 수 있다.

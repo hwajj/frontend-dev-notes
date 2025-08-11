@@ -1,8 +1,16 @@
 // ?Promise와 같은 타입에 감싸인 타입이 있을 때, 안에 감싸인 타입이 무엇인지 어떻게 알 수 있을까요?
 //
 //   예시: 들어 Promise<ExampleType>이 있을 때, ExampleType을 어떻게 얻을 수 있을까요?
+
+
 export {};
 
+type ExampleType = Promise<string>;
+
+type Result = MyAwaited<ExampleType>; // string
+
+📌
+type MyAwaited< > =
 /*
 
 1. T extends PromiseLike<any>
@@ -22,13 +30,3 @@ Promise<Promise<number>>이면 U = Promise<number>
   만약 U도 여전히 PromiseLike라면, 또 다시 MyAwaited<U>를 호출해서 더 깊이 들어갑니다.
 
   그렇지 않으면 U는 더 이상 Promise가 아닌 실제 값이므로 반환합니다.*/
-
-type ExampleType = Promise<string>;
-
-type Result = MyAwaited<ExampleType>; // string
-
-type MyAwaited<T extends PromiseLike<any>> = T extends PromiseLike<infer U>
-  ? U extends PromiseLike<any>
-    ? MyAwaited<U>
-    : U
-  : never;
