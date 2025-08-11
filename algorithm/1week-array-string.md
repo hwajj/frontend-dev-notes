@@ -5,7 +5,13 @@
 **Longest Substring Without Repeating Characters**
 
 ```js
-// Longest Substring Without Repeating Characters
+// 문자열이 주어졌을 때, 반복되지 않는 가장 긴 부분 문자열의 길이를 구하는 문제 풀이
+// (예시 문제)
+// - LeetCode 3. Longest Substring Without Repeating Characters
+// - LeetCode 159. Longest Substring with At Most Two Distinct Characters
+// - LeetCode 340. Longest Substring with At Most K Distinct Characters
+// - LeetCode 904. Fruit Into Baskets (= at most 2 distinct)
+// - HackerRank: Two Characters (변형: 인접 문자 제약)
 function lengthOfLongestSubstring(s) {
   let set = new Set();
   let left = 0,
@@ -30,7 +36,13 @@ function lengthOfLongestSubstring(s) {
 **Two Sum II - Input Array Is Sorted**
 
 ```js
-// Two Sum II - Input Array Is Sorted
+// 정렬된 배열에서 합이 target이 되는 두 수의 1-based 인덱스를 찾는 문제 풀이 (투 포인터)
+// (예시 문제)
+// - LeetCode 167. Two Sum II (Input Array Is Sorted)
+// - LeetCode 125. Valid Palindrome (양끝 포인터 응용)
+// - LeetCode 344. Reverse String (양끝 스왑)
+// - HackerRank: Pairs (정렬 후 투 포인터/이분탐색 응용)
+// - LeetCode 11. Container With Most Water (양끝 좁혀오기)
 function twoSum(numbers, target) {
   let left = 0,
     right = numbers.length - 1;
@@ -53,6 +65,13 @@ function twoSum(numbers, target) {
 
 ```js
 // Range Sum Query (prefix sum 활용)
+// 배열에서 특정 구간 [l, r) 합을 O(1)에 구하기 위한 Prefix Sum 구축
+// (예시 문제)
+// - LeetCode 303. Range Sum Query - Immutable
+// - LeetCode 325. Maximum Size Subarray Sum Equals k (prefix+hash 응용)
+// - LeetCode 560. Subarray Sum Equals K (prefix+hash 응용)
+// - HackerRank: Subarray Division (Birthday Chocolate)
+// - LeetCode 238. Product of Array Except Self (합이 아닌 곱의 누적 응용)
 function buildPrefixSum(nums) {
   let prefix = [0];
   for (let num of nums) {

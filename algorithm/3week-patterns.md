@@ -20,6 +20,12 @@
 (예: LeetCode 1. Two Sum, 387. First Unique Character in a String)
 
 ```js
+// (예시 문제)
+// - LeetCode 1. Two Sum
+// - LeetCode 387. First Unique Character in a String
+// - LeetCode 49. Group Anagrams
+// - LeetCode 242. Valid Anagram
+// - HackerRank: Sherlock and the Valid String
 function countFrequencies(nums) {
   let map = new Map();
   for (let num of nums) {
@@ -53,6 +59,12 @@ function countFrequencies(nums) {
 (예: LeetCode 20. Valid Parentheses)
 
 ```js
+// (예시 문제)
+// - LeetCode 20. Valid Parentheses
+// - LeetCode 150. Evaluate Reverse Polish Notation
+// - LeetCode 155. Min Stack
+// - LeetCode 739. Daily Temperatures (Monotonic Stack)
+// - LeetCode 496. Next Greater Element I
 function isValid(s) {
   const stack = [];
   const map = { ")": "(", "}": "{", "]": "[" };
@@ -91,6 +103,12 @@ function isValid(s) {
 (예: LeetCode 15. 3Sum)
 
 ```js
+// (예시 문제)
+// - LeetCode 15. 3Sum
+// - LeetCode 16. 3Sum Closest
+// - LeetCode 18. 4Sum
+// - LeetCode 167. Two Sum II - Input Array Is Sorted
+// - LeetCode 42. Trapping Rain Water
 function threeSum(nums) {
   nums.sort((a, b) => a - b);
   const res = [];
@@ -142,6 +160,12 @@ function threeSum(nums) {
 (예: LeetCode 704. Binary Search)
 
 ```js
+// (예시 문제)
+// - LeetCode 704. Binary Search
+// - LeetCode 34. Find First and Last Position of Element in Sorted Array
+// - LeetCode 35. Search Insert Position
+// - LeetCode 278. First Bad Version
+// - LeetCode 153. Find Minimum in Rotated Sorted Array
 function binarySearch(nums, target) {
   let l = 0,
     r = nums.length - 1;

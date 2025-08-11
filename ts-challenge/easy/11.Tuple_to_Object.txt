@@ -13,7 +13,7 @@ T[number]는 T 튜플의 **값들(value)**을 유니언 타입으로 추출함.
 
   */
 
-//📌
-type TupleToObject<> = {  
+//📌8/11
+type TupleToObject<> = {
 
 };

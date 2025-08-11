@@ -3,3 +3,14 @@
 type Result = MyExclude<"a" | "b" | "c", "a">; // 'b' | 'c'
 
 type MyExclude<T, U> = T extends U ? never : T;
+
+/**
+ *
+ * // 분해
+ * = ("a" extends "a" ? never : "a")
+ * | ("b" extends "a" ? never : "b")
+ * | ("c" extends "a" ? never : "c")
+ * // 정리
+ * = never | "b" | "c"
+ * = "b" | "c"
+ */
