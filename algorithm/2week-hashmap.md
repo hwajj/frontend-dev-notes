@@ -34,7 +34,7 @@ function isAnagram(s, t) {
 ## (2) 보조 해시맵 탐색 (Two Sum)
 
 **Two Sum**
-
+ 
 ```js
 // Two Sum
 // 배열에서 합이 target이 되는 두 수의 인덱스를 찾는 문제 풀이 (해시맵 보조 탐색)

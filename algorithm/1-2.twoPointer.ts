@@ -20,6 +20,3 @@ function buildPrefixSum(numberArr: number[]) {
     prefix.push(prefix[prefix.length - 1] + num);
   }
 }
-
-
-function

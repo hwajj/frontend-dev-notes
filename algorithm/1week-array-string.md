@@ -18,6 +18,11 @@ function lengthOfLongestSubstring(s : string) :number{
     maxLen = 0;
 
   for (let right = 0; right < s.length; right++) {
+    //cbadbceb의 두번째 b에서 중복 발견 시 윈도우를 앞으로 이동시켜 중복 제고
+    //b가 2번째도 있고 5번째에도 있으면,
+    //2번째 b를 가진 문자열을 최장으로 할것이냐, 5번째 b를 가진 문자열을 최장으로 할것이냐 골라야함
+    //그러기위해선 left를 3번째까지 이동시켜 set안의 b 중복제거. 
+    // left를 이동시키기 위한 while문
     while (set.has(s[right])) {
       set.delete(s[left]);
       left++;
@@ -28,7 +33,18 @@ function lengthOfLongestSubstring(s : string) :number{
   return maxLen;
 }
 ```
+| 입력           | 출력  | 설명                         |
+| ------------ | --- | -------------------------- |
+| `"abcabcbb"` | `3` | `"abc"` 가 가장 긴 중복 없는 부분문자열 |
+| `"bbbbb"`    | `1` | `"b"` 하나만 가능               |
+| `"pwwkew"`   | `3` | `"wke"` 가 가장 길다            |
+| `""`         | `0` | 빈 문자열은 길이 0                |
 
+
+- Set 으로 현재 중복 없는 문자를 저장.
+- left 와 right 포인터로 윈도우 구간을 확장.
+- 중복 발견 시 left를 앞으로 이동시켜 중복 제거.
+- 매번 윈도우 길이(right - left + 1)의 최댓값 갱신.
 ---
 
 ## (2) 투 포인터 (Two Pointers)
@@ -44,18 +60,33 @@ function lengthOfLongestSubstring(s : string) :number{
 // - HackerRank: Pairs (정렬 후 투 포인터/이분탐색 응용)
 // - LeetCode 11. Container With Most Water (양끝 좁혀오기)
 function twoSum(numbers:number[], target: number):number {
+  //left , right 가 양끝
   let left = 0,
     right = numbers.length - 1;
 
   while (left < right) {
     let sum = numbers[left] + numbers[right];
     if (sum === target) return [left + 1, right + 1]; // 1-based index
+    // 합이 너무 작으면 left를 오른쪽으로 옮기고,
     else if (sum < target) left++;
+    //    합이 너무 크면 right를 왼쪽으로 옮김
     else right--;
   }
   return [];
 }
 ```
+
+| 입력                                  | 출력      | 설명          |
+| ----------------------------------- | ------- | ----------- |
+| `numbers = [2,7,11,15], target = 9` | `[1,2]` | 2 + 7 = 9   |
+| `numbers = [2,3,4], target = 6`     | `[1,3]` | 2 + 4 = 6   |
+| `numbers = [-1,0], target = -1`     | `[1,2]` | -1 + 0 = -1 |
+
+- 배열이 정렬되어 있으므로,
+  합이 너무 작으면 left를 오른쪽으로 옮기고,
+  합이 너무 크면 right를 왼쪽으로 옮김.
+
+조건에 맞는 두 수를 찾으면 그 인덱스를 반환.
 
 ---
 

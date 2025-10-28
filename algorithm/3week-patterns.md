@@ -1,7 +1,7 @@
 # ✅ 3주차: 많이 쓰이는 테크닉 & 기본 패턴
 
 이번 주는 실전에서 자주 등장하는 핵심 테크닉을 익히는 것이 목표입니다.
-
+HashMap / Stack / Sorting+Two Pointers(3Sum) / Binary Search
 ---
 
 ## 1. 해시맵 / 딕셔너리 활용 (Hashing)
