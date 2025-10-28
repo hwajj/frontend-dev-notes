@@ -28,13 +28,20 @@ interface userInfo {
 type keyofValue = keyof userInfo;
 // keyofValue는 "name" | "age"가 된다.
 
-//2 . in: 유니언 타입을 순회
+//2. extends: 타입 제한
+//K extends keyof T:  K가 그 키들의 부분집합이어야 한다는 조건(제약)
+// => 검사조건일 뿐 값은 아님
+
+
+//3 . in: 유니언 타입을 순회
 //in은 유니언 타입의 값을 순회하면서 배열 또는 객체를 생성할 때 주로 사용한다.
 //  주의: interface 안에서 in을 직접 사용하면 에러가 발생하므로 사용하지 말 것.
 type name = "firstname" | "lastname";
 type TName = {
   [key in name]: string;
 };
+
+
 
 // 실제 개발에서의 예시:
 

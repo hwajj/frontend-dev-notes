@@ -17,3 +17,18 @@ type spaceXLength = Length<spaceX>; // expected 5
 
 type Length<T extends string[]> = T["length"];
 //이건 T가 고정된 튜플일 경우, 정확한 숫자 리터럴 타입을 추론할 수 있다.
+
+/**
+ *  배열(튜플) 타입도 “객체 타입”이다
+ * type MyTuple = ["a", "b", "c"];
+ *
+ * 이 타입은 내부적으로 이렇게 생긴 객체 타입으로 인식된다.
+ *
+ * type MyTuple = {
+ *   0: "a";
+ *   1: "b";
+ *   2: "c";
+ *   length: 3;        //  여기 length 속성이 있음!
+ *   // + 기타 배열 메서드들 (push, pop 등)
+ * }
+ */
