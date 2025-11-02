@@ -24,3 +24,6 @@ const todo: MyReadonly<Todo> = {
 
 
 
+type ReadOnly<T> = {
+  readonly [ key in K keyof T]: T[key]
+}
