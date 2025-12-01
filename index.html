@@ -99,8 +99,28 @@
     </div>
     <div class="tab-content" id="content-algo">
       <div class="section">
-        <h2>알고리즘</h2>
-        <ul id="algorithm-list"></ul>
+        <h2>탐색 알고리즘</h2>
+        <ul id="search-list"></ul>
+      </div>
+      <div class="section">
+        <h2>자료구조</h2>
+        <ul id="data-structures-list"></ul>
+      </div>
+      <div class="section">
+        <h2>문자열 처리</h2>
+        <ul id="string-list"></ul>
+      </div>
+      <div class="section">
+        <h2>배열/문자열 기법</h2>
+        <ul id="techniques-list"></ul>
+      </div>
+      <div class="section">
+        <h2>그래프 알고리즘</h2>
+        <ul id="graph-list"></ul>
+      </div>
+      <div class="section">
+        <h2>최적화 알고리즘</h2>
+        <ul id="optimization-list"></ul>
       </div>
     </div>
     <div id="viewer">
@@ -134,26 +154,32 @@
         "8.Readonly.ts",
         "9.Deep_Readonly.ts",
       ];
-      const algorithmFiles = [
-        { name: "1주차: 배열/문자열", file: "1week-array-string.md" },
-        { name: "2주차: 해시맵", file: "2week-hashmap.md" },
-        { name: "3주차: 많이 쓰이는 테크닉", file: "3week-patterns.md" },
-        // {
-        //   name: "4주차: 실전 패턴 확장 & 탐색 테크닉",
-        //   file: "4week-patterns.md",
-        // },
-        // {
-        //   name: "5주차: 패턴 조합 & 실전 심화 문제",
-        //   file: "5week-patterns.md",
-        // },
-        // {
-        //   name: "6주차: 그리디, 힙, DP 기초 & 1D 최적화",
-        //   file: "6week-patterns.md",
-        // },
-        // {
-        //   name: "7주차: 고급 자료구조 & 그래프 알고리즘",
-        //   file: "7week-patterns.md",
-        // },
+      const searchFiles = [
+        { name: "DFS (깊이 우선 탐색)", file: "search/DFS.md" },
+        { name: "BFS (너비 우선 탐색)", file: "search/BFS.md" },
+        { name: "이진 탐색", file: "search/BinarySearch.md" },
+        { name: "다익스트라", file: "search/Dijkstra.md" },
+        { name: "트라이", file: "search/Trie.md" },
+      ];
+      const dataStructuresFiles = [
+        { name: "힙", file: "data-structures/Heap.md" },
+        { name: "해시맵", file: "data-structures/HashMap.md" },
+        { name: "스택", file: "data-structures/Stack.md" },
+        { name: "세그먼트 트리", file: "data-structures/SegmentTree.md" },
+        { name: "유니온 파인드 (DSU)", file: "data-structures/DSU.md" },
+      ];
+      const stringFiles = [{ name: "문자열 처리", file: "string/String.md" }];
+      const techniquesFiles = [
+        { name: "투 포인터", file: "techniques/TwoPointer.md" },
+        { name: "슬라이딩 윈도우", file: "techniques/SlidingWindow.md" },
+        { name: "부분합", file: "techniques/PrefixSum.md" },
+      ];
+      const graphFiles = [
+        { name: "위상정렬", file: "graph/TopologicalSort.md" },
+      ];
+      const optimizationFiles = [
+        { name: "동적 계획법 (DP)", file: "optimization/DP.md" },
+        { name: "그리디", file: "optimization/Greedy.md" },
       ];
       function renderList(listId, files, folder, isMarkdown = false) {
         const ul = document.getElementById(listId);
@@ -222,7 +248,17 @@
       showViewer(false);
       renderList("easy-list", easyFiles, "ts-challenge/easy");
       renderList("medium-list", mediumFiles, "ts-challenge/medium");
-      renderList("algorithm-list", algorithmFiles, "algorithm", true);
+      renderList("search-list", searchFiles, "algorithm", true);
+      renderList(
+        "data-structures-list",
+        dataStructuresFiles,
+        "algorithm",
+        true
+      );
+      renderList("string-list", stringFiles, "algorithm", true);
+      renderList("techniques-list", techniquesFiles, "algorithm", true);
+      renderList("graph-list", graphFiles, "algorithm", true);
+      renderList("optimization-list", optimizationFiles, "algorithm", true);
 
       // 탭 전환 로직
       const tabTS = document.getElementById("tab-ts");
