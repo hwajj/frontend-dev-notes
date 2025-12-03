@@ -194,6 +194,7 @@ function numIslands(grid) {
 
 ```js
 function canVisitAllRooms(rooms) {
+<<<<<<< HEAD
   const visited = new Set(); // 방문한 방 기록 (중복 방지)
   function dfs(room) {
     // 현재 방에서 깊이 우선 탐색
@@ -205,6 +206,17 @@ function canVisitAllRooms(rooms) {
   }
   dfs(0); // 0번 방에서 시작
   return visited.size === rooms.length; // 전부 방문했는지 확인
+=======
+  const visited = new Set();
+  function dfs(room) {
+    visited.add(room);
+    for (const key of rooms[room]) {
+      if (!visited.has(key)) dfs(key);
+    }
+  }
+  dfs(0);
+  return visited.size === rooms.length;
+>>>>>>> 08aa47bda981d94e3eb54b0633778ad3d8ff9cfd
 }
 ```
 
