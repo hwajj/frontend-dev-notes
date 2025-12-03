@@ -7,12 +7,12 @@
 
 ## 📍 핵심 개념 요약
 
-| 개념        | 설명                                       |
-| --------- | ---------------------------------------- |
-| **BFS**   | 시작점에서 가까운 노드(이웃)부터 탐색해 나가는 알고리즘          |
-| **자료구조**  | **큐(Queue)** 사용 — 선입선출(FIFO)             |
-| **특징**    | 한 단계씩 확장하므로 "최단 거리(최소 단계)" 문제에 적합        |
-| **방문 관리** | `visited` 집합을 써서 중복 탐색 방지                |
+| 개념          | 설명                                                       |
+| ------------- | ---------------------------------------------------------- |
+| **BFS**       | 시작점에서 가까운 노드(이웃)부터 탐색해 나가는 알고리즘    |
+| **자료구조**  | **큐(Queue)** 사용 — 선입선출(FIFO)                        |
+| **특징**      | 한 단계씩 확장하므로 "최단 거리(최소 단계)" 문제에 적합    |
+| **방문 관리** | `visited` 집합을 써서 중복 탐색 방지                       |
 | **활용 분야** | 그래프 최단 경로, 미로 탐색, Word Ladder, 네트워크 탐색 등 |
 
 ---
@@ -25,10 +25,10 @@
 
 ### 💬 **입출력 예시**
 
-| 입력                                                                                         | 출력  |
-| ------------------------------------------------------------------------------------------ | --- |
-| beginWord = `"hit"`, endWord = `"cog"`, wordList = `["hot","dot","dog","lot","log","cog"]` | `5` |
-| beginWord = `"hit"`, endWord = `"cog"`, wordList = `["hot","dot","dog","lot","log"]`       | `0` |
+| 입력                                                                                       | 출력 |
+| ------------------------------------------------------------------------------------------ | ---- |
+| beginWord = `"hit"`, endWord = `"cog"`, wordList = `["hot","dot","dog","lot","log","cog"]` | `5`  |
+| beginWord = `"hit"`, endWord = `"cog"`, wordList = `["hot","dot","dog","lot","log"]`       | `0`  |
 
 변환 경로 예시
 
@@ -52,18 +52,18 @@ Level 4: cog
 ```js
 // ✅ BFS 최단 거리 탐색 (Word Ladder)
 function bfsShortestPath(start, end, graph) {
-  let queue = [[start, 1]];          // [단어, 거리]
-  let visited = new Set([start]);    // 방문 기록 (중복 방지)
+  let queue = [[start, 1]]; // [단어, 거리]
+  let visited = new Set([start]); // 방문 기록 (중복 방지)
 
   while (queue.length) {
     let [word, dist] = queue.shift(); // 큐에서 하나 꺼냄
-    if (word === end) return dist;    // 목적지 도착 → 거리 반환
+    if (word === end) return dist; // 목적지 도착 → 거리 반환
 
     // 인접(한 글자 차이) 단어 순회
     for (let nei of graph[word] || []) {
       if (!visited.has(nei)) {
-        visited.add(nei);             // 방문 표시
-        queue.push([nei, dist + 1]);  // 거리 1 증가 후 큐에 추가
+        visited.add(nei); // 방문 표시
+        queue.push([nei, dist + 1]); // 거리 1 증가 후 큐에 추가
       }
     }
   }
@@ -82,12 +82,12 @@ function bfsShortestPath(start, end, graph) {
 
 ### ⚡ **핵심 포인트**
 
-| 구분    | 내용                                          |
-| ----- | ------------------------------------------- |
-| 시간복잡도 | O(V + E)                                    |
-| 자료구조  | 큐 (FIFO)                                    |
-| 탐색방식  | 한 단계씩 확장 → 최단 거리 보장                         |
-| 응용    | 미로 최단 거리, Graph Traversal, Friend Network 등 |
+| 구분       | 내용                                               |
+| ---------- | -------------------------------------------------- |
+| 시간복잡도 | O(V + E)                                           |
+| 자료구조   | 큐 (FIFO)                                          |
+| 탐색방식   | 한 단계씩 확장 → 최단 거리 보장                    |
+| 응용       | 미로 최단 거리, Graph Traversal, Friend Network 등 |
 
 ### ✅ **한 줄 요약**
 
@@ -98,7 +98,31 @@ function bfsShortestPath(start, end, graph) {
 
 ## 📝 스터디 문제 정리
 
-<!-- 스터디에서 제공된 문제를 여기에 추가하세요 -->
+### [2-3] Keys and Rooms
+
+- 문제 링크: [LeetCode 841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/description/)
+
+- **핵심 개념**: 그래프 탐색(방 = 노드, 열쇠 = 간선). 큐로 BFS하며 방문 가능 방을 확장
+- **이유**: 중복 방문 방지를 위해 `visited` 관리, 0번 방에서 시작해 모든 방을 방문 가능한지 확인
+
+```js
+function canVisitAllRooms(rooms) {
+  const visited = new Set([0]);
+  const queue = [0];
+
+  while (queue.length) {
+    const room = queue.shift();
+    for (const key of rooms[room]) {
+      if (!visited.has(key)) {
+        visited.add(key);
+        queue.push(key);
+      }
+    }
+  }
+  return visited.size === rooms.length;
+}
+```
+
+> 참고: DFS(재귀/스택)로도 동일하게 풀이 가능. 자세한 DFS 버전은 `algorithm/search/DFS.md` 참조.
 
 ---
-
