@@ -110,6 +110,10 @@ function permute(nums) {
 }
 ```
 
+
+
+
+
 **보충 설명:**
 
 - 부분집합(LeetCode 78. Subsets), 조합의 합(LeetCode 39. Combination Sum) 등도 유사 패턴
@@ -194,7 +198,6 @@ function numIslands(grid) {
 
 ```js
 function canVisitAllRooms(rooms) {
-<<<<<<< HEAD
   const visited = new Set(); // 방문한 방 기록 (중복 방지)
   function dfs(room) {
     // 현재 방에서 깊이 우선 탐색
@@ -206,17 +209,6 @@ function canVisitAllRooms(rooms) {
   }
   dfs(0); // 0번 방에서 시작
   return visited.size === rooms.length; // 전부 방문했는지 확인
-=======
-  const visited = new Set();
-  function dfs(room) {
-    visited.add(room);
-    for (const key of rooms[room]) {
-      if (!visited.has(key)) dfs(key);
-    }
-  }
-  dfs(0);
-  return visited.size === rooms.length;
->>>>>>> 08aa47bda981d94e3eb54b0633778ad3d8ff9cfd
 }
 ```
 
@@ -263,3 +255,235 @@ function solution(info, edges) {
 ```
 
 ---
+
+## 📦 프로그래머스 DFS 4대장 
+
+> 코테 실전에서 바로 제출 가능한 깔끔한 버전 + “왜 이렇게 짰는지” 근거 포함
+
+### 1️⃣ 타겟 넘버 — 이진 선택 DFS (O(2^N))
+
+- 문제 링크: [프로그래머스 43165. 타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
+
+```js
+function solution(numbers, target) {
+  // count: 정답 개수
+  let count = 0;
+
+  /**
+   * dfs(index, total)
+   * - index: 현재 고려 중인 numbers의 인덱스
+   * - total: index 이전까지 부호(+/-)를 붙여 누적한 합
+   *
+   * 구조적으로:
+   *   for (각 수에 + 또는 - 부호 선택)  ← 이진 선택
+   *     dfs(next)
+   */
+  function dfs(index, total) {
+    // 모든 숫자를 사용했을 때 결과 확인
+    if (index === numbers.length) {
+      if (total === target) count++;
+      return;
+    }
+
+    // 현재 숫자를 더하는 경우
+    dfs(index + 1, total + numbers[index]);
+
+    // 현재 숫자를 빼는 경우
+    dfs(index + 1, total - numbers[index]);
+  }
+
+  // 초기 상태에서 시작
+  dfs(0, 0);
+  return count;
+}
+```
+
+- 왜 이렇게 짰나: 각 숫자마다 (+/-) 두 갈래로 뻗는 완전탐색이므로 DFS가 자연스럽고 구현이 단순함.
+- 대안: BFS도 가능하지만 상태가 단순해 DFS가 더 직관적.
+
+---
+
+### 2️⃣ 네트워크 — 그래프 연결요소 개수 (인접행렬 + DFS)
+
+- 문제 링크: [프로그래머스 43162. 네트워크](https://school.programmers.co.kr/learn/courses/30/lessons/43162)
+
+```js
+function solution(n, computers) {
+  // visited[i]: i번 컴퓨터 방문 여부
+  const visited = Array(n).fill(false);
+
+  /**
+   * dfs(node)
+   * - node에 연결된 모든 컴퓨터를 방문처리 (같은 연결요소)
+   */
+  function dfs(node) {
+    visited[node] = true;
+
+    // 인접행렬 한 행을 순회하며 연결된 노드를 확장
+    for (let next = 0; next < n; next++) {
+      if (computers[node][next] === 1 && !visited[next]) {
+        dfs(next);
+      }
+    }
+  }
+
+  // 각 노드를 시작점으로 보며, 새 방문이면 새로운 네트워크 발견
+  let networkCount = 0;
+
+  for (let i = 0; i < n; i++) {
+    if (!visited[i]) {
+      dfs(i);
+      networkCount++;
+    }
+  }
+
+  return networkCount;
+}
+```
+
+- 왜 이렇게 짰나: “연결요소 개수”는 전형적인 DFS/BFS 주제. 방문 배열만으로 간단히 해결.
+
+---
+
+### 3️⃣ 피로도 — 순열 + 백트래킹 + 가지치기 (핵심)
+
+- 문제 링크: [프로그래머스 87946. 피로도](https://school.programmers.co.kr/learn/courses/30/lessons/87946)
+
+```js
+function solution(k, dungeons) {
+  const n = dungeons.length;
+
+  // 각 던전을 이미 사용했는지 체크 (순열용 visited)
+  const visited = Array(n).fill(false);
+
+  // 최대 탐험 개수 (전역 최댓값)
+  let maxCount = 0;
+
+  /**
+   * dfs(currentK, count)
+   * currentK: 현재 남은 피로도
+   * count: 지금까지 탐험한 던전 수
+   *
+   * 구조적으로:
+   * for (첫 번째 던전 선택)
+   *   for (두 번째 던전 선택)
+   *     for (세 번째 던전 선택)
+   *       ...
+   * → DFS가 "가변 길이 중첩 for문 생성기" 역할
+   */
+  function dfs(currentK, count) {
+    // 지금 상태에서의 결과로 최대값 갱신
+    maxCount = Math.max(maxCount, count);
+
+    // === 이 for문이 "현재 깊이의 for문" ===
+    for (let i = 0; i < n; i++) {
+      // 이미 사용한 던전이면 스킵 (순열 중복 방지)
+      if (visited[i]) continue;
+
+      const [need, cost] = dungeons[i];
+
+      // 입장 가능하면만 진행 (가지치기)
+      if (currentK >= need) {
+        // 이 던전 사용 처리
+        visited[i] = true;
+
+        // 다음 깊이 (다음 for문 레벨)
+        dfs(currentK - cost, count + 1);
+
+        // 백트래킹: 사용 취소 (다른 순서 탐색용)
+        visited[i] = false;
+      }
+    }
+  }
+
+  // 초기 상태: 최초 피로도 들고 출발
+  dfs(k, 0);
+
+  return maxCount;
+}
+```
+
+- 왜 이렇게 짰나: “순서를 고려해 모두 시도”는 순열 탐색이며, 피로도 불만족 시 가지치기로 큰 성능 차이.
+- 스터디용 핵심 멘트: “DFS로 ‘던전 수만큼 중첩된 for문’을 일반화했고, visited로 중복을 막고, currentK로 각 경로 상태를 시뮬레이션합니다.”
+
+---
+
+### 4️⃣ 여행경로 — 경로 순열 + 사전순 + 조기 종료
+
+- 문제 링크: [프로그래머스 43164. 여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164)
+
+```js
+function solution(tickets) {
+  // 사전순으로 가장 앞서는 경로를 위해 정렬
+  tickets.sort();
+
+  const n = tickets.length;
+
+  // 각 티켓 사용 여부 (순열용 visited)
+  const visited = Array(n).fill(false);
+
+  // 현재 경로 (경로 시뮬레이션 상태)
+  const route = ["ICN"];
+
+  let answer = [];
+
+  /**
+   * dfs(current, usedCount)
+   * current: 현재 공항
+   * usedCount: 사용한 티켓 수
+   *
+   * 구조적으로:
+   * for (첫 번째 티켓 선택)
+   *   for (두 번째 티켓 선택)
+   *     for (세 번째 티켓 선택)
+   *       ...
+   * 사전순 정렬 + 첫 해답 즉시 종료(조기 종료)
+   */
+  function dfs(current, usedCount) {
+    // 모든 티켓을 다 사용했으면 경로 완성
+    if (usedCount === n) {
+      // 현재 경로를 정답으로 저장
+      answer = route.slice();
+      return true; // 가장 빠른 경로 찾았으니 종료
+    }
+
+    // === 현재 깊이의 for문 ===
+    for (let i = 0; i < n; i++) {
+      // 아직 안 쓴 티켓이고, 출발지가 현재 공항이면
+      if (!visited[i] && tickets[i][0] === current) {
+        visited[i] = true;
+        route.push(tickets[i][1]);
+
+        // 다음 티켓 선택 (다음 for문 깊이)
+        if (dfs(tickets[i][1], usedCount + 1)) {
+          return true; // 사전순으로 가장 빠른 답 → 바로 종료
+        }
+
+        // 백트래킹
+        route.pop();
+        visited[i] = false;
+      }
+    }
+
+    return false;
+  }
+
+  // 항상 ICN에서 출발
+  dfs("ICN", 0);
+
+  return answer;
+}
+```
+
+- 왜 이렇게 짰나: “모든 티켓을 정확히 한 번 사용”은 경로 순열. 사전순 요구가 있어 정렬 후 DFS로 첫 해답에서 종료.
+
+---
+
+### 💡 5주차 DFS 공통 패턴 요약 
+
+- **타겟 넘버**: 이진 선택 DFS (O(2^N))
+- **네트워크**: 그래프 연결요소 개수
+- **피로도**: 순열 + 백트래킹(+ 가지치기)
+- **여행경로**: 경로 구성 + 사전순 + 조기 종료
+
+> DFS는 “가변 길이 중첩 for문 생성기”다. 입력 크기가 늘어나도 코드 구조가 그대로 유지되고, 조건 불만족 브랜치를 “조기 컷(가지치기)” 하며 탐색 공간을 줄인다.
