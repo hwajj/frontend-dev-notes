@@ -96,6 +96,10 @@
         <h2>Medium</h2>
         <ul id="medium-list"></ul>
       </div>
+      <div class="section">
+        <h2>TS 노트</h2>
+        <ul id="ts-notes-list"></ul>
+      </div>
     </div>
     <div class="tab-content" id="content-algo">
       <div class="section">
@@ -153,6 +157,9 @@
         "3.Omit.ts",
         "8.Readonly.ts",
         "9.Deep_Readonly.ts",
+      ];
+      const tsNotesFiles = [
+        { name: "Conditional & Distributive Types", file: "advanced-types/ConditionalTypes.md" },
       ];
       const searchFiles = [
         { name: "DFS (깊이 우선 탐색)", file: "search/DFS.md" },
@@ -248,6 +255,7 @@
       showViewer(false);
       renderList("easy-list", easyFiles, "ts-challenge/easy");
       renderList("medium-list", mediumFiles, "ts-challenge/medium");
+      renderList("ts-notes-list", tsNotesFiles, "ts", true);
       renderList("search-list", searchFiles, "algorithm", true);
       renderList(
         "data-structures-list",
