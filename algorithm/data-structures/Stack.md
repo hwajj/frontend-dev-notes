@@ -1,7 +1,7 @@
-# 📚 스택 (Stack)
+# 📚 스택·큐 (Stack / Queue)
 
-> 주제: 스택
-> 목표: 각 알고리즘의 대표 문제를 예시로 개념, 입력·출력, 코드, 포인트까지 한눈에 보기
+> 주제: 스택, 큐  
+> 목표: 스택·큐 개념과 대표 문제(LeetCode, 스터디, 스택·큐 유형)를 한눈에 보기
 
 ---
 
@@ -9,10 +9,11 @@
 
 | 개념          | 설명                                                                               |
 | ------------- | ---------------------------------------------------------------------------------- |
-| **스택**      | LIFO(Last-In-First-Out) 구조 - 마지막에 넣은 것이 먼저 나옴                        |
+| **스택**      | LIFO(Last-In-First-Out) — 마지막에 넣은 것이 먼저 나옴                             |
+| **큐**        | FIFO(First-In-First-Out) — 먼저 넣은 것이 먼저 나옴 (순서 유지, 대기열)           |
 | **자료구조**  | 배열 또는 연결 리스트로 구현                                                       |
-| **주요 연산** | `push()` (추가), `pop()` (제거), `peek()` (확인)                                   |
-| **활용 분야** | 괄호 검사, 수식 계산, 역순 처리, Monotonic Stack (오큰수, Next Greater Element) 등 |
+| **주요 연산** | 스택: `push()` / `pop()` / `peek()` · 큐: `enqueue()` / `dequeue()`                |
+| **활용 분야** | 스택: 괄호 검사, 수식 계산, Monotonic Stack · 큐: BFS, 순서 유지, 대기 시뮬레이션  |
 
 ---
 
@@ -146,5 +147,109 @@ function isValid(s) {
   return stack.length === 0;
 }
 ```
+
+---
+
+## 📦 스택·큐 대표 문제
+
+> 스택·큐 유형 대표 4문제 — 문제 설명, 제한사항, 입출력 예, JS 풀이
+
+### 1️⃣ 올바른 괄호 (Lv2)
+
+- **링크**: [올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
+- 괄호 `'('` / `')'`만 있을 때 올바른 짝이면 `true`. **스택**: 여는 괄호 push, 닫는 괄호 시 top과 짝 맞으면 pop.
+
+```js
+function solution(s) {
+  const stack = [];
+  for (const ch of s) {
+    if (ch === "(") stack.push(ch);
+    else {
+      if (stack.length === 0) return false;
+      stack.pop();
+    }
+  }
+  return stack.length === 0;
+}
+```
+
+---
+
+### 2️⃣ 기능개발 (Lv2)
+
+- **링크**: [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586)
+- 앞 기능이 배포될 때 함께 배포. 남은 일수 `Math.ceil((100-p)/speed)` 계산 후, 연속된 완료 개수씩 묶어서 return.
+
+```js
+function solution(progresses, speeds) {
+  const days = progresses.map((p, i) => Math.ceil((100 - p) / speeds[i]));
+  const answer = [];
+  let maxDay = days[0], count = 1;
+  for (let i = 1; i < days.length; i++) {
+    if (days[i] <= maxDay) count++;
+    else { answer.push(count); count = 1; maxDay = days[i]; }
+  }
+  answer.push(count);
+  return answer;
+}
+```
+
+---
+
+### 3️⃣ 프로세스 (프린터) (Lv2)
+
+- **링크**: [프린터](https://school.programmers.co.kr/learn/courses/30/lessons/42587)
+- 큐에서 맨 앞을 꺼냈을 때 더 높은 우선순위가 있으면 다시 맨 뒤에 넣기. 실행 순서로 `location` 번째일 때의 순서 return.
+
+```js
+function solution(priorities, location) {
+  const queue = priorities.map((p, i) => [p, i]);
+  let order = 0;
+  while (queue.length) {
+    const [priority, index] = queue.shift();
+    const hasHigher = queue.some(([p]) => p > priority);
+    if (hasHigher) queue.push([priority, index]);
+    else { order++; if (index === location) return order; }
+  }
+}
+```
+
+---
+
+### 4️⃣ 다리를 지나는 트럭 (Lv2)
+
+- **링크**: [다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
+- 다리 위 무게·대수 제한 안에서 시간 축 시뮬레이션. 큐에 `{ weight, outAt }` 넣고, 매 초 내린 트럭 제거 후 진입 가능하면 추가.
+
+```js
+function solution(bridge_length, weight, truck_weights) {
+  let time = 0;
+  const bridge = [];
+  let totalWeight = 0, i = 0;
+  while (i < truck_weights.length || bridge.length > 0) {
+    time++;
+    if (bridge.length && bridge[0].outAt === time) {
+      totalWeight -= bridge.shift().weight;
+    }
+    if (i < truck_weights.length && totalWeight + truck_weights[i] <= weight && bridge.length < bridge_length) {
+      totalWeight += truck_weights[i];
+      bridge.push({ weight: truck_weights[i], outAt: time + bridge_length });
+      i++;
+    }
+  }
+  return time;
+}
+```
+
+---
+
+### ⚡ 스택·큐 대표 문제 정리
+
+| 문제             | 유형        | 핵심 포인트                          |
+| ---------------- | ----------- | ------------------------------------ |
+| 올바른 괄호      | 스택        | push/pop으로 짝 검사                 |
+| 기능개발         | 순서+완료일 | 남은 일수 → 연속 배포 묶음          |
+| 프로세스(프린터) | 큐+우선순위 | 더 높은 우선순위 있으면 맨 뒤로     |
+| 다리를 지나는 트럭 | 큐+시뮬레이션 | 무게·길이 제한, outAt으로 진출 시점 |
 
 ---
