@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공부 노트</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 2rem;
+        background: #f9f9f9;
+      }
+      h1 {
+        color: #2d3a4b;
+      }
+      .section {
+        margin-bottom: 2rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 0.5rem 0;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      pre {
+        background: #f6f6f6;
+        color: #222;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 1rem;
+        line-height: 1.6;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      }
+      #viewer {
+        margin-top: 2rem;
+        display: none;
+      }
+      .tabs {
+        display: flex;
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 2rem;
+      }
+      .tab {
+        padding: 0.7rem 2rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 1.1rem;
+        color: #888;
+        outline: none;
+        transition:
+          color 0.2s,
+          border-bottom 0.2s;
+        border-bottom: 2px solid transparent;
+      }
+      .tab.active {
+        color: #2d3a4b;
+        border-bottom: 2px solid #007acc;
+        font-weight: bold;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      #md-content {
+        max-width: 100%;
+        overflow-x: auto;
+        line-height: 1.65;
+        font-size: 1rem;
+        color: #222;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      #md-content h1,
+      #md-content h2,
+      #md-content h3 {
+        margin-top: 1.25em;
+        margin-bottom: 0.5em;
+        line-height: 1.3;
+      }
+      #md-content pre {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9rem;
+      }
+      #viewer #file-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+      }
+      .list-link {
+        display: block;
+        padding: 0.65rem 0;
+        min-height: 44px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 640px) {
+        body {
+          margin: 1rem;
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 1.35rem;
+        }
+        h2 {
+          font-size: 1.1rem;
+        }
+        .tabs {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          flex-wrap: nowrap;
+          gap: 0;
+          margin: 0 -1rem 1.25rem;
+          padding: 0 1rem;
+        }
+        .tab {
+          flex: 1 1 auto;
+          min-width: max-content;
+          padding: 0.75rem 1rem;
+          min-height: 48px;
+          font-size: 1rem;
+        }
+        #viewer {
+          margin-top: 1rem;
+          padding-bottom: 2rem;
+        }
+        #viewer #file-title {
+          font-size: 1.05rem;
+        }
+        #md-content {
+          font-size: 0.95rem;
+        }
+        #md-content pre,
+        #md-content code {
+          font-size: 0.8rem;
+        }
+        pre {
+          padding: 0.75rem;
+        }
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <h1>개발 공부 노트</h1>
+    <div class="tabs">
+      <button class="tab active" id="tab-ts">TS Challenge</button>
+      <button class="tab" id="tab-algo">알고리즘</button>
+      <button class="tab" id="tab-diary">diary</button>
+    </div>
+    <div class="tab-content active" id="content-ts">
+      <div class="section">
+        <h2>Easy</h2>
+        <ul id="easy-list"></ul>
+      </div>
+      <div class="section">
+        <h2>Medium</h2>
+        <ul id="medium-list"></ul>
+      </div>
+      <div class="section">
+        <h2>TS 노트</h2>
+        <ul id="ts-notes-list"></ul>
+      </div>
+      <div class="section">
+        <h2>스터디 이론</h2>
+        <ul id="study-notes-list"></ul>
+      </div>
+    </div>
+    <div class="tab-content" id="content-algo">
+      <div class="section">
+        <h2>탐색 알고리즘</h2>
+        <ul id="search-list"></ul>
+      </div>
+      <div class="section">
+        <h2>자료구조</h2>
+        <ul id="data-structures-list"></ul>
+      </div>
+      <div class="section">
+        <h2>문자열 처리</h2>
+        <ul id="string-list"></ul>
+      </div>
+      <div class="section">
+        <h2>배열/문자열 기법</h2>
+        <ul id="techniques-list"></ul>
+      </div>
+      <div class="section">
+        <h2>그래프 알고리즘</h2>
+        <ul id="graph-list"></ul>
+      </div>
+      <div class="section">
+        <h2>최적화 알고리즘</h2>
+        <ul id="optimization-list"></ul>
+      </div>
+    </div>
+    <div class="tab-content" id="content-diary">
+      <div class="section">
+        <h2>2026-04</h2>
+        <ul id="diary-2026-04-list"></ul>
+      </div>
+      <div class="section">
+        <h2>2026-05</h2>
+        <ul id="diary-2026-05-list"></ul>
+      </div>
+    </div>
+    <div id="viewer">
+      <h2 id="file-title"></h2>
+      <pre
+        style="display: none"
+      ><code id="file-content" class="language-typescript"></code></pre>
+      <div id="md-content" style="display: none"></div>
+    </div>
+    <script>
+      // 문제 파일 목록 (자동화하려면 빌드시 스크립트로 생성 추천)
+      const easyFiles = [
+        "11.Tuple_to_Object.ts",
+        "14.First_of_Array.ts",
+        "18.Length_of_Tuple.ts",
+        "189.Awaited.ts",
+        "268.If.ts",
+        "3057.Push.ts",
+        "3060.Unshift.ts",
+        "3312.Parameters.ts",
+        "4.Pick.ts",
+        "43.Exclude.ts",
+        "533.Concat.ts",
+        "7.Readonly.ts",
+        "898.Includes.ts",
+      ];
+      const mediumFiles = [
+        "10.Tuple_to_Union'.ts",
+        "2.Get_Return_Type.ts",
+        "3.Omit.ts",
+        "8.Readonly.ts",
+        "9.Deep_Readonly.ts",
+      ];
+      const tsNotesFiles = [
+        {
+          name: "Conditional & Distributive Types",
+          file: "advanced-types/ConditionalTypes.md",
+        },
+      ];
+      const studyNotesFiles = [
+        {
+          name: "1주차 — 타입/가드/오버로드/조건부/Validator",
+          file: "week1-types-theory.md",
+        },
+      ];
+      const searchFiles = [
+        { name: "DFS (깊이 우선 탐색)", file: "search/DFS.md" },
+        { name: "BFS (너비 우선 탐색)", file: "search/BFS.md" },
+        { name: "이진 탐색", file: "search/BinarySearch.md" },
+        { name: "다익스트라", file: "search/Dijkstra.md" },
+        { name: "트라이", file: "search/Trie.md" },
+      ];
+      const dataStructuresFiles = [
+        { name: "힙", file: "data-structures/Heap.md" },
+        { name: "해시맵", file: "data-structures/HashMap.md" },
+        { name: "스택", file: "data-structures/Stack.md" },
+        { name: "세그먼트 트리", file: "data-structures/SegmentTree.md" },
+        { name: "유니온 파인드 (DSU)", file: "data-structures/DSU.md" },
+      ];
+      const stringFiles = [{ name: "문자열 처리", file: "string/String.md" }];
+      const techniquesFiles = [
+        { name: "투 포인터", file: "techniques/TwoPointer.md" },
+        { name: "슬라이딩 윈도우", file: "techniques/SlidingWindow.md" },
+        { name: "부분합", file: "techniques/PrefixSum.md" },
+      ];
+      const graphFiles = [
+        { name: "위상정렬", file: "graph/TopologicalSort.md" },
+      ];
+      const optimizationFiles = [
+        { name: "동적 계획법 (DP)", file: "optimization/DP.md" },
+        { name: "그리디", file: "optimization/Greedy.md" },
+      ];
+      /** 월별로 섹션·배열을 나누고, 새 달이면 항목 추가 */
+      const diary202604Files = [
+        { name: "2026-04-13", file: "2026-04-13.md" },
+        { name: "2026-04-14", file: "2026-04-14.md" },
+        { name: "2026-04-16", file: "2026-04-16.md" },
+        { name: "2026-04-17", file: "2026-04-17.md" },
+        { name: "2026-04-19", file: "2026-04-19.md" },
+        { name: "2026-04-20", file: "2026-04-20.md" },
+        { name: "2026-04-21", file: "2026-04-21.md" },
+        { name: "2026-04-23", file: "2026-04-23.md" },
+        { name: "2026-04-27", file: "2026-04-27.md" },
+        { name: "2026-04-30", file: "2026-04-30.md" },
+      ];
+      const diary202605Files = [
+        { name: "2026-05-01", file: "2026-05-01.md" },
+        { name: "2026-05-04", file: "2026-05-04.md" },
+        { name: "2026-05-05", file: "2026-05-05.md" },
+        { name: "2026-05-11", file: "2026-05-11.md" },
+        { name: "2026-05-12", file: "2026-05-12.md" },
+        { name: "2026-05-27", file: "2026-05-27.md" },
+      ];
+      function renderList(listId, files, folder, isMarkdown = false) {
+        const ul = document.getElementById(listId);
+        files.forEach((fileObj) => {
+          let file, displayName;
+          if (typeof fileObj === "string") {
+            file = fileObj;
+            displayName = fileObj;
+          } else {
+            file = fileObj.file;
+            displayName = fileObj.name;
+          }
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.className = "list-link";
+          a.href = "#viewer";
+          a.setAttribute("role", "button");
+          a.textContent = displayName;
+          if (isMarkdown) {
+            a.onclick = (e) => {
+              e.preventDefault();
+              loadMarkdown(folder + "/" + file, displayName);
+            };
+          } else {
+            a.onclick = (e) => {
+              e.preventDefault();
+              loadFile(folder + "/" + file, displayName);
+            };
+          }
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      }
+      function showViewer(show, isMarkdown = false) {
+        document.getElementById("viewer").style.display = show
+          ? "block"
+          : "none";
+        document.getElementById("file-content").parentElement.style.display =
+          !isMarkdown && show ? "block" : "none";
+        document.getElementById("md-content").style.display =
+          isMarkdown && show ? "block" : "none";
+      }
+      async function loadFile(path, title) {
+        document.getElementById("file-title").textContent = title;
+        document.getElementById("file-content").textContent = "로딩 중...";
+        showViewer(true);
+        try {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error("파일을 불러올 수 없습니다.");
+          const text = await res.text();
+          document.getElementById("file-content").innerHTML = Prism.highlight(
+            text,
+            Prism.languages.typescript,
+            "typescript",
+          );
+          requestAnimationFrame(() => {
+            document.getElementById("viewer").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        } catch (e) {
+          document.getElementById("file-content").textContent = e.message;
+        }
+      }
+      async function loadMarkdown(path, title) {
+        document.getElementById("file-title").textContent = title;
+        document.getElementById("md-content").textContent = "로딩 중...";
+        showViewer(true, true);
+        try {
+          const res = await fetch(path);
+          if (!res.ok) throw new Error("파일을 불러올 수 없습니다.");
+          const text = await res.text();
+          document.getElementById("md-content").innerHTML = marked.parse(text, { breaks: true })
+          Prism.highlightAll();
+          requestAnimationFrame(() => {
+            document.getElementById("viewer").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        } catch (e) {
+          document.getElementById("md-content").textContent = e.message;
+        }
+      }
+      // 페이지 로드시 viewer 숨김
+      showViewer(false);
+      renderList("easy-list", easyFiles, "ts-challenge/easy");
+      renderList("medium-list", mediumFiles, "ts-challenge/medium");
+      renderList("ts-notes-list", tsNotesFiles, "ts", true);
+      renderList("study-notes-list", studyNotesFiles, "study", true);
+      renderList("search-list", searchFiles, "algorithm", true);
+      renderList(
+        "data-structures-list",
+        dataStructuresFiles,
+        "algorithm",
+        true,
+      );
+      renderList("string-list", stringFiles, "algorithm", true);
+      renderList("techniques-list", techniquesFiles, "algorithm", true);
+      renderList("graph-list", graphFiles, "algorithm", true);
+      renderList("optimization-list", optimizationFiles, "algorithm", true);
+      renderList("diary-2026-04-list", diary202604Files, "diary", true);
+      renderList("diary-2026-05-list", diary202605Files, "diary", true);
+
+      // 탭 전환 로직
+      const tabTS = document.getElementById("tab-ts");
+      const tabAlgo = document.getElementById("tab-algo");
+      const tabDiary = document.getElementById("tab-diary");
+      const contentTS = document.getElementById("content-ts");
+      const contentAlgo = document.getElementById("content-algo");
+      const contentDiary = document.getElementById("content-diary");
+      const tabPanels = [
+        { id: "ts", btn: tabTS, panel: contentTS },
+        { id: "algo", btn: tabAlgo, panel: contentAlgo },
+        { id: "diary", btn: tabDiary, panel: contentDiary },
+      ];
+      function activateTab(tab) {
+        tabPanels.forEach(({ id, btn, panel }) => {
+          const on = id === tab;
+          btn.classList.toggle("active", on);
+          panel.classList.toggle("active", on);
+        });
+        showViewer(false);
+      }
+      tabTS.onclick = () => activateTab("ts");
+      tabAlgo.onclick = () => activateTab("algo");
+      tabDiary.onclick = () => activateTab("diary");
+    </script>
+  </body>
+</html>
