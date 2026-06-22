@@ -310,6 +310,11 @@
         { name: "2026-05-12", file: "2026-05-12.md" },
         { name: "2026-05-27", file: "2026-05-27.md" },
       ];
+
+      const diary202606Files = [
+        { name: "2026-06-21", file: "2026-06-21.md" },
+        { name: "2026-06-22", file: "2026-06-22.md" },
+      ];
       function renderList(listId, files, folder, isMarkdown = false) {
         const ul = document.getElementById(listId);
         files.forEach((fileObj) => {
@@ -413,6 +418,7 @@
       renderList("optimization-list", optimizationFiles, "algorithm", true);
       renderList("diary-2026-04-list", diary202604Files, "diary", true);
       renderList("diary-2026-05-list", diary202605Files, "diary", true);
+      renderList("diary-2026-06-list", diary202606Files, "diary", true);
 
       // 탭 전환 로직
       const tabTS = document.getElementById("tab-ts");
