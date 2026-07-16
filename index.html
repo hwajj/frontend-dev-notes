@@ -105,6 +105,14 @@
         min-height: 44px;
         box-sizing: border-box;
       }
+      #interview-toc-list .toc-h2 {
+        font-weight: 600;
+        margin-top: 0.75rem;
+      }
+      #interview-toc-list .toc-h3 {
+        padding-left: 1.25rem;
+        font-size: 0.95rem;
+      }
       @media (max-width: 640px) {
         body {
           margin: 1rem;
@@ -164,6 +172,7 @@
       <button class="tab active" id="tab-ts">TS Challenge</button>
       <button class="tab" id="tab-algo">알고리즘</button>
       <button class="tab" id="tab-diary">diary</button>
+      <button class="tab" id="tab-fe">FE학습</button>
     </div>
     <div class="tab-content active" id="content-ts">
       <div class="section">
@@ -207,6 +216,13 @@
       <div class="section">
         <h2>최적화 알고리즘</h2>
         <ul id="optimization-list"></ul>
+      </div>
+    </div>
+    <div class="tab-content" id="content-interview">
+      <div class="section">
+        <h2>목차</h2>
+        <p id="interview-status">목차 불러오는 중...</p>
+        <ul id="interview-toc-list"></ul>
       </div>
     </div>
     <div class="tab-content" id="content-diary">
@@ -319,6 +335,138 @@
         { name: "2026-06-21", file: "2026-06-21.md" },
         { name: "2026-06-22", file: "2026-06-22.md" },
       ];
+      const INTERVIEW_MD_PATH = "interview/interview.md";
+      let interviewMarkdownCache = null;
+
+      function slugifyHeading(text) {
+        return text
+          .toLowerCase()
+          .trim()
+          .replace(/\s+/g, "-")
+          .replace(/[^\w\u3131-\uD79D-]/g, "");
+      }
+
+      function extractHeadings(markdown) {
+        const headings = [];
+
+        for (const match of markdown.matchAll(/^(#{1,3})\s+(.+)$/gm)) {
+          headings.push({
+            level: match[1].length,
+            text: match[2].trim(),
+          });
+        }
+
+        return headings;
+      }
+      function addHeadingIds(html) {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = html;
+        const slugCount = new Map();
+        wrapper.querySelectorAll("h1, h2, h3").forEach((heading) => {
+          const base = slugifyHeading(heading.textContent);
+          const count = slugCount.get(base) || 0;
+          heading.id = count > 0 ? `${base}-${count}` : base;
+          slugCount.set(base, count + 1);
+        });
+        return wrapper.innerHTML;
+      }
+
+      function renderInterviewToc(headings) {
+        const ul = document.getElementById("interview-toc-list");
+        const status = document.getElementById("interview-status");
+        ul.innerHTML = "";
+
+        const tocHeadings = headings.filter((h) => h.level >= 2);
+        if (tocHeadings.length === 0) {
+          status.textContent = "목차로 쓸 제목(##, ###)이 없습니다.";
+          return;
+        }
+
+        status.textContent = "항목을 클릭하면 본문이 아래에 열립니다.";
+
+        const allLi = document.createElement("li");
+        const allLink = document.createElement("a");
+        allLink.className = "list-link";
+        allLink.href = "#viewer";
+        allLink.setAttribute("role", "button");
+        allLink.textContent = "전체 보기";
+        allLink.onclick = (e) => {
+          e.preventDefault();
+          loadInterviewMarkdown();
+        };
+        allLi.appendChild(allLink);
+        ul.appendChild(allLi);
+
+        tocHeadings.forEach(({ level, text, id }) => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.className = `list-link toc-h${level}`;
+          a.href = "#viewer";
+          a.setAttribute("role", "button");
+          a.textContent = text;
+          a.onclick = (e) => {
+            e.preventDefault();
+            loadInterviewMarkdown(id);
+          };
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      }
+
+      async function ensureInterviewMarkdown() {
+        if (interviewMarkdownCache) return interviewMarkdownCache;
+        const res = await fetch(INTERVIEW_MD_PATH);
+        if (!res.ok) throw new Error("면접 준비 파일을 불러올 수 없습니다.");
+        interviewMarkdownCache = await res.text();
+        return interviewMarkdownCache;
+      }
+
+      async function loadInterviewToc() {
+        const status = document.getElementById("interview-status");
+        const ul = document.getElementById("interview-toc-list");
+        status.textContent = "목차 불러오는 중...";
+        ul.innerHTML = "";
+        try {
+          const markdown = await ensureInterviewMarkdown();
+          console.log(markdown);   // 추가
+          markdown.split("\n").forEach((line) => {
+  console.log(JSON.stringify(line));
+});
+          console.log(extractHeadings(markdown)); // 추가
+          renderInterviewToc(extractHeadings(markdown));
+        } catch (e) {
+          status.textContent = e.message;
+        }
+      }
+
+      async function loadInterviewMarkdown(scrollToId = null) {
+        document.getElementById("file-title").textContent = "면접 준비";
+        document.getElementById("md-content").textContent = "로딩 중...";
+        showViewer(true, true);
+        try {
+          const text = await ensureInterviewMarkdown();
+          const html = addHeadingIds(
+            marked.parse(text, { breaks: true }),
+          );
+          document.getElementById("md-content").innerHTML = html;
+          Prism.highlightAll();
+          requestAnimationFrame(() => {
+            document.getElementById("viewer").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            if (scrollToId) {
+              const target = document.getElementById(scrollToId);
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
+          });
+        } catch (e) {
+          document.getElementById("md-content").textContent = e.message;
+        }
+      }
+
       function renderList(listId, files, folder, isMarkdown = false) {
         const ul = document.getElementById(listId);
         files.forEach((fileObj) => {
@@ -428,26 +576,32 @@
       const tabTS = document.getElementById("tab-ts");
       const tabAlgo = document.getElementById("tab-algo");
       const tabDiary = document.getElementById("tab-diary");
+      const tabFe = document.getElementById("tab-fe");
       const contentTS = document.getElementById("content-ts");
       const contentAlgo = document.getElementById("content-algo");
+      const contentInterview = document.getElementById("content-interview");
       const contentDiary = document.getElementById("content-diary");
       const tabPanels = [
         { id: "ts", btn: tabTS, panel: contentTS },
         { id: "algo", btn: tabAlgo, panel: contentAlgo },
         { id: "diary", btn: tabDiary, panel: contentDiary },
+        { id: "interview", btn: tabFe, panel: contentInterview },
       ];
       function activateTab(tab) {
         tabPanels.forEach(({ id, btn, panel }) => {
           const on = id === tab;
-          btn.classList.toggle("active", on);
+          if (btn) btn.classList.toggle("active", on);
           panel.classList.toggle("active", on);
         });
         showViewer(false);
+        if (tab === "interview") loadInterviewToc();
       }
       tabTS.onclick = () => activateTab("ts");
       tabAlgo.onclick = () => activateTab("algo");
       tabDiary.onclick = () => activateTab("diary");
-      
+      tabFe.onclick = () => {
+        window.location.href = "./fe/";
+      };
     </script>
   </body>
 </html>
