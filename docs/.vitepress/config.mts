@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { curriculumSidebar } from "./curriculum-sidebar.mts";
 
 export default defineConfig({
   lang: "ko-KR",
@@ -8,8 +9,15 @@ export default defineConfig({
   cleanUrls: true,
   outDir: "../fe",
   themeConfig: {
-    nav: [{ text: "면접 준비", link: "/interview/" }],
+    nav: [
+      { text: "커리큘럼", link: "/curriculum/" },
+      { text: "면접 준비", link: "/interview/" },
+    ],
     sidebar: {
+      "/curriculum/": [
+        { text: "커리큘럼 개요", link: "/curriculum/" },
+        ...curriculumSidebar,
+      ],
       "/interview/": [
         {
           text: "JavaScript",
@@ -41,4 +49,3 @@ export default defineConfig({
     socialLinks: [],
   },
 });
-

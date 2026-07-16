@@ -1,43 +1,31 @@
-# 면접 준비
+# 면접 준비 (이전 방식)
 
-이 파일의 `#`, `##`, `###` 제목이 자동으로 목차가 됩니다. 항목을 추가·수정할 때 이 마크다운만 편집하면 됩니다.
+> **이 파일은 더 이상 편집하지 않습니다.**
+> FE 학습 노트는 **`docs/`** 아래에서 **파일 1개 = 페이지 1개**로 관리합니다.
 
-## JavaScript
+## 어디를 수정하나요?
 
-### 클로저란?
+| 하려는 일 | 수정 위치 |
+|-----------|-----------|
+| 문서 내용 추가·수정 | `docs/interview/<카테고리>/<slug>.md` |
+| 사이드바 메뉴 | `docs/.vitepress/config.mts` |
+| 사이트 미리보기 | `npm run docs:dev` |
+| 배포용 HTML 생성 | `npm run docs:build` → `fe/` 폴더 |
 
-함수와 그 함수가 선언된 렉시컬 환경의 조합. 바깥 변수를 기억한다.
+## 문서 목록 (현재)
 
-### 이벤트 루프
+- JavaScript: `docs/interview/javascript/closure.md`, `event-loop.md`
+- React: `docs/interview/react/virtual-dom.md`, `hooks-rules.md`
+- TypeScript: `docs/interview/typescript/generics.md`, `utility-types.md`
+- CS: `docs/interview/cs/http-vs-https.md`
 
-콜 스택, 태스크 큐, 마이크로태스크 큐의 실행 순서를 설명할 수 있어야 한다.
+## 새 페이지 추가 방법
 
-## React
+1. `docs/interview/<카테고리>/<영문-slug>.md` 파일 생성 (제목은 `# 한글 제목`)
+2. `docs/.vitepress/config.mts`의 `sidebar`에 링크 추가
+3. `npm run docs:build` 실행 후 `index.html` → **FE학습** 탭에서 확인
 
-### Virtual DOM
+## 참고
 
-실제 DOM 조작 비용을 줄이기 위해 변경 사항을 모아 한 번에 반영하는 방식.
-
-### Hooks 규칙
-
-최상위에서만 호출, 조건문·반복문 안에서 호출하지 않는다.
-
-## TypeScript
-
-### 제네릭
-
-타입을 파라미터처럼 넘겨 재사용 가능한 타입/함수를 만든다.
-
-### 유틸리티 타입
-
-`Pick`, `Omit`, `Partial`, `Required` 등 — 면접에서 자주 나온다.
-
-## CS 기초
-
-### HTTP vs HTTPS
-
-암호화 여부, TLS 핸드셰이크, 포트 차이.
-
-### 브라우저 렌더링 과정
-
-HTML 파싱 → DOM → CSSOM → Render Tree → Layout → Paint → Composite.
+- `fe/` 폴더는 **빌드 결과물**입니다. 직접 수정하지 마세요.
+- `fe/index.html`이 한 줄로 보이는 것은 정상입니다 (VitePress가 압축해서 생성).
