@@ -5,7 +5,8 @@ export default defineConfig({
   lang: "ko-KR",
   title: "FE 학습",
   description: "프론트엔드 학습 노트",
-  base: "/fe/",
+  // GitHub Pages project site: https://hwajj.github.io/frontend-dev-notes/fe/
+  base: "/frontend-dev-notes/fe/",
   cleanUrls: true,
   outDir: "../fe",
   themeConfig: {

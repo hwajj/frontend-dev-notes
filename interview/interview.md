@@ -5,12 +5,12 @@
 
 ## 어디를 수정하나요?
 
-| 하려는 일 | 수정 위치 |
-|-----------|-----------|
+| 하려는 일           | 수정 위치                             |
+| ------------------- | ------------------------------------- |
 | 문서 내용 추가·수정 | `docs/interview/<카테고리>/<slug>.md` |
-| 사이드바 메뉴 | `docs/.vitepress/config.mts` |
-| 사이트 미리보기 | `npm run docs:dev` |
-| 배포용 HTML 생성 | `npm run docs:build` → `fe/` 폴더 |
+| 사이드바 메뉴       | `docs/.vitepress/config.mts`          |
+| 사이트 미리보기     | `npm run docs:dev`                    |
+| 배포용 HTML 생성    | `npm run docs:build` → `fe/` 폴더     |
 
 ## 문서 목록 (현재)
 
