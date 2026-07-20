@@ -10,3 +10,4 @@ Day 31~36
 - [Day 34: Fiber](/curriculum/week-05-react-rendering/day-34-fiber)
 - [Day 35: Batching](/curriculum/week-05-react-rendering/day-35-batching)
 - [Day 36: key](/curriculum/week-05-react-rendering/day-36-key)
+- [Day 37: Tanstack Query](/curriculum/week-05-react-rendering/day-37-react-query)
