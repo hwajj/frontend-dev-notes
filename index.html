@@ -234,16 +234,18 @@
         <h2>2026-05</h2>
         <ul id="diary-2026-05-list"></ul>
       </div>
-      <div class="section"> 
+      <div class="section">
         <h2>2026-06</h2>
         <ul id="diary-2026-06-list"></ul>
+      </div>
+      <div class="section">
+        <h2>2026-07</h2>
+        <ul id="diary-2026-07-list"></ul>
       </div>
     </div>
     <div id="viewer">
       <h2 id="file-title"></h2>
-      <pre
-        style="display: none"
-      ><code id="file-content" class="language-typescript"></code></pre>
+      <pre style="display: none"><code id="file-content" class="language-typescript"></code></pre>
       <div id="md-content" style="display: none"></div>
     </div>
     <script>
@@ -302,9 +304,7 @@
         { name: "슬라이딩 윈도우", file: "techniques/SlidingWindow.md" },
         { name: "부분합", file: "techniques/PrefixSum.md" },
       ];
-      const graphFiles = [
-        { name: "위상정렬", file: "graph/TopologicalSort.md" },
-      ];
+      const graphFiles = [{ name: "위상정렬", file: "graph/TopologicalSort.md" }];
       const optimizationFiles = [
         { name: "동적 계획법 (DP)", file: "optimization/DP.md" },
         { name: "그리디", file: "optimization/Greedy.md" },
@@ -335,6 +335,8 @@
         { name: "2026-06-21", file: "2026-06-21.md" },
         { name: "2026-06-22", file: "2026-06-22.md" },
       ];
+      const diary202607Files = [{ name: "2026-07-22", file: "2026-07-22.md" }];
+
       const INTERVIEW_MD_PATH = "interview/interview.md";
       let interviewMarkdownCache = null;
 
@@ -428,10 +430,10 @@
         ul.innerHTML = "";
         try {
           const markdown = await ensureInterviewMarkdown();
-          console.log(markdown);   // 추가
+          console.log(markdown); // 추가
           markdown.split("\n").forEach((line) => {
-  console.log(JSON.stringify(line));
-});
+            console.log(JSON.stringify(line));
+          });
           console.log(extractHeadings(markdown)); // 추가
           renderInterviewToc(extractHeadings(markdown));
         } catch (e) {
@@ -445,9 +447,7 @@
         showViewer(true, true);
         try {
           const text = await ensureInterviewMarkdown();
-          const html = addHeadingIds(
-            marked.parse(text, { breaks: true }),
-          );
+          const html = addHeadingIds(marked.parse(text, { breaks: true }));
           document.getElementById("md-content").innerHTML = html;
           Prism.highlightAll();
           requestAnimationFrame(() => {
@@ -500,13 +500,10 @@
         });
       }
       function showViewer(show, isMarkdown = false) {
-        document.getElementById("viewer").style.display = show
-          ? "block"
-          : "none";
+        document.getElementById("viewer").style.display = show ? "block" : "none";
         document.getElementById("file-content").parentElement.style.display =
           !isMarkdown && show ? "block" : "none";
-        document.getElementById("md-content").style.display =
-          isMarkdown && show ? "block" : "none";
+        document.getElementById("md-content").style.display = isMarkdown && show ? "block" : "none";
       }
       async function loadFile(path, title) {
         document.getElementById("file-title").textContent = title;
@@ -519,7 +516,7 @@
           document.getElementById("file-content").innerHTML = Prism.highlight(
             text,
             Prism.languages.typescript,
-            "typescript",
+            "typescript"
           );
           requestAnimationFrame(() => {
             document.getElementById("viewer").scrollIntoView({
@@ -539,7 +536,7 @@
           const res = await fetch(path);
           if (!res.ok) throw new Error("파일을 불러올 수 없습니다.");
           const text = await res.text();
-          document.getElementById("md-content").innerHTML = marked.parse(text, { breaks: true })
+          document.getElementById("md-content").innerHTML = marked.parse(text, { breaks: true });
           Prism.highlightAll();
           requestAnimationFrame(() => {
             document.getElementById("viewer").scrollIntoView({
@@ -558,12 +555,7 @@
       renderList("ts-notes-list", tsNotesFiles, "ts", true);
       renderList("study-notes-list", studyNotesFiles, "study", true);
       renderList("search-list", searchFiles, "algorithm", true);
-      renderList(
-        "data-structures-list",
-        dataStructuresFiles,
-        "algorithm",
-        true,
-      );
+      renderList("data-structures-list", dataStructuresFiles, "algorithm", true);
       renderList("string-list", stringFiles, "algorithm", true);
       renderList("techniques-list", techniquesFiles, "algorithm", true);
       renderList("graph-list", graphFiles, "algorithm", true);
@@ -571,6 +563,7 @@
       renderList("diary-2026-04-list", diary202604Files, "diary", true);
       renderList("diary-2026-05-list", diary202605Files, "diary", true);
       renderList("diary-2026-06-list", diary202606Files, "diary", true);
+      renderList("diary-2026-07-list", diary202607Files, "diary", true);
 
       // 탭 전환 로직
       const tabTS = document.getElementById("tab-ts");

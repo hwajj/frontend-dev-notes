@@ -87,6 +87,10 @@ export const curriculumSidebar = [
         "link": "/curriculum/week-02-js-advanced/day-14-review"
       },
       {
+        "text": "Day 15: 비동기 & 이벤트 루프",
+        "link": "/curriculum/week-02-js-advanced/day-15-async-event-loop"
+      },
+      {
         "text": "(참고) 클로저 & 프로토타입",
         "link": "/curriculum/week-02-js-advanced/ref-closure-prototype"
       },
@@ -109,6 +113,38 @@ export const curriculumSidebar = [
         "link": "/curriculum/week-03-typescript-dom/"
       },
       {
+        "text": "Day 16: TypeScript Basic",
+        "link": "/curriculum/week-03-typescript-dom/day-16-typescript-basic"
+      },
+      {
+        "text": "Day 17: Type Inference & Type System",
+        "link": "/curriculum/week-03-typescript-dom/day-17-type-inference"
+      },
+      {
+        "text": "Day 18: Generic",
+        "link": "/curriculum/week-03-typescript-dom/day-18-generic"
+      },
+      {
+        "text": "Day 19: Utility Types",
+        "link": "/curriculum/week-03-typescript-dom/day-19-utility-types"
+      },
+      {
+        "text": "Day 20: DOM",
+        "link": "/curriculum/week-03-typescript-dom/day-20-dom"
+      },
+      {
+        "text": "Day 21: Event",
+        "link": "/curriculum/week-03-typescript-dom/day-21-event"
+      },
+      {
+        "text": "Day 22: Browser Performance",
+        "link": "/curriculum/week-03-typescript-dom/day-22-browser-performance"
+      },
+      {
+        "text": "Day 23: TypeScript + DOM 실전",
+        "link": "/curriculum/week-03-typescript-dom/day-23-typescript-dom-practice"
+      },
+      {
         "text": "(참고) TypeScript Deep Dive",
         "link": "/curriculum/week-03-typescript-dom/ref-typescript-deep"
       },
@@ -119,12 +155,40 @@ export const curriculumSidebar = [
     ]
   },
   {
-    "text": "4주차 — 네트워크 + 실무/면접용 성능 최적화",
+    "text": "4주차 — 네트워크 & 렌더링 전략",
     "collapsed": true,
     "items": [
       {
         "text": "주차 개요",
         "link": "/curriculum/week-04-network-perf/"
+      },
+      {
+        "text": "Day 24: Fetch",
+        "link": "/curriculum/week-04-network-perf/day-24-fetch"
+      },
+      {
+        "text": "Day 25: REST API",
+        "link": "/curriculum/week-04-network-perf/day-25-rest-api"
+      },
+      {
+        "text": "Day 26: Authentication",
+        "link": "/curriculum/week-04-network-perf/day-26-authentication"
+      },
+      {
+        "text": "Day 27: CSR",
+        "link": "/curriculum/week-04-network-perf/day-27-csr"
+      },
+      {
+        "text": "Day 28: SSR & Hydration",
+        "link": "/curriculum/week-04-network-perf/day-28-ssr-hydration"
+      },
+      {
+        "text": "Day 29: Core Web Vitals",
+        "link": "/curriculum/week-04-network-perf/day-29-core-web-vitals"
+      },
+      {
+        "text": "Day 30: Resource Optimization",
+        "link": "/curriculum/week-04-network-perf/day-30-resource-optimization"
       },
       {
         "text": "(참고) 데이터 통신 & 인증",
@@ -171,11 +235,15 @@ export const curriculumSidebar = [
       {
         "text": "Day 36: key",
         "link": "/curriculum/week-05-react-rendering/day-36-key"
+      },
+      {
+        "text": "Day 37: TanStack Query",
+        "link": "/curriculum/week-05-react-rendering/day-37-react-query"
       }
     ]
   },
   {
-    "text": "6주차 — React Hooks",
+    "text": "6주차 — React Hooks & 성능",
     "collapsed": true,
     "items": [
       {
@@ -203,7 +271,7 @@ export const curriculumSidebar = [
         "link": "/curriculum/week-06-react-hooks/day-42-use-ref"
       },
       {
-        "text": "Day 43: React.memo",
+        "text": "Day 43: React.memo & React Profiler",
         "link": "/curriculum/week-06-react-hooks/day-43-react-memo"
       },
       {
@@ -251,150 +319,214 @@ export const curriculumSidebar = [
     ]
   },
   {
-    "text": "8주차 — 네트워크/API",
+    "text": "8주차 — 라우팅 · URL 상태 · 실시간 통신",
     "collapsed": true,
     "items": [
       {
         "text": "주차 개요",
-        "link": "/curriculum/week-08-network-api/"
+        "link": "/curriculum/week-08-routing-realtime/"
       },
       {
-        "text": "Day 53: REST",
-        "link": "/curriculum/week-08-network-api/day-53-rest"
+        "text": "SPA 라우팅 & History API",
+        "link": "/curriculum/week-08-routing-realtime/08-1-spa-routing-history"
       },
       {
-        "text": "Day 54: Fetch",
-        "link": "/curriculum/week-08-network-api/day-54-fetch"
+        "text": "URL을 상태로 (URL as State)",
+        "link": "/curriculum/week-08-routing-realtime/08-2-url-as-state"
       },
       {
-        "text": "Day 55: AbortController",
-        "link": "/curriculum/week-08-network-api/day-55-abort-controller"
+        "text": "실시간 통신 (WebSocket · SSE · 폴링)",
+        "link": "/curriculum/week-08-routing-realtime/08-3-realtime-communication"
       },
       {
-        "text": "Day 56: JWT",
-        "link": "/curriculum/week-08-network-api/day-56-jwt"
-      },
-      {
-        "text": "Day 57: Refresh Token",
-        "link": "/curriculum/week-08-network-api/day-57-refresh-token"
-      },
-      {
-        "text": "Day 58: CORS",
-        "link": "/curriculum/week-08-network-api/day-58-cors"
-      },
-      {
-        "text": "Day 59: API 설계",
-        "link": "/curriculum/week-08-network-api/day-59-api-design"
+        "text": "탭 간 통신 (postMessage · storage)",
+        "link": "/curriculum/week-08-routing-realtime/08-4-cross-tab-communication"
       }
     ]
   },
   {
-    "text": "9주차 — Core Web Vitals & 번들",
+    "text": "9주차 — 프론트 품질 (CSS · 접근성 · 테스트 · 보안)",
     "collapsed": true,
     "items": [
       {
         "text": "주차 개요",
-        "link": "/curriculum/week-09-web-vitals/"
+        "link": "/curriculum/week-09-quality/"
       },
       {
-        "text": "Day 61: Core Web Vitals",
-        "link": "/curriculum/week-09-web-vitals/day-61-core-web-vitals"
+        "text": "CSS 레이아웃 & 아키텍처",
+        "link": "/curriculum/week-09-quality/09-1-css-layout-architecture"
       },
       {
-        "text": "Day 62: LCP",
-        "link": "/curriculum/week-09-web-vitals/day-62-lcp"
+        "text": "시맨틱 HTML & 접근성(a11y)",
+        "link": "/curriculum/week-09-quality/09-2-semantic-html-a11y"
       },
       {
-        "text": "Day 63: CLS",
-        "link": "/curriculum/week-09-web-vitals/day-63-cls"
+        "text": "테스트 (단위 · RTL · E2E)",
+        "link": "/curriculum/week-09-quality/09-3-testing"
       },
       {
-        "text": "Day 64: INP",
-        "link": "/curriculum/week-09-web-vitals/day-64-inp"
-      },
-      {
-        "text": "Day 65: Code Splitting",
-        "link": "/curriculum/week-09-web-vitals/day-65-code-splitting"
-      },
-      {
-        "text": "Day 66: Lazy Loading",
-        "link": "/curriculum/week-09-web-vitals/day-66-lazy-loading"
-      },
-      {
-        "text": "Day 67: Tree Shaking",
-        "link": "/curriculum/week-09-web-vitals/day-67-tree-shaking"
+        "text": "프론트 보안 (XSS · CSRF · CSP)",
+        "link": "/curriculum/week-09-quality/09-4-security"
       }
     ]
   },
   {
-    "text": "10주차 — 렌더링 전략/리소스/프로파일링",
+    "text": "10주차 — 개발환경 & 빌드 툴링",
     "collapsed": true,
     "items": [
       {
         "text": "주차 개요",
-        "link": "/curriculum/week-10-rendering-strategy/"
+        "link": "/curriculum/week-10-tooling/"
       },
       {
-        "text": "Day 68: CSR",
-        "link": "/curriculum/week-10-rendering-strategy/day-68-csr"
+        "text": "번들러 & 번들 최적화",
+        "link": "/curriculum/week-10-tooling/10-1-bundler-and-bundle-optimization"
       },
       {
-        "text": "Day 69: SSR",
-        "link": "/curriculum/week-10-rendering-strategy/day-69-ssr"
+        "text": "ESLint & Prettier 파이프라인",
+        "link": "/curriculum/week-10-tooling/10-2-eslint-prettier"
       },
       {
-        "text": "Day 70: Hydration",
-        "link": "/curriculum/week-10-rendering-strategy/day-70-hydration"
+        "text": "Node 버전 · 환경변수",
+        "link": "/curriculum/week-10-tooling/10-3-node-version-env"
       },
       {
-        "text": "Day 71: CDN",
-        "link": "/curriculum/week-10-rendering-strategy/day-71-cdn"
+        "text": "모노레포 & Git 설정",
+        "link": "/curriculum/week-10-tooling/10-4-monorepo-git"
       },
       {
-        "text": "Day 72: 이미지 최적화",
-        "link": "/curriculum/week-10-rendering-strategy/day-72-image-optimization"
-      },
-      {
-        "text": "Day 73: Font 최적화",
-        "link": "/curriculum/week-10-rendering-strategy/day-73-font-optimization"
-      },
-      {
-        "text": "Day 74: React Profiler",
-        "link": "/curriculum/week-10-rendering-strategy/day-74-react-profiler"
+        "text": "패키지 관리 (npm · pnpm · lockfile)",
+        "link": "/curriculum/week-10-tooling/10-5-package-manager"
       }
     ]
   },
   {
-    "text": "11주차 — 경력 무기화",
+    "text": "11주차 — 백엔드 기초 (Node · API · 인증서버)",
     "collapsed": true,
     "items": [
       {
         "text": "주차 개요",
-        "link": "/curriculum/week-11-career/"
+        "link": "/curriculum/week-11-backend/"
       },
       {
-        "text": "Day 75: 프로젝트 회고 ①",
-        "link": "/curriculum/week-11-career/day-75-project-retrospective-1"
+        "text": "Node 런타임 & 서버 기초",
+        "link": "/curriculum/week-11-backend/11-1-node-runtime-server"
       },
       {
-        "text": "Day 76: 프로젝트 회고 ②",
-        "link": "/curriculum/week-11-career/day-76-project-retrospective-2"
+        "text": "REST API 설계 심화",
+        "link": "/curriculum/week-11-backend/11-2-rest-api-design-advanced"
       },
       {
-        "text": "Day 77: 장애 경험 정리",
-        "link": "/curriculum/week-11-career/day-77-incident-experience"
+        "text": "인증·인가 서버 관점 (세션 · JWT · OAuth)",
+        "link": "/curriculum/week-11-backend/11-3-auth-server"
       },
       {
-        "text": "Day 78: 성능 개선 경험 정리",
-        "link": "/curriculum/week-11-career/day-78-performance-improvement"
+        "text": "BFF · API Gateway · 서버 구조",
+        "link": "/curriculum/week-11-backend/11-4-bff-gateway"
+      }
+    ]
+  },
+  {
+    "text": "12주차 — 데이터베이스",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "주차 개요",
+        "link": "/curriculum/week-12-database/"
       },
       {
-        "text": "Day 79: 협업 경험 정리",
-        "link": "/curriculum/week-11-career/day-79-collaboration"
+        "text": "연결 & 커넥션 풀",
+        "link": "/curriculum/week-12-database/12-1-connection-pool"
       },
       {
-        "text": "Day 80: STAR 답변 작성",
-        "link": "/curriculum/week-11-career/day-80-star-answers"
+        "text": "인덱스 & 쿼리 최적화",
+        "link": "/curriculum/week-12-database/12-2-index-query"
+      },
+      {
+        "text": "트랜잭션 & N+1",
+        "link": "/curriculum/week-12-database/12-3-transaction-n1"
+      }
+    ]
+  },
+  {
+    "text": "13주차 — 네트워크 · 인프라 & 배포 트러블슈팅",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "주차 개요",
+        "link": "/curriculum/week-13-infra-deploy/"
+      },
+      {
+        "text": "네트워크 심화 (TCP · TLS · HTTP/2·3 · DNS)",
+        "link": "/curriculum/week-13-infra-deploy/13-1-network-deep"
+      },
+      {
+        "text": "Nginx 리버스 프록시 · 서브도메인 · 라우팅",
+        "link": "/curriculum/week-13-infra-deploy/13-2-nginx-reverse-proxy-subdomain"
+      },
+      {
+        "text": "정적 배포 · S3 · CDN(CloudFront) · 미디어",
+        "link": "/curriculum/week-13-infra-deploy/13-3-static-deploy-s3-media"
+      },
+      {
+        "text": "Docker & CI/CD",
+        "link": "/curriculum/week-13-infra-deploy/13-4-docker-cicd"
+      },
+      {
+        "text": "실전 트러블슈팅 사례집",
+        "link": "/curriculum/week-13-infra-deploy/13-5-troubleshooting-cases"
+      }
+    ]
+  },
+  {
+    "text": "14주차 — 분석 · 측정 & 관측",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "주차 개요",
+        "link": "/curriculum/week-14-analytics/"
+      },
+      {
+        "text": "사용자 분석 (GA4 · Clarity · Looker)",
+        "link": "/curriculum/week-14-analytics/14-1-ga4-clarity-looker"
+      },
+      {
+        "text": "프론트 관측 (모니터링 · RUM · Sentry)",
+        "link": "/curriculum/week-14-analytics/14-2-monitoring-rum-sentry"
+      }
+    ]
+  },
+  {
+    "text": "15주차 — 경력 무기화",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "주차 개요",
+        "link": "/curriculum/week-15-career/"
+      },
+      {
+        "text": "프로젝트 회고 ①",
+        "link": "/curriculum/week-15-career/day-75-project-retrospective-1"
+      },
+      {
+        "text": "프로젝트 회고 ②",
+        "link": "/curriculum/week-15-career/day-76-project-retrospective-2"
+      },
+      {
+        "text": "장애 경험 정리",
+        "link": "/curriculum/week-15-career/day-77-incident-experience"
+      },
+      {
+        "text": "성능 개선 경험 정리",
+        "link": "/curriculum/week-15-career/day-78-performance-improvement"
+      },
+      {
+        "text": "협업 경험 정리",
+        "link": "/curriculum/week-15-career/day-79-collaboration"
+      },
+      {
+        "text": "STAR 답변 작성",
+        "link": "/curriculum/week-15-career/day-80-star-answers"
       }
     ]
   }
