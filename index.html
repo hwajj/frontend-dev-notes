@@ -572,13 +572,12 @@
       const tabFe = document.getElementById("tab-fe");
       const contentTS = document.getElementById("content-ts");
       const contentAlgo = document.getElementById("content-algo");
-      const contentInterview = document.getElementById("content-interview");
       const contentDiary = document.getElementById("content-diary");
+      // FE학습(tab-fe)은 탭 패널이 아니라 VitePress 문서 사이트(./fe/)로 이동
       const tabPanels = [
         { id: "ts", btn: tabTS, panel: contentTS },
         { id: "algo", btn: tabAlgo, panel: contentAlgo },
         { id: "diary", btn: tabDiary, panel: contentDiary },
-        { id: "interview", btn: tabFe, panel: contentInterview },
       ];
       function activateTab(tab) {
         tabPanels.forEach(({ id, btn, panel }) => {
@@ -586,8 +585,8 @@
           if (btn) btn.classList.toggle("active", on);
           panel.classList.toggle("active", on);
         });
+        if (tabFe) tabFe.classList.remove("active");
         showViewer(false);
-        if (tab === "interview") loadInterviewToc();
       }
       tabTS.onclick = () => activateTab("ts");
       tabAlgo.onclick = () => activateTab("algo");
