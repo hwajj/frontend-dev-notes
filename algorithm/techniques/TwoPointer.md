@@ -44,7 +44,8 @@ function twoSum(numbers: number[], target: number): number {
 
   while (left < right) {
     let sum = numbers[left] + numbers[right];
-    if (sum === target) return [left + 1, right + 1]; // 1-based index
+    if (sum === target)
+      return [left + 1, right + 1]; // 1-based index
     // 합이 너무 작으면 left를 오른쪽으로 옮기고,
     else if (sum < target) left++;
     //    합이 너무 크면 right를 왼쪽으로 옮김
@@ -87,15 +88,15 @@ function threeSum(nums) {
   const res = [];
 
   for (let i = 0; i < nums.length - 2; i++) {
-    if (i > 0 && nums[i] === nums[i - 1]) continue;
+    if (i > 0 && nums[i] === nums[i - 1]) continue; // 고정숫자 같은 값 건너뛴다.
     let l = i + 1,
       r = nums.length - 1;
     while (l < r) {
       let sum = nums[i] + nums[l] + nums[r];
       if (sum === 0) {
         res.push([nums[i], nums[l], nums[r]]);
-        while (l < r && nums[l] === nums[l + 1]) l++;
-        while (l < r && nums[r] === nums[r - 1]) r--;
+        while (l < r && nums[l] === nums[l + 1]) l++; // left 중복제거
+        while (l < r && nums[r] === nums[r - 1]) r--; // right 중복제거
         l++;
         r--;
       } else if (sum < 0) {
