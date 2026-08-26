@@ -442,7 +442,7 @@ flush
 
 ## 관련 문서
 
-- [주문서 수량 UX — 바꿀 때마다 서버? 낙관적? debounce? 로컬?](./2026-05-28_react-query-optimistic-update.md)
+- [주문서 수량 UX — 바꿀 때마다 서버? 낙관적? debounce? 로컬?](./2026-05-28_cart-quantity-ux.md)
 - [TanStack Query — Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates)
 
 [1]: https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates?from=reactQueryV3&utm_source=chatgpt.com "Optimistic Updates | TanStack Query React Docs"

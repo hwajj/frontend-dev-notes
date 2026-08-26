@@ -12,11 +12,11 @@
 
 ## 모듈 시스템 (CJS vs ESM)
 
-| | CommonJS | ESM |
-|--|----------|-----|
-| 문법 | `require`, `module.exports` | `import`, `export` |
-| 로딩 | 동기·런타임에 경로 결정 가능 | 정적(분석 가능) + 동적 `import()` |
-| Tree Shaking | 어렵다(무엇을 export했는지 빌드가 확신하기 힘듦) | 가능(전제: side effect 관리) |
+|              | CommonJS                                         | ESM                               |
+| ------------ | ------------------------------------------------ | --------------------------------- |
+| 문법         | `require`, `module.exports`                      | `import`, `export`                |
+| 로딩         | 동기·런타임에 경로 결정 가능                     | 정적(분석 가능) + 동적 `import()` |
+| Tree Shaking | 어렵다(무엇을 export했는지 빌드가 확신하기 힘듦) | 가능(전제: side effect 관리)      |
 
 브라우저·모던 번들은 ESM을 전제로 최적화한다. 라이브러리가 CJS만 제공하면 shaking이 약해지고 번들이 커질 수 있다. Node 서버(→ 11-1)에서도 `"type": "module"` vs CJS 혼용 이슈가 난다.
 

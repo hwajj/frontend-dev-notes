@@ -179,8 +179,14 @@ const weeks = [
     summary: "내 코드는 되는데 배포하면 안 되는 구간을 실전 사례로.",
     pages: [
       { file: "13-1-network-deep.md", title: "네트워크 심화 (TCP · TLS · HTTP/2·3 · DNS)" },
-      { file: "13-2-nginx-reverse-proxy-subdomain.md", title: "Nginx 리버스 프록시 · 서브도메인 · 라우팅" },
-      { file: "13-3-static-deploy-s3-media.md", title: "정적 배포 · S3 · CDN(CloudFront) · 미디어" },
+      {
+        file: "13-2-nginx-reverse-proxy-subdomain.md",
+        title: "Nginx 리버스 프록시 · 서브도메인 · 라우팅",
+      },
+      {
+        file: "13-3-static-deploy-s3-media.md",
+        title: "정적 배포 · S3 · CDN(CloudFront) · 미디어",
+      },
       { file: "13-4-docker-cicd.md", title: "Docker & CI/CD" },
       { file: "13-5-troubleshooting-cases.md", title: "실전 트러블슈팅 사례집" },
     ],
@@ -211,16 +217,26 @@ const weeks = [
 
 // 상위 개요 index를 위한 Part 그룹핑
 const parts = [
-  { title: "Part 1 · 프론트 기반 (1~7주)", dirs: [
-    "week-01-web-js", "week-02-js-advanced", "week-03-typescript-dom", "week-04-network-perf",
-    "week-05-react-rendering", "week-06-react-hooks", "week-07-react-state-error",
-  ] },
-  { title: "Part 2 · 프론트 실전 (8~10주)", dirs: [
-    "week-08-routing-realtime", "week-09-quality", "week-10-tooling",
-  ] },
-  { title: "Part 3 · 백엔드 · CS · 인프라 (11~14주)", dirs: [
-    "week-11-backend", "week-12-database", "week-13-infra-deploy", "week-14-analytics",
-  ] },
+  {
+    title: "Part 1 · 프론트 기반 (1~7주)",
+    dirs: [
+      "week-01-web-js",
+      "week-02-js-advanced",
+      "week-03-typescript-dom",
+      "week-04-network-perf",
+      "week-05-react-rendering",
+      "week-06-react-hooks",
+      "week-07-react-state-error",
+    ],
+  },
+  {
+    title: "Part 2 · 프론트 실전 (8~10주)",
+    dirs: ["week-08-routing-realtime", "week-09-quality", "week-10-tooling"],
+  },
+  {
+    title: "Part 3 · 백엔드 · CS · 인프라 (11~14주)",
+    dirs: ["week-11-backend", "week-12-database", "week-13-infra-deploy", "week-14-analytics"],
+  },
   { title: "Part 4 · 마무리", dirs: ["week-15-career"] },
 ];
 
@@ -232,7 +248,7 @@ function renderPage({ title, keywords = [], interview, goal, note }) {
   const lines = [`# ${title}`, "", "## 키워드", ""];
   for (const kw of keywords) lines.push(`- ${kw}`);
   if (keywords.length === 0) lines.push("(작성 예정)");
-  lines.push("", "## 면접 포인트", "", interview ? `- ${interview}` : "(작성 예정)");
+  lines.push("", "## 핵심 개념", "", interview ? `- ${interview}` : "(작성 예정)");
   lines.push("", "## 목표", "", goal ? `- ${goal}` : "(작성 예정)");
   if (note) lines.push("", "## 참고", "", `- ${note}`);
   lines.push("");
@@ -297,9 +313,7 @@ ${parts
   .map(
     (part) =>
       `**${part.title}**\n\n` +
-      part.dirs
-        .map((dir) => `- [${weekByDir[dir].title}](/curriculum/${dir}/)`)
-        .join("\n"),
+      part.dirs.map((dir) => `- [${weekByDir[dir].title}](/curriculum/${dir}/)`).join("\n")
   )
   .join("\n\n")}
 
@@ -316,4 +330,6 @@ export const curriculumSidebar = ${JSON.stringify(sidebar, null, 2)} as const;
 `;
 fs.writeFileSync(path.resolve("docs/.vitepress/curriculum-sidebar.mts"), sidebarExport, "utf8");
 
-console.log(`Generated sidebar for ${weeks.length} weeks. Scaffolded ${scaffolded} missing file(s). Existing files preserved.`);
+console.log(
+  `Generated sidebar for ${weeks.length} weeks. Scaffolded ${scaffolded} missing file(s). Existing files preserved.`
+);
