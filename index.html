@@ -63,19 +63,6 @@
           border-bottom 0.2s;
         border-bottom: 2px solid transparent;
       }
-      .tabs {
-        display: none;
-      }
-
-      #tab-algo {
-        display: none;
-      }
-      #tab-ts {
-        display: none;
-      }
-      #tab-fe {
-        display: none;
-      }
       .tab.active {
         color: #2d3a4b;
         border-bottom: 2px solid #007acc;
@@ -186,14 +173,14 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
-    <!-- <h1>개발 공부 노트</h1> -->
+    <h1>개발 공부 노트</h1>
     <div class="tabs">
-      <button class="tab" id="tab-ts">TS Challenge</button>
+      <button class="tab active" id="tab-ts">TS Challenge</button>
       <button class="tab" id="tab-algo">알고리즘</button>
-      <button class="tab active" id="tab-diary">diary</button>
+      <button class="tab" id="tab-diary">diary</button>
       <button class="tab" id="tab-fe">FE학습</button>
     </div>
-    <div class="tab-content" id="content-ts">
+    <div class="tab-content active" id="content-ts">
       <div class="section">
         <h2>Easy</h2>
         <ul id="easy-list"></ul>
@@ -244,7 +231,7 @@
         <ul id="interview-toc-list"></ul>
       </div>
     </div>
-    <div class="tab-content active" id="content-diary">
+    <div class="tab-content" id="content-diary">
       <div class="section">
         <h2>2026-04</h2>
         <ul id="diary-2026-04-list"></ul>
