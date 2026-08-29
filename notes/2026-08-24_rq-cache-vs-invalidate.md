@@ -1,34 +1,30 @@
-# 캐시만 vs invalidate — react-query 도입 이유
+# React Query 캐시 무효화
 
 > 작성일: 2026-08-24
 > 형식: 경량
-> 맥락: HistoryPage Map+TTL vs react-query 선택 논의 — 결제 후 stale 버그
+> 맥락: 결제 후 공고 목록과 상세 정보가 이전 상태로 남는 문제를 확인하면서 학습
 
-## 결론
+## 핵심
 
-체크 토글용 **TTL 캐시만** 넣으면 결제 성공 후에도 목록이 최대 60초 옛 상태다. react-query는 캐시 + **`invalidateQueries`로 mutation 직후 키 단위 무효화**가 한 세트라 PaymentResultPage에서 목록·상세를 갱신할 수 있다.
+React Query는 서버 데이터를 캐시해서 재사용한다.
 
-## 학습 주제 · 키워드
-
-- **React Query 설계**: `invalidateQueries`, `staleTime`, `mutation side effect`, `server state`
-
-## 이 레포 예문
-
-결제 성공 → 공고 status 변경 → 캐시 버림.
+하지만 **결제·수정 등으로 서버 데이터가 바뀌면 기존 캐시가 낡을 수 있다.**
 
 ```ts
-// PaymentResultPage.tsx
-if (!succeeded) return;
-queryClient.invalidateQueries({ queryKey: jobKeys.lists() });
-queryClient.invalidateQueries({ queryKey: jobKeys.detail(jobId) });
+queryClient.invalidateQueries({
+  queryKey: jobKeys.detail(jobId),
+});
 ```
 
-companion도 결제 결과에서 `invalidateQueries([...])`로 목록 키를 여러 개 지운다.
+`invalidateQueries`는 해당 query를 **stale로 표시하고 최신 데이터를 다시 확인하게 한다.**
 
-## GPT에 물어볼 때
+## `staleTime` vs `invalidateQueries`
 
-```
-서버 state 캐시에서 TTL-only vs event-driven invalidation.
-결제·수정·삭제 후 어떤 queryKey를 invalidate할지 설계하는 체크리스트.
-소규모 앱(엔드포인트 3~5)에서 react-query vs 수제 Map 비용 비교.
-```
+- `staleTime` → **얼마 동안 fresh하게 볼지**
+- `invalidateQueries` → **데이터가 바뀌었으니 다시 확인하라고 알리기**
+
+## 이번 작업에서 배운 것
+
+> **서버 데이터를 변경하는 mutation 후에는, 영향을 받은 query를 `invalidateQueries`로 무효화해 캐시와 서버 상태를 맞춘다.**
+
+특히 어떤 query를 무효화할지는 **mutation으로 어떤 데이터가 변경됐는지**를 기준으로 판단한다.

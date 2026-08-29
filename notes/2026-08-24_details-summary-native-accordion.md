@@ -4,33 +4,38 @@
 > 형식: 경량
 > 맥락: PaymentNotice — JS 없이 유의사항 접기/펼치기
 
-## 결론
+### `details / summary` 핵심 정리
 
-`<summary>` 클릭 시 브라우저가 `<details>`의 **`open` 속성**을 토글한다. React state·onClick 없음. `reset.css`는 기본 ▶ marker만 숨기고, `open` 유무로 초기 펼침(`PaymentNotice`) vs 접힘을 정한다.
-
-## 학습 주제 · 키워드
-
-- **HTML disclosure widget**: `details`, `summary`, `open`, `::-webkit-details-marker`
-
-## 이 레포 예문
+- `<details>` + `<summary>`는 **접기/펼치기용 기본 HTML**
+- `summary` 클릭하면 브라우저가 알아서 `open`을 **추가/제거**
+- React `useState` 없이도 동작
+- CSS에서 `details[open]`으로 열린 상태 스타일링 가능
 
 ```tsx
-// PaymentNotice.tsx
-<details className="noticeGrey__aco" open>
-  <summary><span>필독</span>꼭 확인해 주세요!</summary>
-  ...
+<details>
+  <summary>상세 내용</summary>
+  내용
 </details>
 ```
 
 ```css
-/* reset.css — 토글 아님, 꾸미기만 */
-summary::-webkit-details-marker { display: none; }
+details[open] .arrow {
+  transform: rotate(180deg);
+}
 ```
 
-## GPT에 물어볼 때
+### `button + aria-expanded`
 
+- React에서 **open 상태를 직접 관리해야 할 때** 사용
+- `aria-expanded`로 현재 열림/닫힘 상태를 접근성 API에 전달
+
+```tsx
+<button aria-expanded={open}>상세 내용</button>
 ```
-details/summary vs button+aria-expanded 접근성·키보드 차이.
-React controlled details(open state 동기화)가 필요한 경우.
-details[open] CSS로 화살표·애니메이션 넣는 패턴.
-```
+
+### 선택 기준
+
+**단순 접기/펼치기 → `details`**
+**React 상태와 연동/복잡한 제어 → `button + aria-expanded`**
+
+`details open={open} + onToggle`로 React와 동기화할 수도 있지만, 단순 UI라면 굳이 그럴 필요 없음.
