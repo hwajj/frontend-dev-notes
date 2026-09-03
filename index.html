@@ -19,6 +19,9 @@
       ul {
         list-style: none;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 28px;
       }
       li {
         margin: 0.5rem 0;
@@ -228,20 +231,10 @@
     </div>
     <div class="tab-content" id="content-diary">
       <div class="section">
-        <h2>2026-04</h2>
-        <ul id="diary-2026-04-list"></ul>
+        <ul id="diary-list"></ul>
       </div>
       <div class="section">
-        <h2>2026-05</h2>
-        <ul id="diary-2026-05-list"></ul>
-      </div>
-      <div class="section">
-        <h2>2026-06</h2>
-        <ul id="diary-2026-06-list"></ul>
-      </div>
-      <div class="section">
-        <h2>2026-07</h2>
-        <ul id="diary-2026-07-list"></ul>
+        <ul id="redhat-note-list"></ul>
       </div>
     </div>
     <div id="viewer">
@@ -311,7 +304,7 @@
         { name: "그리디", file: "optimization/Greedy.md" },
       ];
       /** 월별로 섹션·배열을 나누고, 새 달이면 항목 추가 */
-      const diary202604Files = [
+      const diaryFiles = [
         { name: "2026-04-13", file: "2026-04-13.md" },
         { name: "2026-04-14", file: "2026-04-14.md" },
         { name: "2026-04-16", file: "2026-04-16.md" },
@@ -322,22 +315,32 @@
         { name: "2026-04-23", file: "2026-04-23.md" },
         { name: "2026-04-27", file: "2026-04-27.md" },
         { name: "2026-04-30", file: "2026-04-30.md" },
-      ];
-      const diary202605Files = [
         { name: "2026-05-01", file: "2026-05-01.md" },
         { name: "2026-05-04", file: "2026-05-04.md" },
         { name: "2026-05-05", file: "2026-05-05.md" },
         { name: "2026-05-11", file: "2026-05-11.md" },
         { name: "2026-05-12", file: "2026-05-12.md" },
         { name: "2026-05-27", file: "2026-05-27.md" },
-      ];
-
-      const diary202606Files = [
         { name: "2026-06-21", file: "2026-06-21.md" },
         { name: "2026-06-22", file: "2026-06-22.md" },
+        { name: "2026-07-22", file: "2026-07-22.md" },
       ];
-      const diary202607Files = [{ name: "2026-07-22", file: "2026-07-22.md" }];
 
+      const redhatNoteFiles = [
+        { name: "lesson001", file: "lesson001.md" },
+        { name: "lesson002", file: "lesson002.md" },
+        { name: "lesson003", file: "lesson003.md" },
+        { name: "lesson004", file: "lesson004.md" },
+        { name: "lesson005", file: "lesson005.md" },
+        { name: "lesson006", file: "lesson006.md" },
+        { name: "lesson007", file: "lesson007.md" },
+        { name: "lesson008", file: "lesson008.md" },
+        { name: "lesson009", file: "lesson009.md" },
+        { name: "lesson009-advanced", file: "lesson0091-advanced.md" },
+        //{ name: "lesson010", file: "lesson010.md" },
+        //{ name: "lesson011", file: "lesson011.md" },
+        // { name: "lesson012", file: "lesson012.md" },
+      ];
       const INTERVIEW_MD_PATH = "interview/interview.md";
       let interviewMarkdownCache = null;
 
@@ -561,11 +564,8 @@
       renderList("techniques-list", techniquesFiles, "algorithm", true);
       renderList("graph-list", graphFiles, "algorithm", true);
       renderList("optimization-list", optimizationFiles, "algorithm", true);
-      renderList("diary-2026-04-list", diary202604Files, "diary", true);
-      renderList("diary-2026-05-list", diary202605Files, "diary", true);
-      renderList("diary-2026-06-list", diary202606Files, "diary", true);
-      renderList("diary-2026-07-list", diary202607Files, "diary", true);
-
+      renderList("diary-list", diaryFiles, "diary", true);
+      renderList("redhat-note-list", redhatNoteFiles, "diary/redhat", true);
       // 탭 전환 로직
       const tabTS = document.getElementById("tab-ts");
       const tabAlgo = document.getElementById("tab-algo");
