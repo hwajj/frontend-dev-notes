@@ -8,7 +8,7 @@
 - **render-blocking CSS** — `<head>`의 CSS는 렌더를 막는다. Critical CSS·분리로 완화.
 - **다중 CSS 세트 충돌** — 레거시+신규 CSS 동시 적용 시 스타일 오염.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. Flex와 Grid를 언제 나눠 쓰나?**
   → 한 축(행 또는 열) 분배는 Flex, 행+열 2차원 배치는 Grid. 실무에선 Grid 안에 Flex를 섞어 쓴다.

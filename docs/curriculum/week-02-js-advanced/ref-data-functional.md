@@ -10,7 +10,7 @@
 - Type Coercion
 - NaN / undefined / null
 
-## 면접 포인트
+## 질문 예시
 
 - 상태 관리 어떻게 했어요?
 

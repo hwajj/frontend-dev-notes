@@ -8,7 +8,7 @@
 - Memory Leak
 - useMemo / memo
 
-## 면접 포인트
+## 질문 예시
 
 (작성 예정)
 

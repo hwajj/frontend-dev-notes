@@ -9,7 +9,7 @@
 - **Performance** — `PerformanceObserver` 등으로 실사용자(RUM) 지표 측정.
 - **Lighthouse** — 랩 환경에서 성능을 진단·점수화하는 도구.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. LCP를 개선하려면?**
   → 큰 이미지 최적화·preload, 서버 응답(TTFB) 개선, 렌더 차단 리소스 제거, 폰트 최적화.

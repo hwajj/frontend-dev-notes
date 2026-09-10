@@ -9,7 +9,7 @@
 - **Query Selector** — `querySelector` / `querySelectorAll` 로 CSS 선택자 기반 탐색.
 - **DOM Manipulation** — 노드 생성/삽입/삭제/속성·클래스 변경 등 문서 변경.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `Node`와 `Element`의 차이는?**
   → `Node`는 텍스트·주석까지 포함하는 상위 타입이고, `Element`는 그중 태그 요소만. `childNodes`는 Node 목록, `children`은 Element 목록.

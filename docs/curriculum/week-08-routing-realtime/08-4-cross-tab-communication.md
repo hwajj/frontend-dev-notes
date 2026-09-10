@@ -8,7 +8,7 @@
 - **iframe messaging** — 부모↔iframe 통신. `origin` 검증 필수(보안).
 - **same-tab 알림 트릭** — storage 이벤트가 안 오는 같은 탭은 커스텀 이벤트로 보완.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `storage` 이벤트로 같은 탭 동기화가 안 되는 이유는?**
   → 스펙상 storage 이벤트는 "다른" 문서에만 발신된다. 같은 탭은 직접 상태 갱신하거나 커스텀 이벤트/BroadcastChannel로 처리.

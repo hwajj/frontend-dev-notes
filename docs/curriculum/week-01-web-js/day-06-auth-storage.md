@@ -27,7 +27,7 @@
 
 JWT·Refresh 흐름의 세부(Access/Refresh, 만료)는 **Day 26**에서 다룬다. 이 Day는 **"어디에 저장하는가"**에 집중한다.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. Cookie와 LocalStorage 차이는?**
   → Cookie는(조건 충족 시) 요청에 실려 서버로 가고, LocalStorage는 JS가 읽어 API에 직접 붙여야 한다. 용량·보안 속성·자동 전송 여부가 다르다.

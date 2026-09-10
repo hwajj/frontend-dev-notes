@@ -5,7 +5,7 @@
 - React.memo
 - **React Profiler** — 컴포넌트 렌더 횟수·소요 시간을 측정하는 도구. memo/useMemo/useCallback 적용 "전후"를 근거로 판단할 때 사용.
 
-## 면접 포인트
+## 질문 예시
 
 (작성 예정)
 

@@ -9,7 +9,7 @@
 - requestAnimationFrame
 - IntersectionObserver
 
-## 면접 포인트
+## 질문 예시
 
 - 스크롤/애니메이션 왜 느려졌어요?
 

@@ -9,7 +9,7 @@
 - **Path Parameter** — `/users/42`처럼 경로에 포함된 자원 식별자.
 - **CRUD** — Create/Read/Update/Delete를 HTTP 메서드에 매핑.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `PUT`과 `PATCH`의 차이는?**
   → `PUT`은 자원 **전체 교체**(멱등), `PATCH`는 **부분 수정**. 부분 업데이트에는 PATCH가 적합.

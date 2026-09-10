@@ -8,7 +8,7 @@
 - **Type Assertion** — `as`로 개발자가 타입을 단언. 남용 시 안전성 저하.
 - **Mini Project** — 위 개념을 묶어 작은 앱(예: 타입 안전한 Todo/검색) 구현.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `querySelector`의 반환 타입이 왜 `Element | null`인가?**
   → 못 찾을 수 있어 `null` 가능. 그래서 사용 전 null 체크(narrowing)나 제네릭(`querySelector<HTMLInputElement>`) 지정이 필요.

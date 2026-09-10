@@ -40,7 +40,7 @@ S3 (Origin) / 미디어 버킷
 
 HTML/API는 앱·Nginx, 큰 동영상·이미지는 S3(+CDN). Presigned URL 업로드는 **11-2**.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. S3 앞에 CloudFront를 두는 이유는?**
   → Edge 캐시로 지연·Origin 부하를 줄이고, 전역 사용자에게 가까운 응답을 준다.

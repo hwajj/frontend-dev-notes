@@ -8,7 +8,7 @@
 - **스크린 리더** — 라벨(`label`, `aria-label`), 대체 텍스트(`alt`).
 - **명도 대비(contrast)** — WCAG 기준 대비비.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `<div onClick>` 대신 `<button>`을 써야 하는 이유는?**
   → button은 키보드 포커스·Enter/Space 활성·스크린 리더 역할을 기본 제공. div는 이걸 전부 수동 구현해야 한다.

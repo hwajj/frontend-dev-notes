@@ -8,7 +8,7 @@
 - **SPA fallback** — `try_files $uri $uri/ /index.html;` — 새로고침 404 해결(→ 8주차 라우팅과 연결).
 - **업스트림(upstream)** — 뒤에 붙는 실제 서버 그룹.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. SPA 배포 후 새로고침하면 404가 나는 이유와 Nginx 해법은?**
   → 클라이언트 경로를 Nginx가 모르기 때문. `try_files ... /index.html`로 모든 경로를 SPA 진입점으로 fallback.

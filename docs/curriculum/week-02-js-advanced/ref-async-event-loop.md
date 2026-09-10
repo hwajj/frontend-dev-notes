@@ -8,7 +8,7 @@
 - async / await 내부 동작
 - Error Handling 패턴
 
-## 면접 포인트
+## 질문 예시
 
 - Promise vs setTimeout / microtask vs macrotask / try/catch vs .catch
 

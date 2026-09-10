@@ -9,7 +9,7 @@
 - **Intersection (`&`)** — 여러 타입을 모두 만족. `A & B`.
 - **Literal Type** — 특정 값 자체가 타입. `'GET' | 'POST'`, `type Yes = true`.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `interface`와 `type`의 차이는?**
   → `interface`는 선언 병합·객체 확장에 강하고, `type`은 유니온·튜플·조건부 타입 등 표현력이 넓다. 객체 형태는 interface, 그 외 조합은 type을 선호하는 편.

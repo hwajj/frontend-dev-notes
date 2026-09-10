@@ -10,7 +10,7 @@
 - 브라우저 캐시 전략
 - DOMContentLoaded / defer / async
 
-## 면접 포인트
+## 질문 예시
 
 - 스크립트 로딩이 렌더에 미치는 영향
 

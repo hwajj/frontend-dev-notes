@@ -11,7 +11,7 @@
 - **SRI (Subresource Integrity)** — CDN 스크립트 해시 검증. 변조되면 실행 거부.
 - **HTTPS / Mixed Content** — HTTPS 페이지에서 HTTP 자원 로드가 차단·경고. 쿠키 `Secure`와도 연결.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. XSS를 어떻게 막나?**
   → 기본은 출력 이스케이프(React는 기본 이스케이프). `dangerouslySetInnerHTML`은 sanitize(DOMPurify) 후 사용, CSP로 2차 방어.

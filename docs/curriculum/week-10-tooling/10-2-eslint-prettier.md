@@ -8,7 +8,7 @@
 - **format on save** — 에디터 저장 시 자동 포맷. `.vscode/settings.json`.
 - **pre-commit 훅** — husky + lint-staged로 커밋 전 검사.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. ESLint와 Prettier의 역할 차이는?**
   → ESLint는 "버그 날 만한 코드"를, Prettier는 "보이는 스타일"을 담당. 겹치는 포맷 규칙은 Prettier에 넘겨 충돌을 없앤다.

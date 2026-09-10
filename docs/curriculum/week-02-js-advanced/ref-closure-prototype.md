@@ -4,10 +4,10 @@
 
 - 클로저
 - 프로토타입
-- prototype vs __proto__
+- prototype vs **proto**
 - Arrow Function 내부 동작
 
-## 면접 포인트
+## 질문 예시
 
 - 왜 이 상태가 공유돼요?
 

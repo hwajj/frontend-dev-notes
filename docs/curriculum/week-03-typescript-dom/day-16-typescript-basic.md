@@ -9,7 +9,7 @@
 - **Enum** — 이름 있는 상수 집합. `enum Role { Admin, User }`. 런타임 객체가 생성된다.
 - **Any / Unknown / Never** — `any`(검사 포기), `unknown`(안전한 any, 좁혀야 사용), `never`(값이 없음, 도달 불가).
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. `any`와 `unknown`의 차이는?**
   → `any`는 타입 검사를 꺼버려 무엇이든 허용하지만, `unknown`은 사용 전 반드시 타입 좁히기(narrowing)를 강제해 더 안전하다.

@@ -9,7 +9,7 @@
 - **Refresh Token** — 긴 수명. Access Token 만료 시 재발급에 사용.
 - **Authorization** — 인증(누구인가) 이후 "무엇을 할 수 있는가"(권한) 판단. `Authorization: Bearer <token>`.
 
-## 면접 포인트
+## 질문 예시
 
 - **Q. Session 방식과 JWT 방식의 차이는?**
   → Session은 서버가 상태를 저장(stateful)해 무효화가 쉬우나 확장 시 저장소 공유 부담. JWT는 stateless라 확장에 유리하나 발급 후 즉시 무효화가 어렵다.
