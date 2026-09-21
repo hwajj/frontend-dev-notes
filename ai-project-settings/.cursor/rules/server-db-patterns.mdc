@@ -1,0 +1,119 @@
+---
+description: 서버 DB 조작 시 안전성·성능 필수 패턴 (트랜잭션, 조건부 UPDATE, 벌크 쿼리 등)
+globs: server/src/**/*.ts
+alwaysApply: false
+---
+
+# 서버 DB 패턴
+
+`server/src/` 코드를 작성·수정할 때 아래 6가지 패턴을 준수한다. 
+라우트 핸들러에 직접 DB 호출을 작성하는 경우와 service/repository 레이어를 사용하는 경우 모두 동일하게 적용한다.
+
+## 1. 다중 테이블 쓰기 → 트랜잭션
+
+2개 이상 테이블에 INSERT/UPDATE/DELETE할 때 `db.transaction(async (tx) => { ... })`로 감싼다. 트랜잭션 내부에서는 `db` 대신 `tx`를 사용한다. 서비스/레포지토리 구조에서는 `new XxxRepository(tx)`로 같은 연결을 공유한다.
+
+```ts
+// DON'T
+await db.update(deliveries).set({ status: 'shipped' }).where(...);
+await db.update(orders).set({ status: 'shipping' }).where(...);
+await db.insert(orderStatusHistory).values({ ... });
+
+// DO
+await db.transaction(async (tx) => {
+  await tx.update(deliveries).set({ status: 'shipped' }).where(...);
+  await tx.update(orders).set({ status: 'shipping' }).where(...);
+  await tx.insert(orderStatusHistory).values({ ... });
+});
+```
+
+## 2. 외부 호출은 트랜잭션 밖에서 실행
+
+알림 발송, 정산 생성 등 외부 호출/부수 효과는 트랜잭션 커밋 후 실행한다. 트랜잭션 안에서 실행하면 커넥션 점유 시간이 늘어나고, 롤백돼도 알림은 이미 발송된다.
+
+```ts
+// DON'T
+await db.transaction(async (tx) => {
+  await tx.update(orders).set({ status: 'shipping' }).where(...);
+  await notifyNursingHomeOrderShippingByOrderId(orderId, { ... });
+});
+
+// DO
+await db.transaction(async (tx) => {
+  await tx.update(orders).set({ status: 'shipping' }).where(...);
+});
+await notifyNursingHomeOrderShippingByOrderId(orderId, { ... });
+```
+
+## 3. 상태 변경 → 조건부 UPDATE + affected rows 검증
+
+상태를 변경하는 UPDATE에는 현재 상태를 WHERE 조건에 포함하고, `.returning()`으로 실제 변경된 행을 확인한다. 결과가 비어 있으면 409를 반환한다. SELECT → 상태 확인 → UPDATE (Read-Check-Write) 패턴은 사용하지 않는다.
+
+```ts
+// DON'T
+const [delivery] = await tx.select().from(deliveries).where(eq(deliveries.id, id));
+if (delivery.status !== 'preparing') throw ...;
+await tx.update(deliveries).set({ status: 'shipped' }).where(eq(deliveries.id, id));
+
+// DO
+const [updated] = await tx
+  .update(deliveries)
+  .set({ status: 'shipped' })
+  .where(and(eq(deliveries.id, id), eq(deliveries.status, 'preparing')))
+  .returning({ id: deliveries.id });
+if (!updated) throw new ServiceError(409, '상태가 이미 변경되었습니다.');
+```
+
+## 4. 카운터/재고 → DB 레벨 원자적 증감
+
+`currentStock`, `count` 등 숫자 필드는 SQL 수준에서 증감한다. 애플리케이션에서 읽은 값에 산술 연산 후 다시 쓰는 Read-Modify-Write는 동시 요청 시 값이 덮어써진다.
+
+```ts
+// DON'T
+const newStock = product.currentStock + quantity;
+await tx.update(products).set({ currentStock: newStock }).where(eq(products.id, productId));
+
+// DO
+await tx
+  .update(products)
+  .set({ currentStock: sql`${products.currentStock} + ${quantity}` })
+  .where(eq(products.id, productId));
+```
+
+## 5. 벌크 쿼리 우선
+
+루프 내 개별 쿼리 대신 `inArray()` 또는 bulk INSERT를 사용한다. 읽기는 `WHERE id IN (...)` 한 번으로, 쓰기는 `db.insert(table).values([...배열])` 한 번으로 대체한다.
+
+```ts
+// DON'T
+for (const item of items) {
+  await tx.update(products).set({ ... }).where(eq(products.id, item.productId));
+  await tx.insert(inventoryMovements).values({ productId: item.productId, ... });
+}
+
+// DO
+await Promise.all(items.map(item =>
+  tx.update(products)
+    .set({ currentStock: sql`${products.currentStock} + ${item.quantity}` })
+    .where(eq(products.id, item.productId))
+));
+await tx.insert(inventoryMovements).values(
+  items.map(item => ({ productId: item.productId, ... })),
+);
+```
+
+## 6. 독립 비동기 호출 병렬화
+
+서로의 결과에 의존하지 않는 `await` 호출은 `Promise.all`로 병렬 실행한다.
+
+```ts
+// DON'T
+const orderRows = await db.select().from(orders).where(...);
+const deliveryRows = await db.select().from(deliveries).where(...);
+
+// DO
+const [orderRows, deliveryRows] = await Promise.all([
+  db.select().from(orders).where(...),
+  db.select().from(deliveries).where(...),
+]);
+```

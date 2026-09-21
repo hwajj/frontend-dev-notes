@@ -1,0 +1,39 @@
+---
+description: 기능 개발·검토 중 학습 가치가 있으면 .study/에 개념목록 작성
+alwaysApply: true
+---
+
+# 학습 노트 작성 규칙
+
+기능 구현·수정·기획 검토·버그 분석 요청을 처리한 뒤, **학습 가치가 있는 내용**이 있으면 `.study/`에 md 파일로 정리한다.
+
+## 작성 트리거
+
+아래 **A(도메인)** 또는 **B(기술·FE)** 중 하나 이상 해당하면 작성을 검토한다.
+
+### A. 도메인·업무
+
+- **정책·상태 전이·권한** 규칙
+- **함정·엣지케이스** (사용자 오해, CS 유발 지점)
+
+### B. 기술·프론트엔드 (면접 단골 주제 포함)
+
+아래 **어느 카테고리든** 해당하면 학습 노트 후보. React Query만이 아니라 **FE 면접·시니어 역량 전반**을 `.study/`에 쌓는다.
+
+| 카테고리 | 예시 주제 (면접·실무) |
+|----------|---------------------|
+| **JavaScript** | 클로저, this, 프로토타입, 이벤트 루프, Promise/async, 스코프·호이스팅 |
+| **TypeScript** | 제네릭, 타입 좁히기, utility type, any 회피, API 타입 설계 |
+| **React** | 렌더링·리렌더, key, hooks 규칙, controlled/uncontrolled, composition |
+| **상태·데이터** | React Query, Zustand, 서버 state vs 클라이언트 state, 동기화·race |
+| **성능** | memo/useMemo 남용, 가상화, code split, Core Web Vitals, 번들 |
+| **브라우저·네트워크** | HTTP/캐시, CORS, cookie vs storage, 렌더링 파이프라인 |
+| **CSS·레이아웃** | flex/grid, BFC, stacking, 반응형, 디자인 토큰 |
+| **접근성·HTML** | 시맨틱, aria, 키보드·포커스, 폼 라벨 |
+| **테스트** | unit/integration, MSW, 사용자 관점 시나리오, TDD |
+| **보안** | XSS, CSRF, 인증 토큰 저장, CSP |
+| **아키텍처** | 폴더 구조, colocation, 컴포넌트 분리, 에러·로딩 UX |
+| **FE 설계** | “이 기능 어떻게 짠다” (API·상태·화면·엣지케이스) |
+| **디버깅·이슈** | 재현, 원인, 트레이드오프, 회귀 방지 |
+
+**작성하지 않는 경우**: 단순 스타일 수정, import 정리, 린트만 고친 경우, 이미 `.study/`에 동일 주제가 있는 경우(기존 파일 갱신만).

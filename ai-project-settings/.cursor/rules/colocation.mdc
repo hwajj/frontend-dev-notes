@@ -1,0 +1,18 @@
+---
+description: 타입, 유틸 함수, 커스텀 훅의 Co-location 배치 원칙
+globs: src/**/*.ts,src/**/*.tsx
+alwaysApply: false
+---
+
+# Co-location 원칙
+
+타입, 유틸 함수, 커스텀 훅, 상수는 사용 범위에 따라 배치한다.
+
+| 사용 범위 | 타입 | 유틸 함수 | 커스텀 훅 | 상수 |
+|-----------|------|----------|----------|----------|
+| 앱 전체 공유 | `src/types/` | `src/lib/utils/` | `src/hooks/` | `src/const/` |
+| 특정 폴더 내 2+ 파일에서 사용 | 가장 가까운 `types.ts` | 해당 피처 폴더에 `utils.ts` | 해당 피처 폴더에 `hooks/useXxx.ts` | 해당 피처 폴더에 `const.ts` |
+| 단일 파일 전용 | 해당 파일 상단에 선언 | 해당 파일 내 하단에 선언 | 해당 피처 폴더에 `hooks/useXxx.ts` | 해당 피처 폴더에 `const.ts` |
+
+> 피처 폴더: `components/`, `hooks/` 등 구조 하위 폴더의 부모 폴더 (예: `src/routes/logistics/orders/`)
+

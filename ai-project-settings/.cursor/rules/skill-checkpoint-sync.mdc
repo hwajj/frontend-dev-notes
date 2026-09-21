@@ -1,0 +1,10 @@
+---
+globs: .cursor/skills/**/*.md
+---
+# 스킬 수정 시 체크포인트 동기화
+
+이 스킬 파일의 절차(단계, 순서, 도구 호출)를 수정하는 경우:
+1. `retro/checkpoints.json`에서 해당 스킬의 체크포인트 정의를 확인한다
+2. `retro/SCHEMA.md`를 참조하여 변경된 절차에 맞게 체크포인트를 갱신한다 (signal, required 필드)
+3. 수정/추가된 체크포인트의 `effectiveFrom`을 오늘 날짜(YYYY-MM-DD)로 설정한다
+4. 체크포인트 정의가 없는 스킬이면 무시한다

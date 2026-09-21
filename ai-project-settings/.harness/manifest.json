@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "bundleVersion": "0.1.5",
+  "installedAt": "2026-06-05T03:07:16.357Z",
+  "entries": [
+    {
+      "target": ".cursor/rules/colocation.mdc",
+      "source": "harness-core/.cursor/rules/colocation.mdc",
+      "hash": "a0122795942bdf55cef79ee685388a2bb2d7793f025827e7643fda7168610ea4",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/git-workflow.mdc",
+      "source": "harness-core/.cursor/rules/git-workflow.mdc",
+      "hash": "d01402e13a17d3f2238c6f1e3a4cad43a9251e51f68a026df5d4051f2f453643",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/progress-schema-change.mdc",
+      "source": "harness-core/.cursor/rules/progress-schema-change.mdc",
+      "hash": "459f997ce221d8da6628a03a066cc253c51d6b7067ab19922ff05c76a7047883",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/progress-tracking.mdc",
+      "source": "harness-core/.cursor/rules/progress-tracking.mdc",
+      "hash": "cebcc174e8f2d88097df20d792c012f8649417161b2db62d19d79da07614e9e7",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/skill-checkpoint-sync.mdc",
+      "source": "harness-core/.cursor/rules/skill-checkpoint-sync.mdc",
+      "hash": "38f92d59725bcac82983e3d4699e992d45db1e0d2cb01dad0b2ec21c1a72d357",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/test-describe.mdc",
+      "source": "harness-core/.cursor/rules/test-describe.mdc",
+      "hash": "205d6819dac54bed8ae506d32e41bcb66f08f7dba2bc34d5349eff79238234a1",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/rules/write-planning.mdc",
+      "source": "harness-core/.cursor/rules/write-planning.mdc",
+      "hash": "60e0db263f2fc36de27f172debbd3dd250704df69bfc73137793f9aae7c081b9",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/continue-impl/arch-consultation.md",
+      "source": "harness-core/.cursor/skills/continue-impl/arch-consultation.md",
+      "hash": "b87e1f97d59bf7f50241a678e4d9fc0982b43a71d5923c5edd5d7c82878b5fd1",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/continue-impl/SKILL.md",
+      "source": "harness-core/.cursor/skills/continue-impl/SKILL.md",
+      "hash": "edb271af33288af336b8609dd7ac6b5cd320c8af8e2f73d4149dacf246a55212",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/db-migrate/SKILL.md",
+      "source": "harness-core/.cursor/skills/db-migrate/SKILL.md",
+      "hash": "4698af42c4f02d4b68cbb21f525a52e89c27adb185717ec64340e64c0d763d9e",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/fast-verify-impl/SKILL.md",
+      "source": "harness-core/.cursor/skills/fast-verify-impl/SKILL.md",
+      "hash": "7fc21c99fbfbfd7a0fca1578796d9ec2e6715051daaf4291f1f9d1b68416749e",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/impl-e2e/SKILL.md",
+      "source": "harness-core/.cursor/skills/impl-e2e/SKILL.md",
+      "hash": "80a4af521b3e7a0587f0cfb5c788672c26b6d5c87ea77673f1e4b984659b46ae",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/impl-frontend/SKILL.md",
+      "source": "harness-core/.cursor/skills/impl-frontend/SKILL.md",
+      "hash": "14c65ef8c28d02e6c8941b53aec10bb1c33b77a2036e1306a8fc0823341d606b",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/impl-server/SKILL.md",
+      "source": "harness-core/.cursor/skills/impl-server/SKILL.md",
+      "hash": "c375f39b58b9547badb17fb186a650c7e9361bccc3909b000d9dd70aa7957a31",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/merge-to-main/SKILL.md",
+      "source": "harness-core/.cursor/skills/merge-to-main/SKILL.md",
+      "hash": "c8a60dc981ae3fe9e92ffc36797bc0b3cb9e17fe6362392b28afa7e3596fc6f5",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/review-planning/review-guide.md",
+      "source": "harness-core/.cursor/skills/review-planning/review-guide.md",
+      "hash": "95272d19509b4413040fe4b021be703d305c5d7b52ce96e776260d5dacbb49b3",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/review-planning/SKILL.md",
+      "source": "harness-core/.cursor/skills/review-planning/SKILL.md",
+      "hash": "0f134343a08614540337f44d13c9209d93f4d229842ee69107a08a14bdec29e8",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/verify-impl/SKILL.md",
+      "source": "harness-core/.cursor/skills/verify-impl/SKILL.md",
+      "hash": "a749c1842ffb0e60d66074f8bfb62aa7d3ab58ff7e438e2452a8a3f62cbfaace",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/write-planning/document-template.md",
+      "source": "harness-core/.cursor/skills/write-planning/document-template.md",
+      "hash": "fc0aea1b777c16d266942c524a1b6f4e7a59a9f729512eab968935b9ab1f83e8",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/write-planning/index-rules.md",
+      "source": "harness-core/.cursor/skills/write-planning/index-rules.md",
+      "hash": "2a8eb732e4d2e0832f0207824f48abee1d32b91b17d26378aac545f7f2a56d09",
+      "pack": "core"
+    },
+    {
+      "target": ".cursor/skills/write-planning/SKILL.md",
+      "source": "harness-core/.cursor/skills/write-planning/SKILL.md",
+      "hash": "296618d846fcc170f9daa7722e012ce8ec6969d7c65703a0e083c59d0f3e978c",
+      "pack": "core"
+    },
+    {
+      "target": ".harness/adapters/carenation/harness.config.md",
+      "source": "adapters/carenation/harness.config.md",
+      "hash": "956f00b60220259db7ccce23ac62f6b5ffa9d703d59929ad7c8337dfeeae3acc",
+      "pack": "adapter:carenation"
+    },
+    {
+      "target": ".harness/adapters/carenation/migration-notes.md",
+      "source": "adapters/carenation/migration-notes.md",
+      "hash": "362b3e193c5fb33c088fa7749150036be4e9884250f55f05818b3b0fb3ec173c",
+      "pack": "adapter:carenation"
+    },
+    {
+      "target": "harness.config.md",
+      "source": "adapters/carenation/harness.config.md",
+      "hash": "ca7b2c10feb0a41146cc6c02c101a8fd63a97851130467b9b1a17f15244aa6aa",
+      "pack": "adapter:carenation"
+    },
+    {
+      "target": "retro/checkpoints.json",
+      "source": "harness-core/retro/checkpoints.json",
+      "hash": "aad68c4b7ee67f4d7f8d95e8e56c6b7e04bdaf77c18f34570bf004389afcdaab",
+      "pack": "core"
+    },
+    {
+      "target": "retro/SCHEMA.md",
+      "source": "harness-core/retro/SCHEMA.md",
+      "hash": "8cc92bcb3fb4c0a3a387fb97613c0607ad80e841164e27a4ee864979ad204d38",
+      "pack": "core"
+    }
+  ]
+}

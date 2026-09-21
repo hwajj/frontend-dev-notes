@@ -1,0 +1,87 @@
+---
+globs: **/*.ts,**/*.tsx
+alwaysApply: true
+---
+
+# React 작성 규칙
+
+## 컴포넌트 파일 구조
+
+파일 상단부터 아래 순서로 작성한다.
+
+```
+1. props 및 로컬 타입 정의
+2. 상수
+3. 컴포넌트 정의
+4. 유틸 함수
+```
+
+```tsx
+// Props 및 로컬 타입
+type Status = 'active' | 'inactive';
+
+interface Props {
+  status: Status;
+  onChangeStatus: (status: Status) => void;
+}
+
+// 상수
+const STATUS_LABEL: Record<Status, string> = {
+  active: '활성',
+  inactive: '비활성',
+};
+
+// 컴포넌트
+const StatusBadge = ({ status, onChangeStatus }: Props) => {
+  const handleClickBadge = () => onChangeStatus(status);
+
+  return <button onClick={handleClickBadge}>{STATUS_LABEL[status]}</button>;
+};
+
+export default StatusBadge;
+
+// 유틸 함수
+function formatStatus(status: Status) {
+  return STATUS_LABEL[status];
+}
+```
+
+---
+
+1. `useCallback` 사용 금지
+2. `useMemo`는 데이터 크기가 클 것이 예상되는 부분에서만 제한적으로 사용
+3. 이벤트 핸들러: prop 이름은 `on + <동작> + <대상>`, prop으로 전달하는 핸들러는 `handle + <동작> + <대상>`으로 작성
+```tsx
+// DON'T
+const App = () => {
+  const onChangeDate = () => {};
+  const onDateChange = () => {};
+
+  return <DatePicker onChange={onChangeDate}>
+}
+
+// DO
+const App = () => {
+  const handleChangeDate = () => {};
+
+  return <DatePicker onChange={handleChangeDate}>
+}
+```
+
+# 타입 정의 규칙
+
+1. 객체의 key가 1개 이하인 경우에만 인라인 타입 정의를 사용한다
+
+```tsx
+// DON'T
+function getDeadlineInfo(...): { label: string; severity: 'overdue' | 'warning' | 'normal' | 'none'; tooltipText: string | null }
+
+// DO
+interface DeadlineInfo { 
+  label: string; 
+  severity: 'overdue' | 'warning' | 'normal' | 'none'; 
+  tooltipText: string | null 
+}
+
+function getDeadlineInfo(...): DeadlineInfo
+```

@@ -1,0 +1,22 @@
+---
+description: 디자인 시스템 문서 참조 및 컴포넌트 작성 시 준수 규칙
+globs: DESIGN.md,design-system/**/*.md,docs/**/*.md,**/*.tsx,**/*.jsx
+alwaysApply: false
+---
+
+# 디자인 시스템 참조 규칙
+
+기획 문서(`docs/`)를 작성하거나, **컴포넌트(tsx/jsx)를 작성·수정할 때** 반드시 이 규칙을 준수한다.
+
+## 핵심 원칙
+
+- 컴포넌트 구현 시 디자인 토큰 하드코딩을 금지한다. 반드시 아래 서브 문서의 토큰을 기준으로 한다.
+
+
+## 컴포넌트 작성 시 필수 준수 사항
+
+1. **디자인 토큰**: Tailwind 클래스를 사용. `32px` 등 매직 넘버 사용 금지.
+2. **컴포넌트 스펙**: `components/ui` 또는 `components`에 이미 정의된 컴포넌트를 우선적으로 사용하되, 정의된 컴포넌트가 없을 때만 해당 위치에 디자인 시스템을 준수하며 컴포넌트를 작성.
+3. **접근성**: 아이콘 버튼에 `aria-label` 필수, 상태 뱃지에 `aria-label` 부가 설명 (`design-system/motion.md` 참조).
+7. **레이아웃**: 페이지 컴포넌트(`*Page.tsx`)에서는 `Layout.Content`로 감싸서 콘텐츠만 작성하고, 레이아웃 패딩을 직접 지정하지 않는다. 레이아웃 컴포넌트는 `import { Layout } from "@/components/layout"`로 사용한다.
+8. **요양원·회사관리자 UI 셸**: `src/routes/nursing-hospital/`, `src/routes/admin/` 페이지는 [portal-ui-shell.md](../../docs/@agents/portal-ui-shell.md)와 `.cursor/rules/portal-ui-shell.mdc`를 따른다 (브레드크럼·filter-bar·**32px** 컨트롤). 물류센터는 DS 기본 높이(40px) 유지.

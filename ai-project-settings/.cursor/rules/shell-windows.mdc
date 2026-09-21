@@ -1,0 +1,27 @@
+---
+description: Shell 명령 실행 - Windows PowerShell 환경
+alwaysApply: true
+---
+
+# Shell 환경
+
+이 프로젝트는 **Windows + PowerShell** 환경이므로 Shell 도구로 명령을 실행할 때 bash/zsh 문법이 아닌 PowerShell 호환 문법을 사용한다.
+
+## Unix → PowerShell 명령어 대체 규칙
+
+아래 Unix 명령어는 PowerShell에서 동작하지 않는다. 반드시 대체 명령어를 사용한다.
+
+| Unix | PowerShell 대체 |
+|------|----------------|
+| `head -n N <file>` | `Get-Content <file> \| Select-Object -First N` |
+| `head -N` (파이프) | `Select-Object -First N` |
+| `tail -n N <file>` | `Get-Content <file> \| Select-Object -Last N` |
+| `tail -N` (파이프) | `Select-Object -Last N` |
+| `grep pattern` | `Select-String -Pattern pattern` |
+| `grep -r pattern dir` | `Select-String -Path dir\* -Pattern pattern -Recurse` |
+| `cat file` | `Get-Content file` |
+| `wc -l` | `Measure-Object -Line` |
+| `ls -la` | `Get-ChildItem` |
+| `which cmd` | `Get-Command cmd` |
+| `touch file` | `New-Item file -ItemType File` |
+| `rm -rf dir` | `Remove-Item dir -Recurse -Force` |

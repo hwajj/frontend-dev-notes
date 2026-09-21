@@ -1,0 +1,19 @@
+---
+description: docs/ 폴더 기획 문서 작성·수정 시 write-planning 스킬 자동 적용
+globs: docs/**/*.md
+alwaysApply: false
+---
+
+# 기획 문서 작성 규칙
+
+`docs/` 폴더의 md 파일을 작성하거나 수정할 때는 반드시 write-planning 스킬을 읽고 따른다.
+
+스킬 경로: `.cursor/skills/write-planning/SKILL.md`
+
+## 핵심 원칙
+
+- 문서 작성 전 `docs/@index.md`를 먼저 읽어 번호 체계를 파악한다
+- 개별 문서 템플릿을 반드시 준수한다
+- 번호는 `@index.md`에서만 관리하며, 파일명·제목에는 번호를 포함하지 않는다
+- 다른 문서 참조 시 내용을 직접 포함하지 않고 상대 경로 링크만 사용한다 (Single Source of Truth)
+- 문서 작성 후 `@index.md` 목차를 갱신한다
