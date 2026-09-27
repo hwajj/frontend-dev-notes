@@ -51,7 +51,7 @@ JS → TS → DOM/브라우저 → 네트워크/렌더링 → React → 프론�
 
 주제별 Q&A는 [면접 준비](/interview/)에서 확인합니다.
 
-**8주 실무 복기 플랜:** 형제 레포 `20260330-study/CURRICULUM-BRIDGE-8W.md` — `STUDY-PLAN-8W.md` 주차와 맞춰 위 Day md 「먼저 읽기」만 지정.
+**스터디 플랜 연동:** 형제 레포 `20260330-study/CURRICULUM-FULL-TRACK.md` — 위 **15주 Day 전부** 순서·체크. 실무 8주만 골라 읽기: `CURRICULUM-BRIDGE-8W.md`.
 
 ## 나중에 보강 (백로그)
 

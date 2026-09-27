@@ -34,7 +34,7 @@
 [앱 시작]
   JwtAuthService.register(myStorage, myAuthApi)
 
-[API 요청 전 — 인터셉터 개념]
+[API 요청 전 — 인터셉터 개념] 
   tokens ← storage.get()
   access 만료? → newAccess ← authApi.reissueAccessToken(refresh)
               → storage.update({ accessToken: newAccess, refreshToken })
@@ -42,7 +42,7 @@
 
 [로그아웃]
   storage.clear()
-```
+``` 
 
 ## 용어 (이 글에서만)
 
