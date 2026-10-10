@@ -108,11 +108,13 @@
         min-height: 44px;
         box-sizing: border-box;
       }
-      #interview-toc-list .toc-h2 {
+      #interview-toc-list .toc-h2,
+      #opic-toc-list .toc-h2 {
         font-weight: 600;
         margin-top: 0.75rem;
       }
-      #interview-toc-list .toc-h3 {
+      #interview-toc-list .toc-h3,
+      #opic-toc-list .toc-h3 {
         padding-left: 1.25rem;
         font-size: 0.95rem;
       }
@@ -176,6 +178,7 @@
       <button class="tab active" id="tab-ts">TS Challenge</button>
       <button class="tab" id="tab-algo">알고리즘</button>
       <button class="tab" id="tab-diary">diary</button>
+      <button class="tab" id="tab-opic">OPIc</button>
       <button class="tab" id="tab-fe">FE학습</button>
     </div>
     <div class="tab-content active" id="content-ts">
@@ -235,6 +238,13 @@
       </div>
       <div class="section">
         <ul id="redhat-note-list"></ul>
+      </div>
+    </div>
+    <div class="tab-content" id="content-opic">
+      <div class="section">
+        <h2>OPIc 스크립트</h2>
+        <p id="opic-status">목차 불러오는 중...</p>
+        <ul id="opic-toc-list"></ul>
       </div>
     </div>
     <div id="viewer">
@@ -344,7 +354,9 @@
         // { name: "lesson012", file: "lesson012.md" },
       ];
       const INTERVIEW_MD_PATH = "interview/interview.md";
+      const OPIC_MD_PATH = "opic/opic_answer.md";
       let interviewMarkdownCache = null;
+      let opicMarkdownCache = null;
 
       function slugifyHeading(text) {
         return text
@@ -356,12 +368,18 @@
 
       function extractHeadings(markdown) {
         const headings = [];
+        const slugCount = new Map();
 
         for (const match of markdown.matchAll(/^(#{1,3})\s+(.+)$/gm)) {
+          const text = match[2].trim();
+          const base = slugifyHeading(text);
+          const count = slugCount.get(base) || 0;
           headings.push({
             level: match[1].length,
-            text: match[2].trim(),
+            text,
+            id: count > 0 ? `${base}-${count}` : base,
           });
+          slugCount.set(base, count + 1);
         }
 
         return headings;
@@ -454,6 +472,96 @@
         try {
           const text = await ensureInterviewMarkdown();
           const html = addHeadingIds(marked.parse(text, { breaks: true }));
+          document.getElementById("md-content").innerHTML = html;
+          Prism.highlightAll();
+          requestAnimationFrame(() => {
+            document.getElementById("viewer").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            if (scrollToId) {
+              const target = document.getElementById(scrollToId);
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
+          });
+        } catch (e) {
+          document.getElementById("md-content").textContent = e.message;
+        }
+      }
+
+      function renderOpicToc(headings) {
+        const ul = document.getElementById("opic-toc-list");
+        const status = document.getElementById("opic-status");
+        ul.innerHTML = "";
+
+        const tocHeadings = headings.filter((h) => h.level >= 2);
+        if (tocHeadings.length === 0) {
+          status.textContent = "목차로 쓸 제목(##, ###)이 없습니다.";
+          return;
+        }
+
+        status.textContent = "항목을 클릭하면 본문이 아래에 열립니다.";
+
+        const allLi = document.createElement("li");
+        const allLink = document.createElement("a");
+        allLink.className = "list-link";
+        allLink.href = "#viewer";
+        allLink.setAttribute("role", "button");
+        allLink.textContent = "전체 보기";
+        allLink.onclick = (e) => {
+          e.preventDefault();
+          loadOpicMarkdown();
+        };
+        allLi.appendChild(allLink);
+        ul.appendChild(allLi);
+
+        tocHeadings.forEach(({ level, text, id }) => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.className = `list-link toc-h${level}`;
+          a.href = "#viewer";
+          a.setAttribute("role", "button");
+          a.textContent = text;
+          a.onclick = (e) => {
+            e.preventDefault();
+            loadOpicMarkdown(id);
+          };
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      }
+
+      async function ensureOpicMarkdown() {
+        if (opicMarkdownCache) return opicMarkdownCache;
+        const res = await fetch(OPIC_MD_PATH);
+        if (!res.ok) throw new Error("OPIc 스크립트를 불러올 수 없습니다.");
+        opicMarkdownCache = await res.text();
+        return opicMarkdownCache;
+      }
+
+      async function loadOpicToc() {
+        const status = document.getElementById("opic-status");
+        const ul = document.getElementById("opic-toc-list");
+        if (opicMarkdownCache && ul.children.length > 0) return;
+        status.textContent = "목차 불러오는 중...";
+        ul.innerHTML = "";
+        try {
+          const markdown = await ensureOpicMarkdown();
+          renderOpicToc(extractHeadings(markdown));
+        } catch (e) {
+          status.textContent = e.message;
+        }
+      }
+
+      async function loadOpicMarkdown(scrollToId = null) {
+        document.getElementById("file-title").textContent = "OPIc 스크립트";
+        document.getElementById("md-content").textContent = "로딩 중...";
+        showViewer(true, true);
+        try {
+          const text = await ensureOpicMarkdown();
+          const html = addHeadingIds(marked.parse(text));
           document.getElementById("md-content").innerHTML = html;
           Prism.highlightAll();
           requestAnimationFrame(() => {
@@ -572,15 +680,18 @@
       const tabTS = document.getElementById("tab-ts");
       const tabAlgo = document.getElementById("tab-algo");
       const tabDiary = document.getElementById("tab-diary");
+      const tabOpic = document.getElementById("tab-opic");
       const tabFe = document.getElementById("tab-fe");
       const contentTS = document.getElementById("content-ts");
       const contentAlgo = document.getElementById("content-algo");
       const contentDiary = document.getElementById("content-diary");
+      const contentOpic = document.getElementById("content-opic");
       // FE학습(tab-fe)은 탭 패널이 아니라 VitePress 문서 사이트(./fe/)로 이동
       const tabPanels = [
         { id: "ts", btn: tabTS, panel: contentTS },
         { id: "algo", btn: tabAlgo, panel: contentAlgo },
         { id: "diary", btn: tabDiary, panel: contentDiary },
+        { id: "opic", btn: tabOpic, panel: contentOpic },
       ];
       function activateTab(tab) {
         tabPanels.forEach(({ id, btn, panel }) => {
@@ -590,10 +701,12 @@
         });
         if (tabFe) tabFe.classList.remove("active");
         showViewer(false);
+        if (tab === "opic") loadOpicToc();
       }
       tabTS.onclick = () => activateTab("ts");
       tabAlgo.onclick = () => activateTab("algo");
       tabDiary.onclick = () => activateTab("diary");
+      tabOpic.onclick = () => activateTab("opic");
       tabFe.onclick = () => {
         window.location.href = "./fe/";
       };
