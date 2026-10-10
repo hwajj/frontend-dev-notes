@@ -58,29 +58,26 @@ don't have to deal with the crazy Seoul subway rush anymore.
 
 영어
 
-I live in Seoul now, but my hometown is Gwangju. When I was young, I lived in an apartment there, and my
-parents still live in that same place. It's about four times bigger than the apartment I share with my younger
-sister now. It has a living room, a kitchen, three bedrooms, and two bathrooms. The rooms my sister and I used
-as kids are now a storage room and my dad's room. We made a lot of family memories in the living room, like
-making kimchi together and playing board games or card games.
+I grew up in an apartment in Gwangju with my parents. It wasn't huge, but it was much bigger than where I live
+now. It had a living room, a kitchen,
+three bedrooms, and two bathrooms. We spent a lot of time together in the living room, making kimchi or playing
+board games as a family.
 
-My current place is small, but I'm sure it's worth a lot more than my parents' apartment back in Gwangju,
-because it's only about a fifteen-minute bus ride from Gangnam. The layout is simple: one open living and kitchen area in
-the middle, two bedrooms, and one bathroom. My sister has the bigger room, and I have the smaller one. The
-living room is so cramped that I've never invited anyone over. I'm not unhappy with my place, but it doesn't
-have the same memories or emotional attachment as my hometown home.
+I live in Seoul now, and I share a small two-bedroom townhouse with my younger sister. The biggest difference
+is the size. My current place is much smaller, with only one bathroom and a small open kitchen and living
+area. Another difference is how each place feels. My childhood home is full of family memories, while my current
+place is more practical because it's close to work and convenient for commuting.
 
 한글
 
-저는 지금 서울에 살고 있지만, 고향은 광주입니다. 어렸을 때 살던 집은 광주에 있는 아파트이고, 아직도 부모님은
-그 집에서 살고 계세요. 그 집은 지금 여동생과 사는 집의 네 배쯤 됩니다. 거실과 부엌, 방 세 개, 화장실 두 개가
-있어요. 어릴 때 저와 여동생이 쓰던 방은 지금은 하나는 창고, 하나는 아빠 방이 되었습니다. 거실에서는 가족이 다
-같이 김장도 했고, 보드게임이나 카드게임을 하며 보낸 추억이 많아요.
+저는 광주에서 부모님과 함께 아파트에서 자랐습니다. 엄청 큰 집은 아니었지만, 지금 사는 집보다는 훨씬 넓었어요.
+거실 하나, 주방 하나, 침실 세 개, 욕실
+두 개가 있었습니다. 우리는 거실에서 김장을 하거나 가족끼리 보드게임을 하면서 많은 시간을 함께 보냈습니다.
 
-지금 집은 크기는 작지만, 부동산 가치는 광주 부모님 집보다 훨씬 비쌀 거예요. 강남까지 버스로 15분 거리거든요. 집
-구조는 거실과 부엌이 한 공간으로 가운데 있고, 방 두 개와 화장실 한 개예요. 큰 방은 여동생이 쓰고, 작은 방은
-제가 쓰고 있습니다. 거실이 너무 좁아서 지금까지 한 번도 손님을 초대해 본 적이 없어요. 지금 집에 불만은 없지만,
-고향집처럼 추억이나 애정은 아직 없어요.
+지금은 서울에 살고 있고, 여동생과 작은 투룸 빌라를 같이 쓰고 있습니다. 가장 큰 차이는 크기입니다.
+지금 집은 훨씬 작고, 욕실도 하나뿐이며 주방과 거실이 연결된 공간도 작습니다. 또 다른 차이는 집에서 느껴지는
+분위기입니다. 어릴 때 살던 집에는 가족과의 추억이 가득하지만, 지금 집은 직장과 가깝고 출퇴근하기 편하다는 점에서
+실용적인 공간입니다.
 
 ---
 
