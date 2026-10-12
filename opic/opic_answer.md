@@ -682,12 +682,53 @@ Full episodes are still on my list—I just don't have time for them on weekdays
 
 ---
 
-## TV shows have certainly changed compared to the past. Can you tell me a Tv show you used to watch them, and who do you usually watch with?
+## TV shows have certainly changed compared to the past. Can you tell me a TV show you used to watch, and who do you usually watch with?
+
+영어
+
+Honestly, TV is a lot different from when I was a kid. These days, even kids watch YouTube alone instead of
+TV. When I was young, I always watched weekend variety shows with my family. We'd sit together in the living
+room and watch a popular Korean comedy show called Infinite Challenge every Saturday. On Sundays, we watched
+another hit show called 2 Days 1 Night. People joked about which show they liked more, and my family liked
+Infinite Challenge because we preferred the host, Yoo Jae-suk, over Kang Ho-dong from the other show. I still
+catch reruns sometimes, and they're still really fun.
+
+한글
+
+솔직히 TV는 제가 어렸을 때랑 많이 달라요. 지금은 아이들도 TV 대신 유튜브를 혼자 더 많이 보죠. 저는 어렸을 때는
+주말 예능을 항상 가족이랑 같이 봤어요. 토요일마다 거실에 모여서 무한도전이라는 인기 코미디 예능을 보고, 일요일은
+1박 2일이라는 예능을 봤어요. 사람들은 두 프로그램 중 뭐가 더 재밌는지 농담처럼 얘기했고, 저희 가족은 1박 2일 MC
+강호동보다 무한도전 MC 유재석을 더 좋아해서 무한도전 편이었어요. 지금도 재방송 가끔 보면 여전히 재밌어요.
+
+**좋은 영어 표현**
+
+| 표현 | 한 줄 의미 |
+| --- | --- |
+| **Honestly**, ~ | 솔직히 ~ |
+| **a lot different from** when I was a kid | 어렸을 때랑 많이 다르다 |
+| **These days**, ~ | 요즘은 ~ |
+| **alone instead of** TV | TV 대신 혼자 (시청) |
+| **When I was young**, ~ | 어렸을 때는 ~ |
+| **weekend variety shows** | 주말 예능 |
+| **We'd sit together** in the living room | 거실에 같이 앉아서 |
+| **a popular Korean comedy show called** ~ | ~라는 인기 한국 코미디 예능 |
+| **another hit show called** ~ | ~라는 또 다른 인기 프로그램 |
+| **which show they liked more** | 어떤 프로그램을 더 좋아하는지 |
+| **preferred the host** over ~ | MC를 ~보다 더 선호하다 |
+| **catch reruns** | 재방송을 보다 |
+| **still really fun** | 여전히 정말 재밌다 |
+
+**연결:** `Honestly, ~` / `These days, ~` (지금) · `When I was young, ~` (어릴 때) · `We'd ~` (그때 습관)
 
 ## 어릴때와 지금의 tv환경
 
 영어
 
+TV has definitely changed since I was young. Back then, we mostly watched whatever was on at a fixed time—
+weekend variety shows, singing contests, or cartoons in the morning. The whole family watched the same
+program, and if you missed it, you just missed it. There was no way to watch it again on demand. These days, a lot of people
+my age watch OTT platforms like Netflix or YouTube instead of live TV. Popular shows are often web dramas or
+global series you can binge. I think the biggest difference is choice and control. We used to adjust our
 schedule to the TV; now the TV adjusts to us.
 
 한글
@@ -710,7 +751,7 @@ something I kind of miss about the old days.
 아이러니하게도 지금은 더 많은 콘텐츠를 보지만, 가족과 한 TV 앞에 모여 있는 시간은 줄었어요. 그 옛날 느낌이
 조금 그리울 때가 있습니다.
 
-**좋은 영어 표현** _(마지막 주제 · 복습용)_
+**좋은 영어 표현** _(TV 환경 · 복습용)_
 
 | 표현                                     | 한 줄 의미            |
 | ---------------------------------------- | --------------------- |
