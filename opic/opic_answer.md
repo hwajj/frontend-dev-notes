@@ -673,15 +673,12 @@ on weekends when I want a bigger screen.
 
 ---
 
-## 어릴 때 TV vs 지금 인기 방송
+## TV shows have certainly changed compared to the past. Can you tell me a Tv show you used to watch them, and who do you usually watch with?
+
+## 어릴때와 지금의 tv환경
 
 영어
 
-TV has definitely changed since I was young. Back then, we mostly watched whatever was on at a fixed time—
-weekend variety shows, singing contests, or cartoons in the morning. The whole family watched the same
-program, and if you missed it, you just missed it. There was no way to watch it again on demand. These days, a lot of people
-my age watch OTT platforms like Netflix or YouTube instead of live TV. Popular shows are often web dramas or
-global series you can binge. I think the biggest difference is choice and control. We used to adjust our
 schedule to the TV; now the TV adjusts to us.
 
 한글
