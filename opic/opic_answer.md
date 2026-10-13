@@ -41,7 +41,7 @@ taking this test today. Anyway, that's a little about me. Thanks for listening!
 
 영어
 
-I live with my younger sister in a small two-bedroom townhouse. There's a bigger room and a smaller room, with a
+I live with my younger sister in a small two-bedroom apartment. There's a bigger room and a smaller room, with a
 combined kitchen and living area in between. The balcony is right outside the bigger room, and that's where we
 keep the washer and dryer. The thing is, whenever we do laundry, we have to walk through that room, so it
 doesn't feel very private. That's why I picked the smaller room. My room only has a desk, a bed, and a small
@@ -61,17 +61,17 @@ feels more practical than cozy.
 
 **좋은 영어 표현**
 
-| 표현                                 | 한 줄 의미                   |
-| ------------------------------------ | ---------------------------- |
-| a **two-bedroom** townhouse          | 방 두 개짜리 연립/타운하우스 |
-| **combined** kitchen and living area | 부엌·거실이 한 공간          |
-| **The thing is**, ~                  | 문제는/근데 ~                |
-| doesn't feel very **private**        | 프라이버시가 잘 안 느껴진다  |
-| **That's why** I picked ~            | 그래서 ~를 골랐다            |
-| only about a meter **apart**         | 약 1m밖에 안 떨어져 있다     |
-| **We used to** have ~                | 예전에는 ~가 있었다          |
-| **swapped** it for ~                 | ~로 바꿨다                   |
-| more **practical** than cozy         | 아늑하기보다 실용적          |
+| 표현                                 | 한 줄 의미                       |
+| ------------------------------------ | -------------------------------- |
+| a small **two-bedroom** apartment    | 방 두 개짜리 작은 집 (투룸 빌라) |
+| **combined** kitchen and living area | 부엌·거실이 한 공간              |
+| **The thing is**, ~                  | 문제는/근데 ~                    |
+| doesn't feel very **private**        | 프라이버시가 잘 안 느껴진다      |
+| **That's why** I picked ~            | 그래서 ~를 골랐다                |
+| only about a meter **apart**         | 약 1m밖에 안 떨어져 있다         |
+| **We used to** have ~                | 예전에는 ~가 있었다              |
+| **swapped** it for ~                 | ~로 바꿨다                       |
+| more **practical** than cozy         | 아늑하기보다 실용적              |
 
 **연결:** `There's a bigger room and ~` (집 구조 설명) · `whenever we ~` (습관·상황)
 
@@ -86,7 +86,7 @@ now. It had a living room, a kitchen,
 three bedrooms, and two bathrooms. We spent a lot of time together in the living room, making kimchi or playing
 board games as a family.
 
-I live in Seoul now, and I share a small two-bedroom townhouse with my younger sister. The biggest difference
+I live in Seoul now, and I share a small two-bedroom apartment with my younger sister. The biggest difference
 is the size. My current place is much smaller, with only one bathroom and a small open kitchen and living
 area. Another difference is how each place feels. My childhood home is full of family memories, while my current
 place is more practical because it's close to work and convenient for commuting. It's about fifteen minutes
@@ -159,15 +159,14 @@ just for hugging. So my room—and especially my bed—is my favorite place at h
 
 영어
 
-The biggest problem with my place is that it's just too small. I'm living in about an eight-pyeong apartment
-with my younger sister, and honestly, that's tiny for two people. On my budget, I basically had two options: a
+The biggest problem with my place is that it's just too small. I'm living in a small apartment with my younger sister, and honestly, that's tiny for two people. On my budget, I basically had two options: a
 small place close to work, or a slightly bigger place farther away. I always picked the closer one, even if it
 meant less space. My lease is up next year, so I'm not sure where I'm going to move yet. Still, I'd like
 my next place to be a little bigger than this one, even if I have to deal with a longer commute.
 
 한글
 
-지금 집의 가장 큰 문제는 너무 좁다는 거예요. 지금은 8평 정도 되는 집에서 여동생과 둘이 살고 있거든요. 솔직히
+지금 집의 가장 큰 문제는 너무 좁다는 거예요. 지금은 작은 아파트에서 여동생과 둘이 살고 있거든요. 솔직히
 두 사람이 사는 집치고는 정말 작아요. 제 예산 안에서는 회사 가까운데 좁은 집이랑, 회사에서 멀지만 조금 더 넓은
 집, 이렇게 두 가지 중에서 골랐어야 했는데, 저는 항상 좁더라도 가까운 집을 택했어요.
 전세가 내년에 끝나서, 이제 어디로 이사할지 잘 모르겠어요. 그래도
