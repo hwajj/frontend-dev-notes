@@ -45,16 +45,15 @@ I live with my younger sister in a small two-bedroom apartment. There's a bigger
 combined kitchen and living area in between. The balcony is right outside the bigger room, and that's where we
 keep the washer and dryer. The thing is, whenever we do laundry, we have to walk through that room, so it
 doesn't feel very private. That's why I picked the smaller room. My room only has a desk, a bed, and a small
-closet, so there's almost no space left—the desk and the bed are only about a meter apart. The kitchen and living
-area are mostly just the appliances we need every day. Our place
-feels more practical than cozy.
+closet, so there's almost no space left. The desk and the bed are only about a meter apart. In the kitchen and living area, we have a fridge, a dining table, a coffee machine, an oven, and a microwave, and we keep our groceries in a big cabinet. Our place feels more practical than cozy.
 
 한글
 
 저는 여동생이랑 투룸 빌라에서 살고 있습니다. 큰 방 하나, 작은 방 하나 있고, 그 사이에 부엌 겸 거실이 있어요.
 큰 방 밖에 베란다가 있는데, 세탁기와 건조기를 거기 두었어요. 세탁하려면 큰 방을 지나가야 하거든요. 그래서 큰
 방은 프라이버시가 잘 안 지켜지는 편이라, 저는 작은 방을 골랐어요. 제 방에는 책상, 침대, 작은 옷장만 들어가
-있어서 공간이 거의 없어요. 책상과 침대 사이도 1미터가 채 안 되고, 부엌·거실은 매일 쓰는 가전 위주예요.
+있어서 공간이 거의 없어요. 책상과 침대 사이가 1미터 정도밖에 안 됩니다. 부엌·거실에는 냉장고, 식탁, 커피머신,
+오븐, 전자레인지가 있고, 큰 팬트리에는 식료품이 있어요.
 우리 집은 아늑하기보다는 실용적인 느낌이에요.
 
 **좋은 영어 표현**
