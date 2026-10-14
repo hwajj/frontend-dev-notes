@@ -78,7 +78,7 @@ closet, so there's almost no space left. The desk and the bed are only about a m
 
 영어
 
-I grew up in an apartment in Gwangju with my parents. It wasn't huge, but it was much bigger than where I live
+I grew up in an apartment in Gwangju with my family. It wasn't huge, but it was much bigger than where I live
 now. It had a living room, a kitchen,
 three bedrooms, and two bathrooms. We spent a lot of time together in the living room, making kimchi or playing
 board games as a family.
@@ -92,7 +92,7 @@ spacious one, but I don't have to deal with the crazy Seoul subway rush anymore.
 
 한글
 
-저는 광주에서 부모님과 함께 아파트에서 자랐습니다. 엄청 큰 집은 아니었지만, 지금 사는 집보다는 훨씬 넓었어요.
+저는 광주에서 가족과 함께 아파트에서 자랐습니다. 엄청 큰 집은 아니었지만, 지금 사는 집보다는 훨씬 넓었어요.
 거실 하나, 주방 하나, 침실 세 개, 욕실 두 개가 있었습니다. 우리는 거실에서 김장을 하거나 가족끼리 보드게임을 하면서 많은 시간을 함께 보냈습니다.
 
 지금은 서울에 살고 있고, 여동생과 작은 투룸 빌라를 같이 쓰고 있습니다. 가장 큰 차이는 크기입니다.
@@ -156,10 +156,9 @@ just for hugging. So my room—and especially my bed—is my favorite place at h
 
 영어
 
-The biggest problem with my place is that it's just too small. I'm living in a small apartment with my younger sister, and honestly, that's tiny for two people. On my budget, I basically had two options: a
-small place close to work, or a slightly bigger place farther away. I always picked the closer one, even if it
-meant less space. My lease is up next year, so I'm not sure where I'm going to move yet. Still, I'd like
-my next place to be a little bigger than this one, even if I have to deal with a longer commute.
+The biggest problem with my place is that it's just too small. I'm living in a small apartment with my younger sister, and honestly, that's tiny for two people. On my budget, I basically had two options: a small place close to work or a slightly bigger place farther away. I've always chosen the place closer to work, even if it meant less space. My lease is up next year, so I'm not sure where I'm going to move yet. But now, I think I'd prefer a bigger place, even if I have to deal with a longer commute.
+
+한글
 
 한글
 
