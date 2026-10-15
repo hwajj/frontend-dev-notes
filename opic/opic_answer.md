@@ -580,46 +580,54 @@ If I had more free time right now, I'd probably finish a full season in a week, 
 
 영어
 
-I first got interested in TV when I was a kid in Gwangju. My family would gather in the living room after
-dinner and watch whatever was on. I didn't choose the channel; my parents did. As a teenager, I still watched
-a lot of TV, but I cared more about characters and stories than what time shows aired. After I moved to Seoul and
-started working, I barely watched live TV. Netflix and YouTube fit my life better because I can watch
-whenever I want. My taste changed too. These days I look for strong characters and a clear theme, not just
-something funny to kill time.
+I don't remember exactly when I got into TV shows. What I do remember is running home from school as fast as
+I could to watch a drama called My Name Is Kim Sam-soon when I was in high school. That show is a real
+classic. I watched the whole thing again as an adult, and I still enjoyed it just as much the second time
+around. Back then, I was really into melodramas, but these days, I think I'm more into TV dramas in general.
+My favorite show over the past few years has been Stranger Things. It's so much fun watching ordinary people,
+the kind of people you'd actually meet in real life, save the world. Even though my taste in shows has
+changed over the years, one thing has stayed the same: I love female characters who take charge. Kim Sam-soon
+was like that, and so are the women in Stranger Things.
 
 한글
 
-TV에 관심을 갖기 시작한 건 광주에 살던 어릴 때예요. 저녁 먹고 가족이 거실에 모여 틀어 놓은 방송을
-봤습니다. 채널은 부모님이 고르셨어요. 십 대 때도 TV를 많이 봤지만, 편성표보다는 인물과 이야기에 더
-끌렸습니다. 서울에 와서 일하기 시작한 뒤에는 지상파 TV는 거의 안 봤어요. 넷플릭스와 유튜브가 제 생활에
-맞았습니다. 원하는 때에 볼 수 있거든요. 취향도 바뀌었어요. 지금은 시간 때우기용 웃긴 것보다, 인물이
-살아 있고 주제가 분명한 작품을 찾습니다.
+저는 정확하게 TV에 관심을 갖게 된 때가 기억나지 않아요. 하지만 고등학교 때 방영했던 『내 이름은 김삼순』을
+보려고, 학교에서 집까지 전속력으로 뛰어갔던 건 기억나요. 그 드라마는 정말 레전드 작품이에요. 성인이 되고
+나서 한 번 더 정주행했는데, 다시 봐도 진짜 재밌었어요. 그때는 멜로드라마를 좋아했는데, 지금은 드라마 장르를
+더 좋아하는 것 같아요. 최근 몇 년 동안 가장 재밌게 본 건 『스트레인저 씽스』예요. 주변에서 볼 만한 인물들이
+지구를 구하는 과정이 정말 재밌죠. 그런데 그때나 지금이나 제가 마음을 뺏기는 건 주체적인 여성 캐릭터예요.
+『내 이름은 김삼순』의 삼순이도 그렇고, 『스트레인저 씽스』의 여성 캐릭터들도 그렇습니다.
 
 **AL 추가**
 
 영어
 
-When I was little, TV felt like a family event; now it's more like personal time, even when I watch with my
-boyfriend.
+With melodramas, I'm really into it until the two leads get together, but once they're a couple, I lose
+interest pretty fast.
 
 한글
 
-어릴 때는 TV가 가족 모임 같은 느낌이었는데, 지금은 남자친구와 같이 봐도 개인 시간에 가깝습니다.
+멜로드라마는 둘이 이어지기 전까지 재밌는데, 둘이 커플이 되면 저는 금방 관심이 떨어져요.
 
 **좋은 영어 표현**
 
-| 표현                                | 한 줄 의미                   |
-| ----------------------------------- | ---------------------------- |
-| **got interested in** ~             | ~에 관심을 갖기 시작         |
-| **would gather** in the living room | 거실에 모였다                |
-| **whatever was on**                 | 틀어진 채널 그대로           |
-| **cared more about** ~ than ~       | ~보다 ~를 더 중요하게 여기다 |
-| **barely watched** live TV          | 지상파는 거의 안 봤다        |
-| **fit my life better**              | 내 생활에 더 맞다            |
-| **kill time**                       | 시간 때우다                  |
-| **a clear theme**                   | 분명한 주제                  |
+| 표현                                         | 한 줄 의미                     |
+| -------------------------------------------- | ------------------------------ |
+| **got into** TV shows                        | TV 프로그램에 빠졌다           |
+| **What I do remember is** ~                  | 기억나는 건 ~이다              |
+| **running home as fast as I could**          | 전속력으로 집에 뛰다           |
+| **a real classic**                           | 진짜 레전드 작품               |
+| **watched the whole thing again**            | 처음부터 다시 정주행했다       |
+| **just as much the second time around**      | 두 번째도 똑같이 재밌었다      |
+| **TV dramas in general**                     | 드라마 장르 전반               |
+| **My favorite show** over ~ **has been** ~   | 그 기간 최고작은 ~였다         |
+| **the kind of people you'd actually meet**   | 실제로 주변에서 볼 만한 사람   |
+| **Even though** ~, **one thing has stayed the same** | 변했지만 하나만은 같다 |
+| **female characters who take charge**        | 주체적인 여성 캐릭터들         |
+| **so are** the women in ~                    | ~의 여성들도 그렇다            |
+| **lose interest pretty fast**                | 금방 관심이 떨어진다           |
 
-**연결:** `After I moved to Seoul and ~` (전환) · `These days I look for ~, not just ~` (지금 취향)
+**연결:** `What I do remember is ~` (기억나는 장면) · `Back then ~, but these days ~` (취향 변화) · `Even though ~, one thing has stayed the same` (변한 것과 안 변한 것)
 
 ---
 
