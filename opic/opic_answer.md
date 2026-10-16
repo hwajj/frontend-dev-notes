@@ -580,14 +580,11 @@ If I had more free time right now, I'd probably finish a full season in a week, 
 
 영어
 
-I don't remember exactly when I got into TV shows. What I do remember is running home from school as fast as
-I could to watch a drama called My Name Is Kim Sam-soon when I was in high school. That show is a real
-classic. I watched the whole thing again as an adult, and I still enjoyed it just as much the second time
-around. Back then, I was really into melodramas, but these days, I think I'm more into TV dramas in general.
-My favorite show over the past few years has been Stranger Things. It's so much fun watching ordinary people,
-the kind of people you'd actually meet in real life, save the world. Even though my taste in shows has
-changed over the years, one thing has stayed the same: I love female characters who take charge. Kim Sam-soon
-was like that, and so are the women in Stranger Things.
+I'm not sure when I got into TV shows. But in high school, I'd run straight home to watch a drama called My
+Name Is Kim Sam-soon. It's a real classic. I rewatched the whole series as an adult, and it was still
+great. Back then, I loved melodramas. These days, I watch more TV dramas in general. Lately my favorite has
+been Stranger Things. I love watching regular people save the world. My taste has changed, but one thing
+hasn't: I love women who take charge. Kim Sam-soon was like that, and so are the women in Stranger Things.
 
 한글
 
@@ -613,21 +610,20 @@ interest pretty fast.
 
 | 표현                                         | 한 줄 의미                     |
 | -------------------------------------------- | ------------------------------ |
-| **got into** TV shows                        | TV 프로그램에 빠졌다           |
-| **What I do remember is** ~                  | 기억나는 건 ~이다              |
-| **running home as fast as I could**          | 전속력으로 집에 뛰다           |
+| **I'm not sure when** I got into ~           | 정확히 언제인지는 모른다       |
+| **I'd run straight home**                    | 전속력으로 집에 뛰다           |
 | **a real classic**                           | 진짜 레전드 작품               |
-| **watched the whole thing again**            | 처음부터 다시 정주행했다       |
-| **just as much the second time around**      | 두 번째도 똑같이 재밌었다      |
+| **rewatched the whole series**               | 처음부터 다시 정주행했다       |
+| **it was still great**                       | 다시 봐도 재밌었다             |
 | **TV dramas in general**                     | 드라마 장르 전반               |
-| **My favorite show** over ~ **has been** ~   | 그 기간 최고작은 ~였다         |
-| **the kind of people you'd actually meet**   | 실제로 주변에서 볼 만한 사람   |
-| **Even though** ~, **one thing has stayed the same** | 변했지만 하나만은 같다 |
-| **female characters who take charge**        | 주체적인 여성 캐릭터들         |
+| **Lately my favorite has been** ~            | 최근 최고작은 ~                |
+| **regular people**                           | 주변에서 볼 만한 사람들        |
+| **My taste has changed, but one thing hasn't** | 취향은 변했지만 하나는 같다  |
+| **women who take charge**                    | 주체적인 여성 캐릭터           |
 | **so are** the women in ~                    | ~의 여성들도 그렇다            |
 | **lose interest pretty fast**                | 금방 관심이 떨어진다           |
 
-**연결:** `What I do remember is ~` (기억나는 장면) · `Back then ~, but these days ~` (취향 변화) · `Even though ~, one thing has stayed the same` (변한 것과 안 변한 것)
+**연결:** `But in high school, ~` (기억나는 장면) · `Back then ~` / `These days ~` (취향 변화) · `~ has changed, but one thing hasn't` (변한 것과 안 변한 것)
 
 ---
 
@@ -635,44 +631,54 @@ interest pretty fast.
 
 영어
 
-On weekdays, I usually watch something after dinner in my small bedroom. Sometimes it's Netflix on my laptop,
-and sometimes it's YouTube on my phone while I'm lying on my bed. I often talk to my boyfriend on the phone
-at the same time, so I'm not fully focused on one show. On weekends, the routine is different. I stay at his
-place Friday night, and we might watch TV in the living room before we go out or before we sleep. We don't
-binge for hours; one or two episodes is enough for us. That's my normal pattern.
+On weekdays, I watch drama recaps by myself. I'm busy with job hunting and self-improvement, so I mostly watch
+short clips on YouTube—not full episodes. I know writers and directors put a lot of work into those shows,
+and I should watch the full episodes. But honestly I'm too busy, so I go for something quick and light.
+
+On weekends, I'm at my boyfriend's place. We pick one twenty-minute variety highlight on YouTube. Our tastes
+are pretty different, but we both like those clips. We cook dinner, put it by his monitor, and eat while we
+watch.
 
 한글
 
-평일에는 저녁 식사 후 작은 방에서 보는 게 보통이에요. 노트북으로 넷플릭스를 보거나, 침대에 누워 폰으로
-유튜브를 봅니다. 남자친구와 통화를 같이 하는 날도 많아서, 한 작품에만 완전히 몰입하지는 못해요. 주말
-루틴은 달라요. 금요일 밤은 남자친구 집에서 자고, 나가기 전이나 자기 전에 거실 TV로 같이 보기도 합니다.
-몇 시간씩 정주행하지는 않고, 한두 편이면 충분해요. 이게 제 평소 패턴입니다.
+평일에는 혼자 드라마 하이라이트를 봐요. 요즘 이직 준비와 자기계발에 정신이 없어서, 주로 요약된 콘텐츠를
+봐요. 드라마 하이라이트 같은 거요. 작가와 감독이 공들인 작품은 본편으로 보는 게 맞다는 걸 알지만, 머리가
+바쁘고 가벼운 도파민을 좇게 되네요.
+
+주말에는 남자친구와 함께 남자친구 집에서 유튜브로 예능 하이라이트를 하나 골라서 봐요. 취향은 다르지만
+예능 20분짜리 하이라이트는 둘 다 재밌게 볼 수 있거든요. 모니터 앞에 함께 만든 저녁 차려 놓고, 유튜브
+보면서 밥 먹어요.
 
 **AL 추가**
 
 영어
 
-Not only is my room tiny, but the screen is small too, so I actually prefer watching at my boyfriend's place
-on weekends when I want a bigger screen.
+Full episodes are still on my list—I just don't have time for them on weekdays right now.
 
 한글
 
-제 방은 작은데 화면까지 작아서, 화면을 크게 보고 싶을 때는 주말에 남자친구 집에서 보는 편이 더 낫습니다.
+정주행은 여전히 하고 싶은데, 평일에는 그만한 여유가 없어요.
 
 **좋은 영어 표현**
 
-| 표현                         | 한 줄 의미             |
-| ---------------------------- | ---------------------- |
-| **lying on** my bed          | 침대에 누워            |
-| **at the same time**         | 동시에                 |
-| **not fully focused on**     | 완전히 몰입하지 못하다 |
-| **the routine is different** | 루틴이 다르다          |
-| **stay at** his place        | 그 집에서 자다         |
-| **we might** watch ~         | TV를 볼 수도 있다      |
-| **binge for hours**          | 몇 시간 정주행         |
-| **That's my normal pattern** | 제 평소 패턴이다       |
+| 표현                                      | 한 줄 의미                      |
+| ----------------------------------------- | ------------------------------- |
+| **drama recaps**                            | 드라마 하이라이트·요약 영상      |
+| **busy with** job hunting                 | 이직 준비에 정신이 없다         |
+| **self-improvement**                        | 자기계발                        |
+| **short clips** / **not full episodes**     | 짧은 클립·본편은 안 봄          |
+| **put a lot of work into** ~                | ~에 공을 들이다                 |
+| **I should watch the full episodes**        | 본편으로 보는 게 맞다           |
+| **But honestly** ~                          | 솔직히 ~ (알지만 현실)          |
+| **something quick and light**               | 가벼운 도파민·가벼운 재미       |
+| **pick one** ~ **highlight**                | ~ 하이라이트 하나 고르다        |
+| **Our tastes are pretty different**         | 취향이 다르다                   |
+| **we both like those clips**                | 둘 다 재밌게 본다               |
+| **put it by his monitor**                   | 모니터 앞에 차려 놓다           |
+| **eat while we watch**                      | 보면서 밥 먹다                  |
+| **don't have time for** ~                   | ~할 여유가 없다                 |
 
-**연결:** `On weekdays, ~` / `On weekends, ~` · `so I'm not ~` (이유)
+**연결:** `On weekdays, ~` / `On weekends, ~` · `I know ~, but ~` (알지만 현실) · `~, but ~` (취향은 다르지만 공통점)
 
 ---
 
