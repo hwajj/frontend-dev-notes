@@ -45,7 +45,9 @@ I live with my younger sister in a small two-bedroom apartment. There's a bigger
 combined kitchen and living area in between. The balcony is right outside the bigger room, and that's where we
 keep the washer and dryer. The thing is, whenever we do laundry, we have to walk through that room, so it
 doesn't feel very private. That's why I picked the smaller room. My room only has a desk, a bed, and a small
-closet, so there's almost no space left. The desk and the bed are only about a meter apart. In the kitchen and living area, we have a fridge, a dining table, a coffee machine, an oven, and a microwave, and we keep our groceries in a big cabinet. Our place feels more practical than cozy.
+closet, so there's almost no space left. The desk and the bed are only about a meter apart. In the kitchen and
+living area, we have a fridge, a dining table, a coffee machine, an oven, and a microwave. We keep our
+groceries in a lower storage cabinet with drawers. Our place feels more practical than cozy.
 
 한글
 
@@ -53,8 +55,8 @@ closet, so there's almost no space left. The desk and the bed are only about a m
 큰 방 밖에 베란다가 있는데, 세탁기와 건조기를 거기 두었어요. 세탁하려면 큰 방을 지나가야 하거든요. 그래서 큰
 방은 프라이버시가 잘 안 지켜지는 편이라, 저는 작은 방을 골랐어요. 제 방에는 책상, 침대, 작은 옷장만 들어가
 있어서 공간이 거의 없어요. 책상과 침대 사이가 1미터 정도밖에 안 됩니다. 부엌·거실에는 냉장고, 식탁, 커피머신,
-오븐, 전자레인지가 있고, 큰 팬트리에는 식료품이 있어요.
-우리 집은 아늑하기보다는 실용적인 느낌이에요.
+오븐, 전자레인지가 있고, 식료품은 서랍 있는 낮은 수납장에 넣어 두었어요. 우리 집은 아늑하기보다는 실용적인
+느낌이에요.
 
 **좋은 영어 표현**
 
@@ -66,8 +68,7 @@ closet, so there's almost no space left. The desk and the bed are only about a m
 | doesn't feel very **private**        | 프라이버시가 잘 안 느껴진다      |
 | **That's why** I picked ~            | 그래서 ~를 골랐다                |
 | only about a meter **apart**         | 약 1m밖에 안 떨어져 있다         |
-| **We used to** have ~                | 예전에는 ~가 있었다              |
-| **swapped** it for ~                 | ~로 바꿨다                       |
+| a lower **storage cabinet**          | 낮은 수납장 (서랍형)             |
 | more **practical** than cozy         | 아늑하기보다 실용적              |
 
 **연결:** `There's a bigger room and ~` (집 구조 설명) · `whenever we ~` (습관·상황)
@@ -87,8 +88,8 @@ I live in Seoul now, and I share a small two-bedroom apartment with my younger s
 is the size. My current place is much smaller, with only one bathroom and a small open kitchen and living
 area. Another difference is how each place feels. My childhood home is full of family memories, while my current
 place is more practical because it's close to work and convenient for commuting. It's about fifteen minutes
-to Gangnam by bus, and my sister and I both work around there too. I chose a smaller place instead of a more
-spacious one, but I don't have to deal with the crazy Seoul subway rush anymore.
+to Gangnam by bus, and my sister and I both work around there too. I gave up a more spacious place, but I
+don't have to deal with the crazy Seoul subway rush anymore.
 
 한글
 
@@ -160,8 +161,6 @@ The biggest problem with my place is that it's just too small. I'm living in a s
 
 한글
 
-한글
-
 지금 집의 가장 큰 문제는 너무 좁다는 거예요. 지금은 작은 아파트에서 여동생과 둘이 살고 있거든요. 솔직히
 두 사람이 사는 집치고는 정말 작아요. 제 예산 안에서는 회사 가까운데 좁은 집이랑, 회사에서 멀지만 조금 더 넓은
 집, 이렇게 두 가지 중에서 골랐어야 했는데, 저는 항상 좁더라도 가까운 집을 택했어요.
@@ -173,13 +172,12 @@ The biggest problem with my place is that it's just too small. I'm living in a s
 | 표현                              | 한 줄 의미                    |
 | --------------------------------- | ----------------------------- |
 | **The biggest problem** is that ~ | 가장 큰 문제는 ~              |
-| **eight-pyeong** apartment        | 8평짜리 집                    |
 | **On my budget**                  | 내 예산 안에서는              |
 | I **basically** had two options   | 기본적으로 선택지가 두 가지   |
 | **even if** it meant less space   | 공간이 줄어도                 |
 | My **lease is up** next year      | 전세/계약이 내년에 끝난다     |
 | **deal with** a longer commute    | 출퇴근이 길어지는 걸 감수하다 |
-| **Still**, I'd like ~             | 그래도 ~하고 싶다             |
+| **But now, I think I'd prefer** ~ | 지금은 ~가 더 나은 것 같다    |
 
 **연결:** `a small place close to work, or ~` (A or B 선택) · `honestly` (솔직히)
 
@@ -264,35 +262,39 @@ door twice before I walk away.
 
 영어
 
-Recently, my sister and I made a change in our kitchen and living area. We removed a tall open pantry and
-brought in a lower display cabinet instead. The old pantry was over two meters high, with exposed metal
-frames, so we had been stacking groceries and random stuff on the shelves. Because everything was out in the
-open, dust built up really fast. After we took it out, the room felt bigger and brighter. I like the new
-cabinet better because most things stay inside the drawers. You only see clutter when someone opens them, so
-the whole space looks much cleaner now. It was a small change, but it made our home feel more organized.
+Recently, my sister and I made some changes to our kitchen and living area. We removed a tall open pantry and
+replaced it with a lower storage cabinet instead. The old pantry was over two meters high, with open metal
+shelves, so we had been piling groceries and other random stuff on them. Because everything was out in the
+open, dust collected really quickly. After we took it out, the room felt bigger and brighter. I like the new
+cabinet better because most things are tucked away in the drawers. The clutter is hidden until someone opens
+the drawers, so the whole space looks much cleaner now. It was a small change, but it made our home feel more
+organized.
 
 한글
 
-최근에 여동생이랑 거실 겸 부엌을 조금 바꿨어요. 키 큰 오픈형 팬트리를 없애고, 낮은 장식장을 들였습니다. 예전
-팬트리는 2미터가 넘는 높이에 철제 구조가 드러나 있었고, 식료품이랑 잡동사니를 그냥 쌓아 두곤 했어요. 노출
-구조라 먼지가 금방 꼈습니다. 팬트리를 빼고 낮은 가구를 두니, 가구 키가 낮아서 거실이 더 넓어 보이고 밝아졌어요.
-지금은 대부분 서랍 안에 넣어 두니까, 서랍을 열 때만 물건이 보여서 훨씬 깔끔해 보입니다. 큰 공사는 아니었지만, 집이 정리된
-느낌이 나서 만족해요.
+최근에 여동생이랑 거실 겸 부엌을 조금 바꿨어요. 키 큰 오픈형 팬트리를 없애고, 낮은 수납장으로 바꿨습니다. 예전
+팬트리는 2미터가 넘는 높이에 열린 철제 선반이 있어서, 식료품이랑 잡동사니를 쌓아 두곤 했어요. 다 드러나 있어서
+먼지도 금방 끼었고요. 팬트리를 빼고 나니 공간이 더 넓고 밝아 보였어요. 지금은 대부분 서랍 안에 넣어 두니까,
+서랍을 열기 전엔 어수선한 게 안 보여서 훨씬 깔끔해 보입니다. 큰 공사는 아니었지만, 집이 정리된 느낌이 나서
+만족해요.
 
 **좋은 영어 표현**
 
-| 표현                                  | 한 줄 의미              |
-| ------------------------------------- | ----------------------- |
-| **made a change** in ~                | ~을 조금 바꿨다         |
-| **brought in** ~ **instead**          | 대신 ~를 들이다         |
-| **exposed** metal frames              | 드러난 철 구조          |
-| **random stuff**                      | 잡동사니                |
-| **out in the open**                   | 밖에 노출된             |
-| **dust built up** really fast         | 먼지가 금방 쌓이다      |
-| **felt bigger and brighter**          | 더 넓고 밝게 느껴지다   |
+| 표현 | 한 줄 의미 |
+| --- | --- |
+| **made some changes to** ~ | ~을 조금 손봤다 / 바꿨다 |
+| **replaced it with** ~ | 그걸 ~로 바꿨다 |
+| **open metal shelves** | 열린 철제 선반 |
+| **piling** groceries and other random stuff | 식료품·잡동사니를 쌓아 두다 |
+| **out in the open** | 밖에 다 드러난 |
+| **dust collected** really quickly | 먼지가 금방 쌓이다 |
+| **tucked away** in the drawers | 서랍 안에 넣어 두다 |
+| **The clutter is hidden until** ~ | ~하기 전엔 어수선함이 안 보인다 |
 | **made our home feel** more organized | 집이 정리된 느낌이 나다 |
 
 **연결:** `Because everything was ~` (이유) · `It was a small change, but ~` (결론)
+
+**외워 두면 좋은 덩어리:** `made some changes to` · `replaced it with` · `dust collected`
 
 ---
 
