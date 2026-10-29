@@ -610,20 +610,20 @@ interest pretty fast.
 
 **좋은 영어 표현**
 
-| 표현                                         | 한 줄 의미                     |
-| -------------------------------------------- | ------------------------------ |
-| **I'm not sure when** I got into ~           | 정확히 언제인지는 모른다       |
-| **I'd run straight home**                    | 전속력으로 집에 뛰다           |
-| **a real classic**                           | 진짜 레전드 작품               |
-| **rewatched the whole series**               | 처음부터 다시 정주행했다       |
-| **it was still great**                       | 다시 봐도 재밌었다             |
-| **TV dramas in general**                     | 드라마 장르 전반               |
-| **Lately my favorite has been** ~            | 최근 최고작은 ~                |
-| **regular people**                           | 주변에서 볼 만한 사람들        |
-| **My taste has changed, but one thing hasn't** | 취향은 변했지만 하나는 같다  |
-| **women who take charge**                    | 주체적인 여성 캐릭터           |
-| **so are** the women in ~                    | ~의 여성들도 그렇다            |
-| **lose interest pretty fast**                | 금방 관심이 떨어진다           |
+| 표현                                           | 한 줄 의미                  |
+| ---------------------------------------------- | --------------------------- |
+| **I'm not sure when** I got into ~             | 정확히 언제인지는 모른다    |
+| **I'd run straight home**                      | 전속력으로 집에 뛰다        |
+| **a real classic**                             | 진짜 레전드 작품            |
+| **rewatched the whole series**                 | 처음부터 다시 정주행했다    |
+| **it was still great**                         | 다시 봐도 재밌었다          |
+| **TV dramas in general**                       | 드라마 장르 전반            |
+| **Lately my favorite has been** ~              | 최근 최고작은 ~             |
+| **regular people**                             | 주변에서 볼 만한 사람들     |
+| **My taste has changed, but one thing hasn't** | 취향은 변했지만 하나는 같다 |
+| **women who take charge**                      | 주체적인 여성 캐릭터        |
+| **so are** the women in ~                      | ~의 여성들도 그렇다         |
+| **lose interest pretty fast**                  | 금방 관심이 떨어진다        |
 
 **연결:** `But in high school, ~` (기억나는 장면) · `Back then ~` / `These days ~` (취향 변화) · `~ has changed, but one thing hasn't` (변한 것과 안 변한 것)
 
@@ -663,22 +663,22 @@ Full episodes are still on my list—I just don't have time for them on weekdays
 
 **좋은 영어 표현**
 
-| 표현                                      | 한 줄 의미                      |
-| ----------------------------------------- | ------------------------------- |
-| **drama recaps**                            | 드라마 하이라이트·요약 영상      |
-| **busy with** job hunting                 | 이직 준비에 정신이 없다         |
-| **self-improvement**                        | 자기계발                        |
-| **short clips** / **not full episodes**     | 짧은 클립·본편은 안 봄          |
-| **put a lot of work into** ~                | ~에 공을 들이다                 |
-| **I should watch the full episodes**        | 본편으로 보는 게 맞다           |
-| **But honestly** ~                          | 솔직히 ~ (알지만 현실)          |
-| **something quick and light**               | 가벼운 도파민·가벼운 재미       |
-| **pick one** ~ **highlight**                | ~ 하이라이트 하나 고르다        |
-| **Our tastes are pretty different**         | 취향이 다르다                   |
-| **we both like those clips**                | 둘 다 재밌게 본다               |
-| **put it by his monitor**                   | 모니터 앞에 차려 놓다           |
-| **eat while we watch**                      | 보면서 밥 먹다                  |
-| **don't have time for** ~                   | ~할 여유가 없다                 |
+| 표현                                    | 한 줄 의미                  |
+| --------------------------------------- | --------------------------- |
+| **drama recaps**                        | 드라마 하이라이트·요약 영상 |
+| **busy with** job hunting               | 이직 준비에 정신이 없다     |
+| **self-improvement**                    | 자기계발                    |
+| **short clips** / **not full episodes** | 짧은 클립·본편은 안 봄      |
+| **put a lot of work into** ~            | ~에 공을 들이다             |
+| **I should watch the full episodes**    | 본편으로 보는 게 맞다       |
+| **But honestly** ~                      | 솔직히 ~ (알지만 현실)      |
+| **something quick and light**           | 가벼운 도파민·가벼운 재미   |
+| **pick one** ~ **highlight**            | ~ 하이라이트 하나 고르다    |
+| **Our tastes are pretty different**     | 취향이 다르다               |
+| **we both like those clips**            | 둘 다 재밌게 본다           |
+| **put it by his monitor**               | 모니터 앞에 차려 놓다       |
+| **eat while we watch**                  | 보면서 밥 먹다              |
+| **don't have time for** ~               | ~할 여유가 없다             |
 
 **연결:** `On weekdays, ~` / `On weekends, ~` · `I know ~, but ~` (알지만 현실) · `~, but ~` (취향은 다르지만 공통점)
 
@@ -769,3 +769,421 @@ something I kind of miss about the old days.
 | **Ironically**, ~                        | 아이러니하게도 ~      |
 
 **연결:** `Back then, ~` / `These days, ~` (과거·현재) · `I think the biggest difference is ~` (의견)
+
+## 최근에 영화보러갔던때 , 그날하루, 영화보기전에 뭐했고, 영화본 뒤에는 무엇을 했는지
+
+영어
+
+About three months ago, I went to see a movie called _Hope_. Before the movie, my boyfriend and I had dinner at
+home and then walked to Lotte World Tower, where the movie theater is. It took us about 40 minutes to get
+there on foot, so we'd had plenty of time to digest our dinner by the time we arrived. We watched a late-night
+screening, and afterward, we took a taxi home while chatting about the movie.
+
+The walk actually made the night better because I arrived feeling relaxed rather than full and sleepy.
+
+한글
+
+한 3개월 전쯤에 *Hope*라는 영화를 보러 갔어요. 보기 전에 남자친구와 집에서 저녁을 먹고, 영화관이 있는
+롯데월드타워까지 걸어갔어요. 걸어서 40분 정도라, 도착할 때쯤에는 저녁을 소화할 시간이 충분했어요. 심야
+상영을 보고, 그다음에는 영화 얘기를 하면서 택시를 타고 집에 왔어요.
+
+걸어간 덕분에 배가 부른 채로 졸지 않고, 오히려 편하게 도착해서 더 좋았어요.
+
+**좋은 영어 표현**
+
+| 표현                                                  | 한 줄 의미                      |
+| ----------------------------------------------------- | ------------------------------- |
+| **It took us about 40 minutes to get there on foot.** | 걸어서 가는 데 40분 정도 걸렸다 |
+| **by the time we arrived**                            | 도착했을 때쯤에는               |
+| **rather than**                                       | ~한 상태 대신                   |
+
+`I'd had plenty of time to digest`를 쓴 이유는, `completely digested`가 소화가 의학적으로 끝났다는 말처럼
+들리기 때문입니다.
+
+**연결:** `Before the movie, ~` / `and afterward, ~` (전·후 순서) · `The walk actually made ~ because ~`
+(경험 → 의미)
+
+---
+
+## 기억에 남는 영화, 무엇이 그영화를 특별하게 했나요? 그 영화를 친구들에게 추천하고싶나요?
+
+영어
+
+The movie that has stuck with me the most is _Hope_, directed by Na Hong-jin. He's known for his thrillers and
+horror films. It's not exactly a feel-good movie. It's more of a dark, cinematic thriller, and he's not a
+director I usually follow. But this movie really divided audiences. Some people raved about it, while others
+were pretty critical, so opinions on it are still mixed.
+
+Personally, I'd recommend it. What really stood out to me was the directing. I was completely drawn in and
+stayed engaged from start to finish. I'd love to hear what my friends think of it, especially whether they
+found it as immersive as I did.
+
+The funny thing is, I went in without high expectations, and maybe that's why it stuck with me.
+
+한글
+
+제일 기억에 남는 영화는 나홍진 감독의 *Hope*예요. 스릴러랑 공포로 알려진 감독이고, 보고 나면 기분이 좋아지는
+영화는 아니에요. 어둡고 시네마틱한 스릴러에 가깝고, 원래 제가 즐겨 보는 감독도 아니에요. 그런데 이 영화는
+관객 반응이 정말 갈렸어요. 어떤 사람은 극찬하고, 어떤 사람은 꽤 비판해서 평이 아직도 섞여 있어요.
+
+저는 추천하고 싶어요. 특히 인상적이었던 건 연출이에요. 처음부터 끝까지 완전히 빠져들었어요. 친구들은 어떻게
+생각하는지, 저만큼 몰입하는지도 들어 보고 싶어요.
+
+재미있게도 큰 기대 없이 봤는데, 그래서 더 기억에 남는 것 같아요.
+
+**좋은 영어 표현**
+
+| 표현                                    | 한 줄 의미                   |
+| --------------------------------------- | ---------------------------- |
+| **has stuck with me**                   | 지금까지 기억에 남다         |
+| **a feel-good movie**                   | 보고 나면 기분 좋아지는 영화 |
+| **divide audiences**                    | 관객 반응을 갈라놓다         |
+| **rave about**                          | 극찬하다                     |
+| **What really stood out to me was ...** | 특히 인상적이었던 것은 …     |
+| **be drawn in**                         | 빠져들다                     |
+| **go in without high expectations**     | 큰 기대 없이 보러 가다       |
+
+`art-house`를 빼 둔 이유는, *Hope*가 예술영화가 아니라 SF 스릴러이기 때문입니다. 본인이 말한 "편하게 보는
+영화가 아니다"는 `feel-good`으로 살렸습니다.
+
+**연결:** `Some people ~, while others ~` (대비) · `The funny thing is, ~` (마무리 한 줄)
+
+---
+
+## 좋아하는 영화배우, 그 배우에 대해 뉴스에서 들은 이야기. 그사람이 누구인지, 무슨일이 있엇는지 왜 영화팬들이 흥미롭게 생각했는지.
+
+영어
+
+My favorite actor is Robert Pattinson. He first rose to fame through teen romance movies that were hugely
+popular with young audiences. After that, he spent several years taking on roles in critically acclaimed indie
+films, which helped him grow as an actor. Now he's respected for his performances even in big-budget Hollywood
+movies.
+
+What I find impressive is that he didn't just rely on his early fame. He deliberately chose more challenging
+roles, and I think that's why people take him seriously as an actor.
+
+한글
+
+제가 좋아하는 배우는 로버트 패틴슨이에요. 처음에는 청소년들 사이에서 인기 많던 로맨스 영화로 유명해졌어요.
+그 뒤 몇 년 동안 평이 좋은 독립영화에서 역할을 맡으며 배우로서 성장했고, 지금은 헐리우드 대작에서도 연기를
+인정받아요.
+
+인상적인 건, 초기에 얻은 인기에만 기대지 않았다는 점이에요. 더 어려운 역할을 일부러 골랐고, 그래서 사람들이
+그를 배우로 진지하게 보는 것 같아요.
+
+**좋은 영어 표현**
+
+| 표현                       | 한 줄 의미         |
+| -------------------------- | ------------------ |
+| **rise to fame**           | 유명해지다         |
+| **take on roles**          | 역할을 맡다        |
+| **grow as an actor**       | 배우로서 성장하다  |
+| **rely on his early fame** | 초반 인기에 기대다 |
+| **take him seriously**     | 그를 진지하게 보다 |
+
+`indie films`를 남긴 이유는, 말할 때는 `independent films`보다 `indie`가 더 흔하기 때문입니다.
+
+**연결:** `He first ~` / `After that, ~` / `Now ~` (시간 순) · `What I find impressive is that ~` (의견)
+
+## 좋아하는 영화배우, 그 배우에 대해 뉴스에서 들은 이야기. 그사람이 누구인지, 무슨일이 있엇는지 왜 영화팬들이 흥미롭게 생각했는지.
+
+영어
+
+> My favorite actress is Kim Go-eun. Her debut was pretty unusual. As a newcomer, she was asked to film some very intimate scenes, and she later said she didn't really have the leverage to push back against the director. A lot of people found those scenes uncomfortable to watch, and they felt pretty voyeuristic. Even so, that movie is what got her noticed, and she went on to build a successful career.
+>
+> What I really admire is how she built her reputation after that. She starred in one hit after another, and now she's considered one of the top actresses in Korea. _Exhuma_ is a great example. She played a shaman, and her performance felt so convincing that it was hard to believe it was acting. She also had amazing chemistry with the actor who played Bong-gil, and the two of them are a big reason fans got so invested in the movie. Some fans even started writing fan fiction and making fan art about their characters.
+>
+> The movie also earned her major acting awards in 2024, including the Best Actress award at the Blue Dragon Film Awards and the Best Actress award at the Baeksang Arts Awards. That's why I admire her so much. She had a really tough start, but she kept growing as an actress, and I think that's what makes her story so interesting to movie fans.
+>
+> Honestly, the way she handled that early experience is what makes me respect her even more. Watching her grow from there is really inspiring.
+
+한글
+
+> 제가 제일 좋아하는 배우는 김고은이에요. 데뷔부터 꽤 특별했어요. 신인이었는데도 매우 노골적인 장면을 찍어야 했고, 본인도 감독에게 맞설 힘이 없었다고 나중에 말했어요. 그 장면들이 불편하고 훔쳐보는 듯한 느낌이라 비판도 많았어요. 그래도 그 영화 덕분에 이름을 알렸고, 이후로도 꾸준히 작품을 이어 가며 커리어를 쌓았어요.
+>
+> 제가 정말 존경하는 건 그 뒤로 이미지를 쌓아 간 방식이에요. 연달아 흥행작에 출연했고, 지금은 한국 최고의 배우 중 한 명으로 꼽히죠. *파묘*가 대표적인 예예요. 무당 역할을 맡았는데, 너무 자연스러워서 연기라는 걸 잊을 정도였어요. 봉길 역을 맡은 배우와의 케미도 정말 좋아서, 팬들이 영화에 푹 빠진 이유 중 하나가 됐어요. 일부 팬들은 캐릭터를 바탕으로 팬픽을 쓰고 팬아트도 그리고 있어요.
+>
+> 이 영화로 2024년에 청룡영화상 여우주연상과 백상예술대상 여자 최우수연기상도 받았어요. 그래서 더 존경하게 돼요. 시작은 정말 힘들었는데, 그 뒤로도 배우로서 계속 성장했고, 바로 그 점이 영화 팬들이 그녀의 이야기에 관심을 갖는 이유인 것 같아요.
+>
+> 솔직히 말하면, 초반의 힘든 경험을 버텨 낸 방식 때문에 더 존경하게 돼요. 거기서부터 성장해 가는 걸 보는 게 정말 큰 자극이 돼요.
+
+## 좋은 영어 표현
+
+| 표현                               | 한 줄 의미             |
+| ---------------------------------- | ---------------------- |
+| **as a newcomer**                  | 신인으로서             |
+| **have the leverage to push back** | 맞설 힘이 있다         |
+| **voyeuristic**                    | 훔쳐보는 듯한          |
+| **get noticed**                    | 이름이 알려지다        |
+| **one hit after another**          | 연달아 히트작에 나오다 |
+| **feel convincing**                | 진짜처럼 느껴지다      |
+| **get invested in**                | 빠져들다               |
+| **fan fiction / fan art**          | 팬픽 / 팬아트          |
+| **earn awards in 2024**            | 2024년에 상을 받다     |
+| **have a tough start**             | 힘든 출발을 하다       |
+
+---
+
+## 어떤 음악 듣고, 가장 좋아하는 가수나 작곡가
+
+영어
+
+I mostly listen to mainstream K-pop, and I'm a big fan of AKMU. They're a sibling duo, Lee Chanhyuk and Lee
+Suhyun. They first got attention on a TV audition show with original songs like "Don't Cross Your Legs" and
+"You Are Attractive," which really showed how talented they are. Chanhyuk is an incredible songwriter, and
+Suhyun is just as impressive. She can pull off a wide range of musical styles.
+
+My favorite song is "Nakka," with IU. It reminds me that even when life feels uncertain, having someone by
+your side can make everything feel okay. I love their vocal chemistry, especially toward the end of the song.
+If you haven't heard it, I'd definitely recommend giving it a listen.
+
+If I had to sum them up, Chanhyuk puts emotions into words and melodies, and Suhyun brings those emotions to
+life through her voice.
+
+한글
+
+저는 주로 대중적인 케이팝을 듣고, AKMU 팬이에요. 이찬혁이랑 이수현, 남매 듀오예요. TV 오디션에서 'Don't
+Cross Your Legs', 'You Are Attractive' 같은 자작곡으로 처음 주목받았고, 그때 이미 재능이 드러났어요. 찬혁은
+작곡을 정말 잘하고, 수현도 그만큼 인상적이에요. 다양한 스타일을 잘 소화하거든요.
+
+제일 좋아하는 곡은 아이유와 함께한 'Nakka', 그러니까 '낙하'예요. 삶이 불확실해도 곁에 누군가 있으면
+괜찮아질 수 있다는 걸 떠올리게 해요. 둘의 보컬 조합이 좋고, 특히 후반부가 좋아요. 아직 안 들어 봤다면
+한번 들어 보세요.
+
+한 줄로 말하면, 찬혁이 감정을 가사와 멜로디로 만들고, 수현이 목소리로 그 감정을 살려 줘요.
+
+**좋은 영어 표현**
+
+| 표현                  | 한 줄 의미         |
+| --------------------- | ------------------ |
+| **a sibling duo**     | 남매 듀오          |
+| **get attention**     | 주목받다           |
+| **a wide range of**   | 다양한             |
+| **vocal chemistry**   | 보컬 조합          |
+| **give it a listen**  | 한번 들어 보다     |
+| **bring ... to life** | 생생하게 살려 내다 |
+
+**연결:** `If I had to sum them up, ~` (한 줄 정리) · `If you haven't heard it, ~` (추천)
+
+---
+
+## 언제 어디에서 듣나요? 음악을 라디오로 OR 콘서트로? 일상에서 음악을 즐기는 방법은?
+
+영어
+
+I usually listen to music on YouTube. Going to concerts would be fun, but honestly, I don't really have the
+energy or the money for them. So I just listen whenever I feel like it, usually while I'm going about my day. I
+put on music when I'm taking a walk, doing the dishes, or cleaning my room.
+
+When I have a lot of housework to do, I play something upbeat and fast-paced. It gives me an extra boost of
+energy, and I end up getting way more done than I would without music.
+
+So for me, music isn't something I save for special occasions. It's just part of my everyday routine.
+
+한글
+
+보통 유튜브로 들어요. 콘서트에 가면 좋겠지만, 솔직히 체력이랑 돈이 늘 있는 건 아니에요. 그래서 듣고 싶을
+때, 일상을 보내면서 들어요. 산책할 때, 설거지할 때, 방 청소할 때 틀어요.
+
+집안일이 많을 때는 경쾌하고 빠른 곡을 틀어요. 그러면 힘이 더 나서, 음악이 없을 때보다 훨씬 많은 일을
+하게 돼요.
+
+그래서 저한테 음악은 특별한 날에만 듣는 게 아니라, 그냥 매일의 일부예요.
+
+**좋은 영어 표현**
+
+| 표현                               | 한 줄 의미                 |
+| ---------------------------------- | -------------------------- |
+| **whenever I feel like it**        | 하고 싶을 때마다           |
+| **go about my day**                | 평소 일상을 보내다         |
+| **put on music**                   | 음악을 틀다                |
+| **upbeat and fast-paced**          | 경쾌하고 빠른              |
+| **an extra boost of energy**       | 힘이 더 나다               |
+| **get way more done**              | 훨씬 많은 일을 해내다      |
+| **save ... for special occasions** | 특별한 때를 위해 아껴 두다 |
+
+`stamina` 대신 `energy`를 쓴 이유는, 콘서트에 가기 힘들다는 말에서 `stamina`는 운동 지구력처럼 들리기
+때문입니다.
+
+**연결:** `So for me, ~` (의미 한 줄) · `When I have ~, I ~` (상황별 예)
+
+---
+
+## 음악에 처음 관심가지게 된 때에 대해 말해주세요. 처음에는 어떤 종류 노래 좋아했고, 시간이 지나면서 음악에 대한 관심이 어떻게 변해왔나요?
+
+영어
+
+My interest in music started in high school. Back then, I was really into hip-hop. I was under a lot of
+pressure preparing for college entrance exams, so I used to listen to music with heavy beats to relieve stress.
+
+These days, I prefer pop music because it's easier to listen to and helps me unwind. Looking back, I don't
+just use music to cope with stress anymore. I enjoy it for its own sake.
+
+So it wasn't just my taste that changed. The reason I listen to music changed, too.
+
+한글
+
+음악에 관심 갖게 된 건 고등학교 때예요. 그때는 힙합에 푹 빠져 있었어요. 입시 준비로 압박이 컸어서, 비트가
+강한 음악으로 스트레스를 풀곤 했어요.
+
+요즘은 듣기 편하고 긴장이 풀리는 팝을 더 좋아해요. 돌이켜 보면, 이제는 스트레스를 견디려고만 듣지 않아요.
+음악 자체가 좋아서 들어요.
+
+그래서 취향만 바뀐 게 아니라, 음악을 듣는 이유까지 바뀐 거예요.
+
+**좋은 영어 표현**
+
+| 표현                 | 한 줄 의미          |
+| -------------------- | ------------------- |
+| **be really into**   | ~에 푹 빠져 있다    |
+| **heavy beats**      | 강한 비트           |
+| **help me unwind**   | 긴장을 풀어 주다    |
+| **look back**        | 돌이켜 보다         |
+| **cope with stress** | 스트레스에 대처하다 |
+| **for its own sake** | 그 자체가 좋아서    |
+
+**연결:** `Back then, ~` / `These days, ~` (과거·현재) · `So it wasn't just ~. ~ changed, too.` (변화 정리)
+
+---
+
+## 라이브 음악을 들엇던 때에 대해 말해줄수있나요? 언제,어디, 누구와,무슨일? 무엇이 그 경험을 특별하거나 잊을수없게 만들었나요?? 언제,어디, 누구와,무슨일? 무엇이 그 경험을 특별하거나 잊을수없게 만들었나요??
+
+영어
+
+> The most memorable live music experience I've had was a Psy concert, about eight years ago. I wasn't really a big fan of his, but a friend of my younger sibling was one of his backup dancers, and he offered me a free ticket. So I ended up going to the show in Seoul, even though we'd only just met for the first time.
+>
+> At first, we sat in the back and watched from our seats. But before long, we made our way down to the standing area up front, and that's when things got really fun. I was in my twenties then, and I had so much energy. I was dancing and singing along with everyone around me, and I had a blast.
+>
+> It's still the first and only concert where I've had that much fun. I went in with no real expectations, and that's probably why it stuck with me.
+
+한글
+
+> 제가 가장 기억에 남는 라이브 공연은 약 8년 전에 본 싸이 콘서트예요. 싸이 팬은 아니었는데, 동생 친구 중 한 명이 싸이의 백댄서였고 공짜 표를 준다고 해서 서울에 공연을 보러 가게 됐어요. 그 친구는 그날 처음 만난 사람이었어요.
+>
+> 처음에는 뒤쪽 좌석에 앉아서 봤어요. 그런데 얼마 안 가서 앞쪽 스탠딩 구역으로 내려갔고, 그때부터 진짜 재밌어졌어요. 그때는 20대였고 에너지도 넘쳤어요. 주변 사람들이랑 같이 춤추고 따라 부르면서 정말 신나게 놀았어요.
+>
+> 지금까지 콘서트에서 그렇게 재밌게 논 건 그때가 처음이자 마지막이에요. 크게 기대하지 않고 갔던 게 오히려 더 오래 기억에 남는 이유인 것 같아요.
+
+## AL 추가 (선택)
+
+영어
+
+> Looking back, I think it was special because I just let loose and enjoyed the moment without overthinking it.
+
+한글
+
+> 돌이켜 보면, 그냥 몸을 맡기고 순간을 즐겼던 게 특별했던 것 같아요.
+
+이 문장은 "재밌게 놀았다"를 이유와 연결해 주는 역할을 합니다. 본인이 실제로 그렇게 느꼈다면 유지하고, 아니라면 빼도 됩니다.
+
+## 좋은 영어 표현
+
+| 표현                               | 한 줄 의미              |
+| ---------------------------------- | ----------------------- |
+| **I wasn't really a big fan of ~** | ~의 열성 팬은 아니었다  |
+| **a friend of my younger sibling** | 동생(형제자매)의 친구   |
+| **backup dancer**                  | 백댄서                  |
+| **head to**                        | ~로 향하다              |
+| **make one's way down to**         | ~쪽으로 내려가다        |
+| **before long**                    | 얼마 안 가서            |
+| **sing along**                     | 같이 따라 부르다        |
+| **have a blast**                   | 신나게 놀다             |
+| **let loose**                      | 긴장을 풀고 마음껏 놀다 |
+| **go in with no expectations**     | 기대 없이 가다          |
+
+## 번역 설명
+
+- `I wasn't really a big fan of his`는 `I'm not a fan`보다 부드럽고, 자연스럽게 "그럼에도 갔다"는 흐름을 만듭니다.
+- 동생 친구 관계는 `a friend of my younger sibling`으로 썼습니다. 동생의 성별을 알 수 없어서 `brother`나 `sister`를 고르지 않았습니다. 필요하면 바꾸면 됩니다.
+- `had a blast`는 "신나게 놀았다"의 구어 표현입니다. `had fun`보다 감정이 더 강하게 전달됩니다.
+- 실제 공연장에서 뒤쪽 좌석에서 앞쪽 스탠딩으로 이동한 흐름이 답변의 핵심이라, `before long`과 `made our way down`으로 그 변화를 살렸습니다.
+
+---
+
+## 여행선호장소, 이유
+
+영어
+
+When it comes to travel, I'd say my favorite kind of destination is somewhere by the sea. Being by the sea
+helps me relax, and I love the seafood there. I don't spend as much time playing in the water as I did when I
+was a kid, but I still love being near the ocean.
+
+About six months ago, I visited Busan. The raw fish was delicious, and the ocean views were beautiful. These
+days, going to the beach is less about playing in the water and more about slowing down, enjoying the view, and
+eating well.
+
+한글
+
+여행으로 치면, 제가 좋아하는 곳은 바닷가예요. 바다에 있으면 긴장이 풀리고, 해산물도 맛있거든요. 어릴
+때만큼 물에서 놀지는 않지만, 바다 근처에 있는 건 여전히 좋아요.
+
+6개월 전에 부산에 갔는데, 회가 맛있었고 바다 풍경도 정말 좋았어요. 요즘은 바다에 가는 이유가 물놀이보다는,
+속도를 늦추고 풍경을 보고 맛있게 먹는 쪽에 가까워요.
+
+**좋은 영어 표현**
+
+| 표현                     | 한 줄 의미            |
+| ------------------------ | --------------------- |
+| **somewhere by the sea** | 바닷가                |
+| **help me relax**        | 긴장을 풀어 주다      |
+| **spend time -ing**      | ~하면서 시간을 보내다 |
+| **ocean views**          | 바다 풍경             |
+| **slow down**            | 속도를 늦추다         |
+
+**연결:** `When it comes to travel, ~` (주제 시작) · `These days, ~ is less about ~ and more about ~` (취향
+변화)
+
+---
+
+## 여행준비물, 준비단계
+
+영어
+
+When I travel, I always pack extra clothes, a charger, and a power bank. First, I check my destination, how
+long I'll be staying, and the weather forecast. Then I pack accordingly.
+
+I usually bring a few lightweight layers because they help me adjust to changing temperatures. I can also mix
+and match them, so each day feels a little different. I pack extra underwear and socks, plus a travel-sized
+toothbrush and toothpaste. And I make sure my power bank is fully charged before I leave.
+
+Once my plans are set, I book my accommodation and reserve anything that needs to be booked in advance. If I'm
+going to the beach, I pack a swimsuit.
+
+Packing can be a hassle, but once I'm on the trip, I'm always glad I prepared ahead of time. Traveling always
+leaves me with great memories.
+
+한글
+
+여행 갈 때는 여벌 옷, 충전기, 보조배터리를 꼭 챙겨요. 먼저 목적지, 기간, 일기예보를 보고 그에 맞게 짐을
+싸요.
+
+보통 가벼운 옷을 여러 겹 챙기는데, 기온이 바뀌어도 맞춰 입을 수 있고 날마다 다른 느낌으로 조합할 수도
+있어요. 여분의 속옷이랑 양말, 여행용 칫솔이랑 치약도 넣어요. 보조배터리는 출발 전에 완전히 충전해 두고요.
+
+일정이 정해지면 숙소를 예약하고, 미리 예약해야 하는 것도 잡아 둬요. 바다에 가면 수영복도 챙기고요.
+
+짐 싸는 건 귀찮아도, 막상 가면 미리 준비해 두길 잘했다고 느껴요. 여행은 항상 좋은 추억을 남겨 줘요.
+
+**좋은 영어 표현**
+
+| 표현                      | 한 줄 의미            |
+| ------------------------- | --------------------- |
+| **pack accordingly**      | 상황에 맞게 짐을 싸다 |
+| **lightweight layers**    | 가볍게 겹쳐 입을 옷   |
+| **mix and match**         | 옷을 조합하다         |
+| **once my plans are set** | 일정이 정해지면       |
+| **booked in advance**     | 미리 예약된           |
+| **prepare ahead of time** | 미리 준비하다         |
+| **a hassle**              | 번거로운 일           |
+
+**연결:** `First, ~` / `Then ~` / `Once ~` (준비 순서) · `Packing can be ~, but once ~` (단점·결과)
+
+---
+
+## 잊지못할 여행경험. 어디, 무슨일, 누구와, 왜
+
+## 인기있는 여행지
+
+## 사람들이 여행가면 하는일, 장소, 하는일
+
+## 어릴떄 여행갓던 나라, 어떘음?기억에 남고 특별한것?
