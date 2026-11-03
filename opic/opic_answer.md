@@ -280,17 +280,17 @@ organized.
 
 **좋은 영어 표현**
 
-| 표현 | 한 줄 의미 |
-| --- | --- |
-| **made some changes to** ~ | ~을 조금 손봤다 / 바꿨다 |
-| **replaced it with** ~ | 그걸 ~로 바꿨다 |
-| **open metal shelves** | 열린 철제 선반 |
-| **piling** groceries and other random stuff | 식료품·잡동사니를 쌓아 두다 |
-| **out in the open** | 밖에 다 드러난 |
-| **dust collected** really quickly | 먼지가 금방 쌓이다 |
-| **tucked away** in the drawers | 서랍 안에 넣어 두다 |
-| **The clutter is hidden until** ~ | ~하기 전엔 어수선함이 안 보인다 |
-| **made our home feel** more organized | 집이 정리된 느낌이 나다 |
+| 표현                                        | 한 줄 의미                      |
+| ------------------------------------------- | ------------------------------- |
+| **made some changes to** ~                  | ~을 조금 손봤다 / 바꿨다        |
+| **replaced it with** ~                      | 그걸 ~로 바꿨다                 |
+| **open metal shelves**                      | 열린 철제 선반                  |
+| **piling** groceries and other random stuff | 식료품·잡동사니를 쌓아 두다     |
+| **out in the open**                         | 밖에 다 드러난                  |
+| **dust collected** really quickly           | 먼지가 금방 쌓이다              |
+| **tucked away** in the drawers              | 서랍 안에 넣어 두다             |
+| **The clutter is hidden until** ~           | ~하기 전엔 어수선함이 안 보인다 |
+| **made our home feel** more organized       | 집이 정리된 느낌이 나다         |
 
 **연결:** `Because everything was ~` (이유) · `It was a small change, but ~` (결론)
 
@@ -342,7 +342,7 @@ easier.
 영어
 
 When I go shopping, I usually go to COEX Mall with my boyfriend. He's my shopping partner, and he's really
-good at choosing clothes that fit me well and colors that suit me. A few brands there match my body type well, so we always stop
+good at choosing clothes that fit me well and colors that suit me. A few brands there fit(suit) my body type well, so we always stop
 by those stores and try things on. Some days I don't buy anything, but most of the time I end up getting at
 least one item. After we're done shopping, we like to eat somewhere with a different kind of cuisine. If
 you're at COEX and want a recommendation, I'd suggest Agra for Indian food or Mutan for Chinese. Trying on
@@ -638,7 +638,7 @@ short clips on YouTube—not full episodes. I know writers and directors put a l
 and I should watch the full episodes. But honestly I'm too busy, so I go for something quick and light.
 
 On weekends, I'm at my boyfriend's place. We pick one twenty-minute variety highlight on YouTube. Our tastes
-are pretty different, but we both like those clips. We cook dinner, put it by his monitor, and eat while we
+are pretty different, but we both like those clips. We cook dinner and set it up next to his monitor, and eat while we
 watch.
 
 한글
@@ -704,21 +704,21 @@ catch reruns sometimes, and they're still really fun.
 
 **좋은 영어 표현**
 
-| 표현 | 한 줄 의미 |
-| --- | --- |
-| **Honestly**, ~ | 솔직히 ~ |
-| **a lot different from** when I was a kid | 어렸을 때랑 많이 다르다 |
-| **These days**, ~ | 요즘은 ~ |
-| **alone instead of** TV | TV 대신 혼자 (시청) |
-| **When I was young**, ~ | 어렸을 때는 ~ |
-| **weekend variety shows** | 주말 예능 |
-| **We'd sit together** in the living room | 거실에 같이 앉아서 |
-| **a popular Korean comedy show called** ~ | ~라는 인기 한국 코미디 예능 |
-| **another hit show called** ~ | ~라는 또 다른 인기 프로그램 |
-| **which show they liked more** | 어떤 프로그램을 더 좋아하는지 |
-| **preferred the host** over ~ | MC를 ~보다 더 선호하다 |
-| **catch reruns** | 재방송을 보다 |
-| **still really fun** | 여전히 정말 재밌다 |
+| 표현                                      | 한 줄 의미                    |
+| ----------------------------------------- | ----------------------------- |
+| **Honestly**, ~                           | 솔직히 ~                      |
+| **a lot different from** when I was a kid | 어렸을 때랑 많이 다르다       |
+| **These days**, ~                         | 요즘은 ~                      |
+| **alone instead of** TV                   | TV 대신 혼자 (시청)           |
+| **When I was young**, ~                   | 어렸을 때는 ~                 |
+| **weekend variety shows**                 | 주말 예능                     |
+| **We'd sit together** in the living room  | 거실에 같이 앉아서            |
+| **a popular Korean comedy show called** ~ | ~라는 인기 한국 코미디 예능   |
+| **another hit show called** ~             | ~라는 또 다른 인기 프로그램   |
+| **which show they liked more**            | 어떤 프로그램을 더 좋아하는지 |
+| **preferred the host** over ~             | MC를 ~보다 더 선호하다        |
+| **catch reruns**                          | 재방송을 보다                 |
+| **still really fun**                      | 여전히 정말 재밌다            |
 
 **연결:** `Honestly, ~` / `These days, ~` (지금) · `When I was young, ~` (어릴 때) · `We'd ~` (그때 습관)
 
@@ -812,7 +812,7 @@ The walk actually made the night better because I arrived feeling relaxed rather
 The movie that has stuck with me the most is _Hope_, directed by Na Hong-jin. He's known for his thrillers and
 horror films. It's not exactly a feel-good movie. It's more of a dark, cinematic thriller, and he's not a
 director I usually follow. But this movie really divided audiences. Some people raved about it, while others
-were pretty critical, so opinions on it are still mixed.
+were pretty critical, and opinions on it are still mixed.
 
 Personally, I'd recommend it. What really stood out to me was the directing. I was completely drawn in and
 stayed engaged from start to finish. I'd love to hear what my friends think of it, especially whether they
@@ -1050,9 +1050,9 @@ So it wasn't just my taste that changed. The reason I listen to music changed, t
 
 영어
 
-> The most memorable live music experience I've had was a Psy concert, about eight years ago. I wasn't really a big fan of his, but a friend of my younger sibling was one of his backup dancers, and he offered me a free ticket. So I ended up going to the show in Seoul, even though we'd only just met for the first time.
+> The most memorable live music experience I've had was a Psy concert, about eight years ago. I wasn't really a big fan of his, but a friend of my younger sibling was one of his backup dancers, and he offered me a free ticket. So I ended up going to the show in Seoul, even though I had only just met him for the first time.
 >
-> At first, we sat in the back and watched from our seats. But before long, we made our way down to the standing area up front, and that's when things got really fun. I was in my twenties then, and I had so much energy. I was dancing and singing along with everyone around me, and I had a blast.
+> At first, we sat in the back. But before long, we made our way down to the standing area up front, and that's when things got really fun. I was in my twenties then, and I had so much energy. I was dancing and singing along with everyone around me, and I had a blast.
 >
 > It's still the first and only concert where I've had that much fun. I went in with no real expectations, and that's probably why it stuck with me.
 
@@ -1108,9 +1108,8 @@ When it comes to travel, I'd say my favorite kind of destination is somewhere by
 helps me relax, and I love the seafood there. I don't spend as much time playing in the water as I did when I
 was a kid, but I still love being near the ocean.
 
-About six months ago, I visited Busan. The raw fish was delicious, and the ocean views were beautiful. These
-days, going to the beach is less about playing in the water and more about slowing down, enjoying the view, and
-eating well.
+About six months ago, I visited Busan. The sashimi was delicious, and the ocean views were beautiful. These
+days, going to the beach is less about playing in the water and more about slowing down, enjoying the ocean views, and eating well.
 
 한글
 
