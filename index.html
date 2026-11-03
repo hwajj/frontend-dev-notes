@@ -102,6 +102,19 @@
         font-size: 1.15rem;
         margin-bottom: 0.75rem;
       }
+      #opic-toc-list a.current {
+        font-weight: bold;
+        color: #2d3a4b;
+      }
+      .opic-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem 1rem;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e0e0e0;
+      }
       .list-link {
         display: block;
         padding: 0.65rem 0;
@@ -357,6 +370,10 @@
       const OPIC_MD_PATH = "opic/opic_answer.md";
       let interviewMarkdownCache = null;
       let opicMarkdownCache = null;
+      let opicSectionsPromise = null; // ## 단위로 자른 OPIc 주제 목록 (캐시)
+      let opicCurrentSlug = null; // 지금 보고 있는 주제 slug ("all" = 전체 보기)
+      let opicPendingScroll = false; // 사용자가 목차/이전·다음을 눌렀을 때만 본문 위치로 스크롤
+      const OPIC_LAST_KEY = "opic:last-topic"; // 마지막으로 본 주제 기억 (localStorage)
 
       function slugifyHeading(text) {
         return text
@@ -491,46 +508,199 @@
         }
       }
 
-      function renderOpicToc(headings) {
+      function renderOpicToc(sections) {
         const ul = document.getElementById("opic-toc-list");
         const status = document.getElementById("opic-status");
         ul.innerHTML = "";
 
-        const tocHeadings = headings.filter((h) => h.level >= 2);
-        if (tocHeadings.length === 0) {
-          status.textContent = "목차로 쓸 제목(##, ###)이 없습니다.";
+        if (sections.length === 0) {
+          status.textContent = "목차로 쓸 제목(##)이 없습니다.";
           return;
         }
 
-        status.textContent = "항목을 클릭하면 본문이 아래에 열립니다.";
+        status.textContent = "항목을 고르면 그 주제만 아래에 열립니다. 마지막으로 본 주제는 기억됩니다.";
 
-        const allLi = document.createElement("li");
-        const allLink = document.createElement("a");
-        allLink.className = "list-link";
-        allLink.href = "#viewer";
-        allLink.setAttribute("role", "button");
-        allLink.textContent = "전체 보기";
-        allLink.onclick = (e) => {
-          e.preventDefault();
-          loadOpicMarkdown();
-        };
-        allLi.appendChild(allLink);
-        ul.appendChild(allLi);
-
-        tocHeadings.forEach(({ level, text, id }) => {
+        const items = [
+          { label: "전체 보기", slug: "all", cls: "" },
+          ...sections.map((s) => ({ label: s.title, slug: s.slug, cls: "toc-h2" })),
+        ];
+        items.forEach(({ label, slug, cls }) => {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.className = `list-link toc-h${level}`;
-          a.href = "#viewer";
+          a.className = `list-link ${cls}`.trim();
+          a.dataset.slug = slug;
+          a.href = `#/opic/${slug}`;
           a.setAttribute("role", "button");
-          a.textContent = text;
+          a.textContent = label;
           a.onclick = (e) => {
             e.preventDefault();
-            loadOpicMarkdown(id);
+            goToOpic(slug);
           };
           li.appendChild(a);
           ul.appendChild(li);
         });
+        highlightOpicToc();
+      }
+
+      // "## 제목" 기준으로 자르고, 중복 제목도 slug가 겹치지 않게 만든다
+      function parseOpicSections(markdown) {
+        const raw = [];
+        let current = null;
+        markdown.split("\n").forEach((rawLine) => {
+          const line = rawLine.replace(/\r$/, "");
+          const match = line.match(/^##\s+(.+)$/);
+          if (match) {
+            current = { title: match[1].trim(), lines: [] };
+            raw.push(current);
+          } else if (current) {
+            current.lines.push(line);
+          }
+        });
+
+        const used = new Set(["all"]); // "all"은 전체 보기 예약어라 주제 slug로 쓰지 않음
+        return raw.map((sec) => {
+          const root =
+            slugifyHeading(sec.title).slice(0, 40).replace(/-+$/, "") || "section";
+          let slug = root;
+          let n = 2;
+          while (used.has(slug)) slug = `${root}-${n++}`;
+          used.add(slug);
+          return { title: sec.title, slug, body: sec.lines.join("\n") };
+        });
+      }
+
+      function ensureOpicSections() {
+        if (!opicSectionsPromise) {
+          opicSectionsPromise = ensureOpicMarkdown()
+            .then(parseOpicSections)
+            .catch((e) => {
+              opicSectionsPromise = null; // 실패하면 다음 진입 때 다시 시도
+              throw e;
+            });
+        }
+        return opicSectionsPromise;
+      }
+
+      // 해시 주소 해석: null = OPIc 주소 아님, "" = #/opic, "all" = 전체, 그 외 = 주제 slug
+      function readOpicRoute() {
+        let path = location.hash.slice(1);
+        try {
+          path = decodeURIComponent(path);
+        } catch (e) {
+          // 인코딩이 깨졌으면 원문 그대로 사용
+        }
+        const parts = path.split("/").filter(Boolean);
+        if (parts[0] !== "opic") return null;
+        return parts[1] || "";
+      }
+
+      function goToOpic(slug) {
+        opicPendingScroll = true;
+        if (readOpicRoute() === slug) {
+          routeOpic(); // 같은 주소면 hashchange가 안 일어나므로 직접 호출
+        } else {
+          location.hash = `#/opic/${slug}`;
+        }
+      }
+
+      function highlightOpicToc() {
+        document.querySelectorAll("#opic-toc-list a").forEach((a) => {
+          a.classList.toggle("current", a.dataset.slug === opicCurrentSlug);
+        });
+      }
+
+      function scrollToOpicViewer() {
+        document.getElementById("viewer").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      function buildOpicNav(sections, index) {
+        const nav = document.createElement("nav");
+        nav.className = "opic-nav";
+        const makeLink = (target, label) => {
+          const a = document.createElement("a");
+          a.href = `#/opic/${target.slug}`;
+          a.textContent = label;
+          a.onclick = (e) => {
+            e.preventDefault();
+            goToOpic(target.slug);
+          };
+          return a;
+        };
+        if (index > 0) {
+          const prev = sections[index - 1];
+          nav.appendChild(makeLink(prev, `← 이전: ${prev.title}`));
+        }
+        if (index < sections.length - 1) {
+          const next = sections[index + 1];
+          nav.appendChild(makeLink(next, `다음: ${next.title} →`));
+        }
+        return nav;
+      }
+
+      function showOpicSection(sections, index, wantScroll) {
+        const sec = sections[index];
+        opicCurrentSlug = sec.slug;
+        localStorage.setItem(OPIC_LAST_KEY, sec.slug);
+        highlightOpicToc();
+
+        document.getElementById("file-title").textContent = `OPIc 스크립트 · ${sec.title}`;
+        const md = document.getElementById("md-content");
+        md.innerHTML = marked.parse(sec.body);
+        md.appendChild(buildOpicNav(sections, index));
+        Prism.highlightAll();
+        showViewer(true, true);
+        if (wantScroll) scrollToOpicViewer();
+      }
+
+      async function routeOpic() {
+        const slug = readOpicRoute();
+        if (slug === null) return;
+
+        const wantScroll = opicPendingScroll;
+        opicPendingScroll = false;
+        activateTab("opic");
+
+        try {
+          if (slug === "all") {
+            await showOpicAll(wantScroll);
+            return;
+          }
+
+          const sections = await ensureOpicSections();
+
+          if (slug === "") {
+            // #/opic만 왔으면 마지막으로 본 주제, 없으면 목차만 표시
+            const lastIndex = sections.findIndex(
+              (s) => s.slug === localStorage.getItem(OPIC_LAST_KEY)
+            );
+            if (lastIndex >= 0) {
+              history.replaceState(null, "", `#/opic/${sections[lastIndex].slug}`);
+              showOpicSection(sections, lastIndex, false);
+            } else {
+              opicCurrentSlug = null;
+              highlightOpicToc();
+              showViewer(false);
+            }
+            return;
+          }
+
+          const index = sections.findIndex((s) => s.slug === slug);
+          if (index < 0) {
+            opicCurrentSlug = null;
+            highlightOpicToc();
+            showViewer(false);
+            document.getElementById("opic-status").textContent =
+              "없는 주제입니다. 목차에서 다시 골라 주세요.";
+            return;
+          }
+          showOpicSection(sections, index, wantScroll);
+        } catch (e) {
+          showViewer(true, true);
+          document.getElementById("md-content").textContent = e.message;
+        }
       }
 
       async function ensureOpicMarkdown() {
@@ -544,41 +714,30 @@
       async function loadOpicToc() {
         const status = document.getElementById("opic-status");
         const ul = document.getElementById("opic-toc-list");
-        if (opicMarkdownCache && ul.children.length > 0) return;
+        if (ul.children.length > 0) {
+          highlightOpicToc();
+          return;
+        }
         status.textContent = "목차 불러오는 중...";
-        ul.innerHTML = "";
         try {
-          const markdown = await ensureOpicMarkdown();
-          renderOpicToc(extractHeadings(markdown));
+          renderOpicToc(await ensureOpicSections());
         } catch (e) {
           status.textContent = e.message;
         }
       }
 
-      async function loadOpicMarkdown(scrollToId = null) {
-        document.getElementById("file-title").textContent = "OPIc 스크립트";
-        document.getElementById("md-content").textContent = "로딩 중...";
+      // 전체 보기: 기존처럼 스크립트 전체를 한 번에 표시
+      async function showOpicAll(wantScroll) {
+        opicCurrentSlug = "all";
+        highlightOpicToc();
+        document.getElementById("file-title").textContent = "OPIc 스크립트 · 전체";
+        const md = document.getElementById("md-content");
+        md.textContent = "로딩 중...";
         showViewer(true, true);
-        try {
-          const text = await ensureOpicMarkdown();
-          const html = addHeadingIds(marked.parse(text));
-          document.getElementById("md-content").innerHTML = html;
-          Prism.highlightAll();
-          requestAnimationFrame(() => {
-            document.getElementById("viewer").scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-            if (scrollToId) {
-              const target = document.getElementById(scrollToId);
-              if (target) {
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }
-          });
-        } catch (e) {
-          document.getElementById("md-content").textContent = e.message;
-        }
+        const text = await ensureOpicMarkdown();
+        md.innerHTML = marked.parse(text);
+        Prism.highlightAll();
+        if (wantScroll) scrollToOpicViewer();
       }
 
       function renderList(listId, files, folder, isMarkdown = false) {
@@ -700,16 +859,36 @@
           panel.classList.toggle("active", on);
         });
         if (tabFe) tabFe.classList.remove("active");
+        if (tab === "opic") {
+          loadOpicToc();
+          return;
+        }
         showViewer(false);
-        if (tab === "opic") loadOpicToc();
+        // OPIc 주소(#/opic...)가 남아 있으면 지워서 다른 탭을 새로고침해도 OPIc으로 돌아가지 않게 함
+        if (readOpicRoute() !== null) {
+          history.replaceState(null, "", location.pathname + location.search);
+        }
       }
       tabTS.onclick = () => activateTab("ts");
       tabAlgo.onclick = () => activateTab("algo");
       tabDiary.onclick = () => activateTab("diary");
-      tabOpic.onclick = () => activateTab("opic");
+      tabOpic.onclick = () => {
+        if (readOpicRoute() !== null) routeOpic();
+        else location.hash = "#/opic";
+      };
       tabFe.onclick = () => {
         window.location.href = "./fe/";
       };
+
+      // 주소 기반 복원: 뒤로/앞으로, 직접 입력, 새로고침 모두 같은 경로로 처리
+      window.addEventListener("hashchange", () => {
+        if (readOpicRoute() !== null) {
+          routeOpic();
+        } else if (contentOpic.classList.contains("active")) {
+          activateTab("ts");
+        }
+      });
+      routeOpic(); // 페이지 진입 시 #/opic 주소면 바로 복원
     </script>
   </body>
 </html>
