@@ -188,13 +188,13 @@
   <body>
     <h1>개발 공부 노트</h1>
     <div class="tabs">
-      <button class="tab active" id="tab-ts">TS Challenge</button>
-      <button class="tab" id="tab-algo">알고리즘</button>
+      <button class="tab active" id="tab-opic">OPIc</button>
       <button class="tab" id="tab-diary">diary</button>
-      <button class="tab" id="tab-opic">OPIc</button>
+      <button class="tab" id="tab-ts">TS Challenge</button>
+      <button class="tab" id="tab-algo">알고리즘</button>
       <button class="tab" id="tab-fe">FE학습</button>
     </div>
-    <div class="tab-content active" id="content-ts">
+    <div class="tab-content" id="content-ts">
       <div class="section">
         <h2>Easy</h2>
         <ul id="easy-list"></ul>
@@ -253,7 +253,7 @@
         <ul id="redhat-note-list"></ul>
       </div>
     </div>
-    <div class="tab-content" id="content-opic">
+    <div class="tab-content active" id="content-opic">
       <div class="section">
         <h2>OPIc 스크립트</h2>
         <p id="opic-status">목차 불러오는 중...</p>
@@ -847,10 +847,10 @@
       const contentOpic = document.getElementById("content-opic");
       // FE학습(tab-fe)은 탭 패널이 아니라 VitePress 문서 사이트(./fe/)로 이동
       const tabPanels = [
+        { id: "opic", btn: tabOpic, panel: contentOpic },
+        { id: "diary", btn: tabDiary, panel: contentDiary },
         { id: "ts", btn: tabTS, panel: contentTS },
         { id: "algo", btn: tabAlgo, panel: contentAlgo },
-        { id: "diary", btn: tabDiary, panel: contentDiary },
-        { id: "opic", btn: tabOpic, panel: contentOpic },
       ];
       function activateTab(tab) {
         tabPanels.forEach(({ id, btn, panel }) => {
@@ -885,10 +885,13 @@
         if (readOpicRoute() !== null) {
           routeOpic();
         } else if (contentOpic.classList.contains("active")) {
-          activateTab("ts");
+          activateTab("opic");
         }
       });
       routeOpic(); // 페이지 진입 시 #/opic 주소면 바로 복원
+      if (readOpicRoute() === null) {
+        loadOpicToc();
+      }
     </script>
   </body>
 </html>

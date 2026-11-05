@@ -1050,7 +1050,7 @@ So it wasn't just my taste that changed. The reason I listen to music changed, t
 
 영어
 
-> The most memorable live music experience I've had was a Psy concert, about eight years ago. I wasn't really a big fan of his, but a friend of my younger sibling was one of his backup dancers, and he offered me a free ticket. So I ended up going to the show in Seoul, even though I had only just met him for the first time.
+> The most memorable live music experience I've had was a Psy concert, about eight years ago. I wasn't really a big fan of his, but a friend of my younger sister was one of his backup dancers, and he offered me a free ticket. So I ended up going to the show in Seoul, even though I had only just met him for the first time.
 >
 > At first, we sat in the back. But before long, we made our way down to the standing area up front, and that's when things got really fun. I was in my twenties then, and I had so much energy. I was dancing and singing along with everyone around me, and I had a blast.
 >
