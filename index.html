@@ -349,6 +349,7 @@
         { name: "2026-07-22", file: "2026-07-22.md" },
         { name: "2026-09-06", file: "2026-09-06.md" },
         { name: "2026-09-07", file: "2026-09-07.md" },
+        { name: "2026-11-05", file: "2026-11-05.md" },
       ];
 
       const redhatNoteFiles = [
@@ -518,7 +519,8 @@
           return;
         }
 
-        status.textContent = "항목을 고르면 그 주제만 아래에 열립니다. 마지막으로 본 주제는 기억됩니다.";
+        status.textContent =
+          "항목을 고르면 그 주제만 아래에 열립니다. 마지막으로 본 주제는 기억됩니다.";
 
         const items = [
           { label: "전체 보기", slug: "all", cls: "" },
@@ -559,8 +561,7 @@
 
         const used = new Set(["all"]); // "all"은 전체 보기 예약어라 주제 slug로 쓰지 않음
         return raw.map((sec) => {
-          const root =
-            slugifyHeading(sec.title).slice(0, 40).replace(/-+$/, "") || "section";
+          const root = slugifyHeading(sec.title).slice(0, 40).replace(/-+$/, "") || "section";
           let slug = root;
           let n = 2;
           while (used.has(slug)) slug = `${root}-${n++}`;
